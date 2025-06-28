@@ -2,6 +2,10 @@ name: flutter_projects
 publish_to: none
 environment:
   sdk: ^3.8.0
+
+dev_dependencies:
+  melos: ^7.0.0-dev.9
+
 workspace:
   - packages/athena_common
   - packages/athena_components
@@ -10,7 +14,10 @@ workspace:
   - packages/athena_utils
   - packages/athena_network
   - packages/hzy_normal_tool
+  - packages/hzy_normal_network
+  - packages/hzy_common_module
   - projects/athena_common_flutter
+  - projects/athena_app
   - projects/flutter_demo
 
 
@@ -24,5 +31,29 @@ melos:
       run: echo '$GREETING World'
       env:
         GREETING: "Hey"
-dev_dependencies:
-  melos: ^7.0.0-dev.9
+
+      analyze:
+    run: melos exec -- "flutter analyze"
+    description: Run `flutter analyze` in all packages
+
+    pub_get:
+      run: melos exec --flutter "flutter pub get"
+      description: pub get
+
+    build_all:
+      run: melos exec --depends-on="build_runner" "flutter packages pub run build_runner build --delete-conflicting-outputs"
+      description: build_runner build all modules
+
+    format:
+      run: melos exec -- "flutter format . --set-exit-if-changed"
+      description: Run `flutter format .` in all packages
+
+    test:
+      run: melos exec --dir-exists=test -- "flutter test"
+      description: Run `flutter test` in all packages
+
+    runalone_bootstrap_athena_app:
+      run: melos exec --scope="projects/athena_app" -- 'flutter pub get'
+      description: 为 athena_app 单独执行 pub get
+
+

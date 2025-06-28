@@ -90,12 +90,42 @@ $GREETING World
 
 ```
 
-### 创建 package
+### melos aliases
+每次都要加上前缀 `fvm dart pub global run melos xxx` 才能执行命令比较繁琐，可以给 melos 创建一个 aliases
 ```
+在 .zshrc 文件加上：
+alias melos="fvm dart pub global run melos"
+
+```
+
+
+### package 介绍
+```
+# 创建 package
 $ fvm flutter  create --template=package athena_network
 ```
 
 
 
+
+
+### 推荐脚本的写法以及常用脚本分享
+
+#### hello
+一个简单脚本，执行后输出：
+```
+$ fvm dart pub global run melos hello # 运行定义的 script
+Resolving dependencies in `/Users/aosom/Documents/yhui/github/ZYHB/flutter-projects`... (8.4s)
+Downloading packages... 
+Got dependencies in `/Users/aosom/Documents/yhui/github/ZYHB/flutter-projects`.
+Building package executable... 
+Built melos:melos.
+melos run hello
+  └> echo '$GREETING World'
+     └> RUNNING
+
+$GREETING World
+```
+#### test:selective_unit_test
 
 

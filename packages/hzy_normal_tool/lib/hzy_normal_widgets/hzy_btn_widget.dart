@@ -3,8 +3,8 @@
  * @version: 
  * @Author: TT
  * @Date: 2023-03-16 22:03:34
- * @LastEditors: TT-hzy 
- * @LastEditTime: 2024-01-23 14:41:47
+ * @LastEditors: TT
+ * @LastEditTime: 2023-08-14 17:44:01
  */
 
 import 'package:flutter/material.dart';
@@ -31,9 +31,7 @@ class HzyBtnWidget extends StatelessWidget {
     super.key,
     this.btnLayoutType = BtnLayoutType.text,
     this.decoration,
-    this.mainAxisAlignment = MainAxisAlignment.center,
-    this.crossAxisAlignment = CrossAxisAlignment.center,
-    this.mainAxisSize = MainAxisSize.max,
+    this.alignment,
     this.margin,
     this.padding,
     this.width,
@@ -45,13 +43,10 @@ class HzyBtnWidget extends StatelessWidget {
     this.titleWidget,
     this.text,
     this.textStyle,
-    this.textAlign,
     this.fontSize = 14,
     this.fontColor = Colors.black,
     this.lineHeight,
     this.imageWidget,
-    this.textIsExpend = false,
-    this.isCanTap = true,
     this.space = 4,
     this.isFittedBox = false,
     this.tapCall,
@@ -60,18 +55,13 @@ class HzyBtnWidget extends StatelessWidget {
   // 按钮布局类型
   final BtnLayoutType? btnLayoutType;
 
-  /// 是否可以点击
-  final bool isCanTap;
-
   /// 按钮宽
   final double? width;
 
   /// 按钮高
   final double? height;
 
-  final MainAxisAlignment mainAxisAlignment;
-  final CrossAxisAlignment crossAxisAlignment;
-  final MainAxisSize mainAxisSize;
+  final AlignmentGeometry? alignment;
   // ---------- 装饰器 ----------- //
 
   /// 背景装饰器
@@ -101,14 +91,8 @@ class HzyBtnWidget extends StatelessWidget {
   /// 文本内容
   final String? text;
 
-  /// 文本位置
-  final TextAlign? textAlign;
-
   /// 字体样式
   final TextStyle? textStyle;
-
-  /// 文本是否需要撑满剩余界面
-  final bool textIsExpend;
 
   /// 字体大小
   final double? fontSize;
@@ -138,14 +122,6 @@ class HzyBtnWidget extends StatelessWidget {
     List<Widget> child = [];
     switch (btnLayoutType) {
       case BtnLayoutType.letfImg:
-        child = [
-          iW,
-          sp,
-          configTextExpend(
-            tW: tW,
-          ),
-        ];
-        break;
       case BtnLayoutType.topImg:
         child = [
           iW,
@@ -154,14 +130,6 @@ class HzyBtnWidget extends StatelessWidget {
         ];
         break;
       case BtnLayoutType.rightImg:
-        child = [
-          configTextExpend(
-            tW: tW,
-          ),
-          sp,
-          iW,
-        ];
-        break;
       case BtnLayoutType.bottomImg:
         child = [
           tW,
@@ -170,12 +138,7 @@ class HzyBtnWidget extends StatelessWidget {
         ];
         break;
       case BtnLayoutType.text:
-        child = [
-          configTextExpend(
-            tW: tW,
-            isExpend: width == null ? textIsExpend : true,
-          ),
-        ];
+        child = [tW];
         break;
       case BtnLayoutType.img:
         child = [iW];
@@ -191,6 +154,7 @@ class HzyBtnWidget extends StatelessWidget {
       height: height,
       margin: margin,
       padding: padding,
+      alignment: alignment ?? Alignment.center,
       decoration: decoration ??
           BoxDecoration(
             color: bgColor,
@@ -202,24 +166,12 @@ class HzyBtnWidget extends StatelessWidget {
           ),
       child: body,
     );
-    body = mainAxisSize == MainAxisSize.min
-        ? Row(
-            mainAxisSize: mainAxisSize,
-            mainAxisAlignment: mainAxisAlignment,
-            crossAxisAlignment: crossAxisAlignment,
-            children: [
-              body,
-            ],
-          )
-        : body;
 
     body = tapCall == null
         ? body
         : InkWell(
             onTap: () {
-              if (isCanTap) {
-                tapCall?.call();
-              }
+              tapCall!();
             },
             child: body,
           );
@@ -231,23 +183,13 @@ class HzyBtnWidget extends StatelessWidget {
     return body;
   }
 
-  configTextExpend({
-    required Widget tW,
-    bool? isExpend,
-  }) {
-    return isExpend ?? textIsExpend
-        ? Expanded(
-            child: tW,
-          )
-        : tW;
-  }
-
   /// 创建布局
   Widget createLayout({
     required List<Widget> list,
   }) {
     Widget body = Container();
-
+    MainAxisAlignment mainAxisAlignment = MainAxisAlignment.center;
+    CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center;
     switch (btnLayoutType) {
       case BtnLayoutType.topImg:
       case BtnLayoutType.bottomImg:
@@ -287,10 +229,6 @@ class HzyBtnWidget extends StatelessWidget {
                 color: fontColor,
                 height: lineHeight,
               ),
-          overflow: TextOverflow.ellipsis,
-          textAlign: textAlign ??
-              (btnLayoutType == BtnLayoutType.text ? TextAlign.center : null),
-          maxLines: 2,
         );
 
     return body;

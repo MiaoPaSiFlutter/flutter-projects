@@ -31,7 +31,7 @@ mixin HzyAppBarMixin {
         leadingCallback: () {
           configleadingCallbak(context: context);
         },
-        forceShowBack: configShowBack(),
+        showback: configShowBack(),
         titlew: createAppBarTitleWidget(),
         bottom: createAppBarBottomWidget(),
         toolbarHeight: configPrferredheight(),
@@ -95,9 +95,9 @@ mixin HzyAppBarMixin {
     return null;
   }
 
-  /// 是否强制显示返回按钮
+  /// 是否显示返回按钮
   bool configShowBack() {
-    return false;
+    return true;
   }
 
   /// 配置appBar 高度

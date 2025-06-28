@@ -3,16 +3,15 @@
  * @version: 
  * @Author: TT
  * @Date: 2023-03-18 18:13:28
- * @LastEditors: TT-hzy 
- * @LastEditTime: 2024-06-04 10:40:22
+ * @LastEditors: TT
+ * @LastEditTime: 2023-09-18 10:41:05
  */
 
 import 'package:flutter/material.dart';
-
-import '../hzy_normal_config/hzy_normal_colors.dart';
-import '../hzy_normal_config/hzy_text_style.dart';
-import '../hzy_normal_tools/hzy_normal_tools.dart';
-import 'hzy_normal_widagets.dart';
+import 'package:hzy_normal_tool/hzy_normal_config/hzy_normal_colors.dart';
+import 'package:hzy_normal_tool/hzy_normal_config/hzy_text_style.dart';
+import 'package:hzy_normal_tool/hzy_normal_tools/hzy_normal_tools.dart';
+import 'package:hzy_normal_tool/hzy_normal_widgets/hzy_normal_widagets.dart';
 
 class HzyNormalItemModel {
   /**
@@ -176,10 +175,7 @@ class HzyNormalItemModel {
   int? tapType;
 
   /// item 点击事件
-  OptionalIndexTapCallback? tapItemCall;
-
-  /// 其他信息
-  dynamic otherInfo;
+  TapIndexOptionCallback? tapItemCall;
 
   HzyNormalItemModel({
     this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
@@ -222,7 +218,6 @@ class HzyNormalItemModel {
     this.router,
     this.margin,
     this.tapType = 1,
-    this.otherInfo,
   });
 }
 
@@ -234,7 +229,7 @@ class HzyNormalItemWidget extends StatelessWidget {
   });
 
   final HzyNormalItemModel itemModel;
-  final ItemTapCallback? tapItemCallback;
+  final TapItemCallback? tapItemCallback;
 
   @override
   Widget build(BuildContext context) {
@@ -268,7 +263,7 @@ class HzyNormalItemWidget extends StatelessWidget {
         body,
         itemModel.isShowLine == true
             ? itemModel.lineWidget ??
-                buildDividerLine(
+                HzyNormalTools.configlineSpace(
                   color: itemModel.lineColor!,
                   height: itemModel.lineHeight ?? 0.5,
                   margin: itemModel.lineMargin,
@@ -328,6 +323,7 @@ class HzyNormalItemWidget extends StatelessWidget {
               color: itemModel.leftMsgColor,
             ),
         overflow: TextOverflow.ellipsis,
+        maxLines: 3,
       );
       double maxWidth = maxW;
       if (itemModel.rightType == 0 && itemModel.rightWidget == null) {
@@ -398,8 +394,8 @@ class HzyNormalItemWidget extends StatelessWidget {
 
     // 创建右边图片部分
     createRightImageWidget() {
-      Widget body = buildArrowIcon(
-        color: itemModel.rightIconColor ?? HzyNormalColorS.col666666,
+      Widget body = configChevronRight(
+        color: itemModel.rightIconColor,
       );
       body = itemModel.rightImagePath == null
           ? body

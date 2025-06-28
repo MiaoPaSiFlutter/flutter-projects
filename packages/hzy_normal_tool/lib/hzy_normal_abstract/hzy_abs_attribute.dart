@@ -3,10 +3,11 @@
  * @version: 
  * @Author: TT
  * @Date: 2023-06-25 10:05:36
- * @LastEditors: TT-hzy 
- * @LastEditTime: 2024-05-27 09:44:22
+ * @LastEditors: TT
+ * @LastEditTime: 2023-09-23 15:48:52
  */
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../hzy_normal_config/page_state.dart';
 
@@ -22,10 +23,10 @@ mixin class HzyAbsAttribute {
   final Color? navBackgroudColor = null;
 
   /// 默认安全区顶部 忽略
-  final bool safeAreaTop = true;
+  final bool safeAreatop = true;
 
   /// 默认安全区底部 忽略
-  final bool safeAreaBottom = true;
+  final bool safeAreabottm = true;
 
   /// 背景颜色
   final Color? scallBackGroundColor = null;
@@ -41,6 +42,9 @@ mixin class HzyAbsAttribute {
 
   /// 添加右滑返回拦截器
   final bool isAddPopScope = false;
+
+  /// 电池栏颜色
+  final SystemUiOverlayStyle uiOverlayStyle = SystemUiOverlayStyle.dark;
 }
 
 mixin class HzyAbsState {
@@ -54,45 +58,18 @@ mixin class HzyAbsState {
 /// 刷新界面 规范
 mixin class HzyAbstracRefreshWidget {
   /// 创建刷新控件
-  Widget createRefreshWidget(
-    BuildContext context,
-  ) {
+  Widget createRefreshWidget(BuildContext context) {
     throw UnimplementedError();
   }
 
   /// 创建列表
-  Widget createListView(
-    BuildContext context,
-  ) {
+  Widget createListView(BuildContext context) {
     throw UnimplementedError();
   }
 
   /// 创建列表 item
-  Widget createListitem(
-    BuildContext context,
-    int index,
-  ) {
+  Widget createListitem(BuildContext context, int index) {
     throw UnimplementedError();
-  }
-
-  /// 创建下啦刷新头部
-  createHeader() {
-    throw UnimplementedError();
-  }
-
-  /// 配置下啦刷新头部字体颜色
-  Color? configHeaderTitleColor() {
-    return null;
-  }
-
-  /// 创建上啦加载更多
-  createFooter() {
-    throw UnimplementedError();
-  }
-
-  /// 配置上啦加载更多字体颜色
-  Color? configFooterTitleColor() {
-    return null;
   }
 }
 
@@ -105,7 +82,7 @@ mixin class HzyAbstracRefreshMehod {
   /// 结束刷新
   PageState endRefresh({
     required int type,
-    required PageState state,
+    required PageState pageState,
   }) {
     throw UnimplementedError();
   }
@@ -119,6 +96,15 @@ mixin class HzyAbstracRefreshMehod {
 
 // 配置网络请求规范
 mixin class HzyAbstractNetWork {
+  /// 配置网络请求参数
+  /// mark 区分不同请求
+  Map<String, dynamic>? configNetWorkParmas({
+    String? mark,
+    Map<String, dynamic>? params,
+  }) {
+    return null;
+  }
+
   /// 网络请求
   @protected
   getNetWorkData({

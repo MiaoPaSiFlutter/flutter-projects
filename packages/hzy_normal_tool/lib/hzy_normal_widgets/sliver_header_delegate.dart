@@ -8,6 +8,8 @@
  */
 import 'package:flutter/material.dart';
 
+import '../hzy_normal_tools/hzy_normal_tools.dart';
+
 typedef SliverHeaderBuilder = Widget Function(
   BuildContext context,
   double shrinkOffset,
@@ -52,7 +54,7 @@ class SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
     //测试代码：如果在调试模式，且子组件设置了key，则打印日志
     assert(() {
       if (child.key != null) {
-        debugPrint('${child.key}: shrink: $shrinkOffset，overlaps:$overlapsContent');
+        dPrint('${child.key}: shrink: $shrinkOffset，overlaps:$overlapsContent');
       }
       return true;
     }());

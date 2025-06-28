@@ -1,0 +1,19 @@
+name: hzy_normal_network
+description: 火之夜网络请求封装库
+version: 0.0.1
+homepage: https://gitee.com/tengteng_fan/hzy_normal_network.git
+
+resolution: workspace
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # 一个强大的 HTTP 网络包，支持拦截器、中止和取消请求、自定义适配器、转换器等。
+  dio: ^5.3.2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+flutter:
