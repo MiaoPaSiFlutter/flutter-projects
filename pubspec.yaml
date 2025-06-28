@@ -16,6 +16,32 @@ workspace:
   - packages/hzy_normal_tool
   - packages/hzy_normal_network
   - packages/hzy_common_module
+  - packages_ui/ui_coffe_app
+  - packages_ui/ui_food_app
+  - packages_ui/ui_tesla_app
+  - packages_ui/ui_blogclub_app
+  - packages_ui/ui_facebook_app
+  - packages_ui/ui_fd_daily_task_app
+  - packages_ui/ui_fd_project_management_app
+  - packages_ui/ui_foodybite_app
+  - packages_ui/ui_instagram_app
+  - packages_ui/ui_motion_animations_reply_app
+  - packages_ui/ui_pay_now_ewallet_app
+  - packages_ui/ui_smart_home_app
+  - packages_ui/ui_animated_rive_app
+  - packages_ui/ui_animated_travel_app
+  - packages_ui/ui_chat_message_app
+  - packages_ui/ui_clock_app
+  - packages_ui/ui_goplan_app
+  - packages_ui/ui_online_shopping_app
+  - packages_ui/ui_parallax_effect_app
+  - packages_ui/ui_smart_home_animated_app
+  - packages_ui/ui_task_management_app
+  - packages_ui/ui_ticket_booking_app
+  - packages_ui/ui_ecommerce_complate_app
+  - packages_ui/ui_ecommerce_mobile_app
+  - packages_ui/ui_responsive_app
+  - packages_ui/ui_shoe_app
   - projects/athena_common_flutter
   - projects/athena_app
   - projects/flutter_demo
