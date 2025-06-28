@@ -9,6 +9,7 @@ workspace:
   - packages/athena_core
   - packages/athena_utils
   - packages/athena_network
+  - packages/hzy_normal_tool
   - projects/athena_common_flutter
   - projects/flutter_demo
 
