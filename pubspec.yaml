@@ -16,6 +16,13 @@ workspace:
   - packages/hzy_normal_tool
   - packages/hzy_normal_network
   - packages/hzy_common_module
+
+  - packages_test/extended_sliver_demo
+  - packages_test/scrollerview_demo
+  - packages_test/animation_demo
+  - packages_test/canvas_demo
+  - packages_test/common_demo
+
   - packages_ui/ui_coffe_app
   - packages_ui/ui_food_app
   - packages_ui/ui_tesla_app
