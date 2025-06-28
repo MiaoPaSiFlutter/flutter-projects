@@ -27,10 +27,10 @@ class Homepage extends StatelessWidget {
       body: GetBuilder<ScreensHandlerController>(
         id: controller.idToUpdateWith,
         global: true,
-        builder: (_) {
+        builder: (controller) {
           return PageView(
             key: const ValueKey("pageView"),
-            controller: _.pageController,
+            controller: controller.pageController,
             physics: const NeverScrollableScrollPhysics(),
             children: const <Widget>[
               HomeScreen(),

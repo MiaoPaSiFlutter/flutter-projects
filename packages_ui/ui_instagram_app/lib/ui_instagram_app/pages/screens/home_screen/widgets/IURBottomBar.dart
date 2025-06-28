@@ -11,14 +11,14 @@ class IURBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ScreensHandlerController>(
-      builder: (_) {
+      builder: (controller) {
         return BottomNavigationBar(
           key: const Key('bottomNavigationBar'),
           type: BottomNavigationBarType.fixed,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           onTap: (index) {
-            _.showScreenWithIndexOf(index);
+            controller.showScreenWithIndexOf(index);
           },
           items: <BottomNavigationBarItem>[
             ...List.generate(
