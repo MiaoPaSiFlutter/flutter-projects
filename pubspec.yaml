@@ -1,0 +1,27 @@
+name: flutter_projects
+publish_to: none
+environment:
+  sdk: ^3.8.0
+workspace:
+  - packages/athena_common
+  - packages/athena_components
+  - packages/athena_constants
+  - packages/athena_core
+  - packages/athena_utils
+  - packages/athena_network
+  - projects/athena_common_flutter
+  - projects/flutter_demo
+
+
+melos:
+  # All of the content of your previous melos.yaml file
+  # (Except for the packages and name)
+  scripts:
+    hello:
+      name: hey
+      description: Greet the world
+      run: echo '$GREETING World'
+      env:
+        GREETING: "Hey"
+dev_dependencies:
+  melos: ^7.0.0-dev.9
