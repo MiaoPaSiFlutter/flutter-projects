@@ -3,10 +3,11 @@
  * @version: 
  * @Author: TT
  * @Date: 2023-03-15 22:15:22
- * @LastEditors: TT
- * @LastEditTime: 2023-09-09 16:04:07
+ * @LastEditors: TT-hzy
+ * @LastEditTime: 2024-08-22 18:27:55
  */
 import 'package:flutter/material.dart';
+
 import '../hzy_normal_config/hzy_normal_colors.dart';
 
 class HzyAppBarGenerator {
@@ -14,23 +15,43 @@ class HzyAppBarGenerator {
     required BuildContext context,
     String? title,
     List<Widget>? actions,
-    Widget? titlew,
-    Widget? leading,
+    Widget? titleWidget,
+    Widget? leadingWidget,
     IconData? icon,
-    bool showback = true,
+    bool forceShowBack = false,
     double elevation = 0,
-    double? toolbarHeight,
+    double? toolBarHeight,
     Color? textColor,
+    TextStyle? textStyle,
+    double? fontSize,
     Color? leadingIconColor,
     Color? backgroundColor,
     Widget? flexibleSpace,
+    double? popTop,
     Function()? leadingCallback,
   }) {
+    ThemeData themeData = Theme.of(context);
+    textStyle ??= (textColor != null || fontSize != null)
+        ? TextStyle(
+            color: textColor,
+            fontSize: fontSize ??
+                themeData.appBarTheme.titleTextStyle?.fontSize ??
+                18,
+          )
+        : (themeData.appBarTheme.titleTextStyle ??
+            TextStyle(
+              color: textColor ??
+                  themeData.appBarTheme.titleTextStyle?.color ??
+                  HzyNormalColorS.col101010,
+              fontSize: fontSize ??
+                  themeData.appBarTheme.titleTextStyle?.fontSize ??
+                  18,
+            ));
     Widget leftWidget = configAppBarBackBtnWidget(
       context: context,
-      leading: leading,
+      leading: leadingWidget,
       icon: icon,
-      showback: showback,
+      forceShowBack: forceShowBack,
       leadingIconColor: leadingIconColor,
       leadingCallback: leadingCallback,
     );
@@ -39,13 +60,9 @@ class HzyAppBarGenerator {
         ? Container()
         : Text(
             title,
-            style: TextStyle(
-              fontSize: 18,
-              color: textColor ?? HzyNormalColorS.col101010,
-            ),
-            textAlign: TextAlign.center,
+            style: textStyle,
           );
-    textWidget = titlew ?? textWidget;
+    textWidget = titleWidget ?? textWidget;
     textWidget = Center(
       child: textWidget,
     );
@@ -60,9 +77,10 @@ class HzyAppBarGenerator {
       ],
     );
 
+    double top = popTop ?? MediaQuery.of(context).padding.top;
     body = Container(
-      height: MediaQuery.of(context).padding.top + kToolbarHeight,
-      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+      height: top + kToolbarHeight,
+      padding: EdgeInsets.only(top: top),
       decoration: BoxDecoration(
         color: backgroundColor ?? Colors.white.withOpacity(0),
       ),
@@ -73,7 +91,7 @@ class HzyAppBarGenerator {
         Positioned(
           left: 0,
           right: 0,
-          top: MediaQuery.of(context).padding.top,
+          top: top,
           bottom: 0,
           child: textWidget,
         ),
@@ -88,12 +106,15 @@ class HzyAppBarGenerator {
     required BuildContext context,
     Widget? leading,
     IconData? icon,
-    bool showback = true,
+    bool forceShowBack = false,
     Color? leadingIconColor,
     Function()? leadingCallback,
   }) {
-    final ModalRoute<dynamic>? parentRoute = ModalRoute.of(context);
-    bool canShowBack = parentRoute?.canPop ?? false;
+    bool canPop = Navigator.of(context).canPop();
+    bool canShowBack = canPop;
+    if (forceShowBack) {
+      canShowBack = true;
+    }
     ThemeData themeData = Theme.of(context);
     leadingIconColor ??=
         (themeData.appBarTheme.iconTheme?.color ?? HzyNormalColorS.col101010);
@@ -107,7 +128,6 @@ class HzyAppBarGenerator {
           onPressed: leadingCallback ?? () => Navigator.of(context).pop(),
         );
     backBtn = canShowBack ? backBtn : Container();
-    backBtn = showback ? backBtn : Container();
     return backBtn;
   }
 
@@ -118,7 +138,7 @@ class HzyAppBarGenerator {
     Widget? titlew,
     Widget? leading,
     IconData? icon,
-    bool showback = true,
+    bool forceShowBack = false,
     double elevation = 0,
     double? toolbarHeight,
     PreferredSizeWidget? bottom,
@@ -126,50 +146,69 @@ class HzyAppBarGenerator {
     Color? leadingIconColor,
     Color? backgroundColor,
     Widget? flexibleSpace,
+    double? fontSize,
+    TextStyle? textStyle,
     Function()? leadingCallback,
   }) {
-    final ModalRoute<dynamic>? parentRoute = ModalRoute.of(context);
-    bool canshowback = parentRoute?.canPop ?? false;
+    bool canPop = Navigator.of(context).canPop();
+
+    bool canShowBack = canPop;
+    if (forceShowBack) {
+      canShowBack = true;
+    }
+
     ThemeData themeData = Theme.of(context);
     leadingIconColor ??=
         (themeData.appBarTheme.iconTheme?.color ?? HzyNormalColorS.col101010);
     backgroundColor ??=
         (themeData.appBarTheme.backgroundColor ?? HzyNormalColorS.colffffff);
+    textStyle ??= (textColor != null || fontSize != null)
+        ? TextStyle(
+            color: textColor,
+            fontSize: fontSize ??
+                themeData.appBarTheme.titleTextStyle?.fontSize ??
+                18,
+          )
+        : (themeData.appBarTheme.titleTextStyle ??
+            TextStyle(
+              color: textColor ??
+                  themeData.appBarTheme.titleTextStyle?.color ??
+                  HzyNormalColorS.col101010,
+              fontSize: fontSize ??
+                  themeData.appBarTheme.titleTextStyle?.fontSize ??
+                  18,
+            ));
     return AppBar(
       backgroundColor: backgroundColor,
       centerTitle: true,
       toolbarHeight: toolbarHeight,
       actions: actions,
       flexibleSpace: flexibleSpace,
-      leading: showback
-          ? (canshowback
-              ? (leading ??
-                  IconButton(
-                    icon: Icon(
-                      icon ?? Icons.arrow_back_ios,
-                      color: leadingIconColor,
-                    ),
-                    onPressed:
-                        leadingCallback ?? () => Navigator.of(context).pop(),
-                  ))
-              : null)
-          : null,
+      leading: (canShowBack
+          ? (leading ??
+              IconButton(
+                icon: Icon(
+                  icon ?? Icons.arrow_back_ios_new,
+                  color: leadingIconColor,
+                ),
+                onPressed: leadingCallback ?? () => Navigator.of(context).pop(),
+              ))
+          : null),
       title: titlew ??
           Text(
             title,
-            style: TextStyle(
-              fontSize: 18,
-              color: textColor ?? HzyNormalColorS.col101010,
-            ),
+            style: textStyle,
           ),
       elevation: elevation,
       bottom: bottom,
-      automaticallyImplyLeading: showback,
+      automaticallyImplyLeading: forceShowBack,
     );
   }
 
   // 判断是否是一级界面
-  static bool isfirstPage({required BuildContext context}) {
+  static bool isFirstPage({
+    required BuildContext context,
+  }) {
     bool showback;
     final ModalRoute<dynamic>? parentRoute = ModalRoute.of(context);
     showback = parentRoute?.canPop ?? false;

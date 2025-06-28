@@ -4,7 +4,7 @@
  * @Author: TT
  * @Date: 2023-09-23 11:15:57
  * @LastEditors: TT
- * @LastEditTime: 2023-09-23 15:16:06
+ * @LastEditTime: 2023-12-16 09:16:45
  */
 import 'package:flutter/material.dart';
 
@@ -21,18 +21,20 @@ mixin HzyScaffolMixin {
     required BuildContext context,
     BoxConstraints? constraints,
   }) {
-    Widget body = createScallBody(
-      context: context,
-      constraints: constraints,
-    );
-    body = configIsNeedScaffol()
+    Widget body = configIsNeedScaffol()
         ? Scaffold(
             appBar: createAppBar(context: context),
             backgroundColor: configScallBackgroundColor(),
             resizeToAvoidBottomInset: configResizeToAvoidBottomInset(),
-            body: body,
+            body: createScallBody(
+              context: context,
+              constraints: constraints,
+            ),
           )
-        : body;
+        : createScallBody(
+            context: context,
+            constraints: constraints,
+          );
     return body;
   }
 
@@ -56,7 +58,6 @@ mixin HzyScaffolMixin {
   PreferredSizeWidget? createAppBar({
     required BuildContext context,
   });
- 
 
   /// 创建界面body
   @protected
