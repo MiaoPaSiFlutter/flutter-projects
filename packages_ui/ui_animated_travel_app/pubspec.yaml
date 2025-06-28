@@ -10,8 +10,8 @@ dependencies:
   # 通用
   hzy_common_module:
     path: ../../packages/hzy_common_module
-  font_awesome_flutter: 10.5.0
-  ionicons: 0.2.2
+  font_awesome_flutter: ^10.5.0
+  ionicons: ^0.2.2
 
   flutter:
     sdk: flutter

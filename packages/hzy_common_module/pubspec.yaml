@@ -11,43 +11,43 @@ dependencies:
   flutter:
     sdk: flutter
   # 用于获取主机平台文件系统上的常用位置，例如临时目录和应用程序数据目录。
-  path_provider: 2.1.5
+  path_provider: ^2.1.5
   # InheritedWidget 的包装器，使它们更易于使用且更可重用。
-  provider: 6.1.5
+  provider: ^6.1.5
   # 用于查询应用程序包的信息，例如iOS上的CFBundleVersion或Android上的versionCode。
-  package_info_plus: 4.1.0
+  package_info_plus: ^4.1.0
   # 相机
-  wechat_camera_picker: 4.3.7
+  wechat_camera_picker: ^4.3.7
   # 相册选择
-  wechat_assets_picker: 9.5.1
+  wechat_assets_picker: ^9.5.1
   # 图片加载
-  extended_image: 10.0.1
+  extended_image: ^10.0.1
   # 图片文件流
-  extended_image_library: 5.0.1
+  extended_image_library: ^5.0.1
   # 加载动画
-  flutter_easyloading: 3.0.5
+  flutter_easyloading: ^3.0.5
   # 获取app 权限
-  permission_handler: 10.4.2
+  permission_handler: ^10.4.2
   # 屏幕适配
-  flutter_screenutil: 5.9.3
+  flutter_screenutil: ^5.9.3
   # 拖拽
-  reorderables: 0.6.0
+  reorderables: ^0.6.0
   # 刷新控件
-  easy_refresh: 3.4.0
+  easy_refresh: ^3.4.0
   # 本地数据存储,不涉及到系统读写权限
-  shared_preferences: 2.2.3
+  shared_preferences: ^2.2.3
   # 图片选择
-  image_picker: 1.0.0
+  image_picker: ^1.0.0
   # 项目 基础框架
   # 状态管理
   # 路由
-  get: 4.6.6
+  get: ^4.6.6
   # 使用 Dart Streams 来解耦应用程序的简单事件总线
-  event_bus_plus: 0.6.1
+  event_bus_plus: ^0.6.1
   # 用于启动 URL 的 Flutter 插件。  支持网络、电话、短信和电子邮件方案。
-  url_launcher: 6.2.1
+  url_launcher: ^6.2.1
   # 适用于所有 Dart 平台（Web、VM、Flutter）的 RFC4122（v1、v4、v5）UUID 生成器和解析器
-  uuid: 4.5.1
+  uuid: ^4.5.1
   # 基础项目工具
   hzy_normal_tool:
     path:  ../../packages/hzy_normal_tool

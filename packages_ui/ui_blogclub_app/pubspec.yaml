@@ -10,12 +10,12 @@ dependencies:
   # 通用
   hzy_common_module:
     path: ../../packages/hzy_common_module
-  dotted_border: 2.1.0
-  flutter_svg: 2.0.8
-  smooth_page_indicator: 1.1.0
-  flutter_cache_manager: 3.4.1
-  video_player: 2.7.0
-  rxdart: 0.27.7
+  dotted_border: ^2.1.0
+  flutter_svg: ^2.0.8
+  smooth_page_indicator: ^1.1.0
+  flutter_cache_manager: ^3.4.1
+  video_player: ^2.7.0
+  rxdart: ^0.27.7
 
   flutter:
     sdk: flutter

@@ -11,9 +11,9 @@ dependencies:
   hzy_common_module:
     path: ../../packages/hzy_common_module
 
-  animations: 2.0.8
-  google_fonts: 5.1.0
-  flutter_gallery_assets: 1.0.2
+  animations: ^2.0.8
+  google_fonts: ^5.1.0
+  flutter_gallery_assets: ^1.0.2
 
   flutter:
     sdk: flutter

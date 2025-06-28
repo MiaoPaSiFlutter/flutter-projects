@@ -10,7 +10,7 @@ dependencies:
   # 通用
   hzy_common_module:
     path: ../../packages/hzy_common_module
-  badges: 3.1.2
+  badges: ^3.1.2
   # youtube_player_flutter: ^8.0.0
   # youtube_player_iframe: ^2.1.0
 

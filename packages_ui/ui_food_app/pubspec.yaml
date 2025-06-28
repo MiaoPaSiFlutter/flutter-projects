@@ -10,9 +10,9 @@ dependencies:
   # 通用
   hzy_common_module:
     path: ../../packages/hzy_common_module
-  google_fonts: 5.1.0
-  flutter_svg: 2.0.8
-  flutter_rating_bar: 4.0.1
+  google_fonts: ^5.1.0
+  flutter_svg: ^2.0.8
+  flutter_rating_bar: ^4.0.1
 
   flutter:
     sdk: flutter

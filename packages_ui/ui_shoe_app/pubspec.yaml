@@ -11,12 +11,12 @@ dependencies:
   hzy_common_module:
     path: ../../packages/hzy_common_module
 
-  dots_indicator: 3.0.0
-  flutter_svg: 2.0.8
-  font_awesome_flutter: 10.5.0
-  google_fonts: 5.1.0
-  lottie: 2.6.0
-  velocity_x: 4.3.1
+  dots_indicator: ^3.0.0
+  flutter_svg: ^2.0.8
+  font_awesome_flutter: ^10.5.0
+  google_fonts: ^5.1.0
+  lottie: ^2.6.0
+  velocity_x: ^4.3.1
 
   flutter:
     sdk: flutter

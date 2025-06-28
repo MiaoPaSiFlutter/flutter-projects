@@ -11,13 +11,13 @@ dependencies:
   hzy_common_module:
     path: ../../packages/hzy_common_module
 
-  carousel_slider: 5.1.1
-  flutter_svg: 2.0.8
-  google_fonts: 5.1.0
-  auto_route: 7.8.4
-  animations: 2.0.8
-  flutter_rating_bar: 4.0.1
-  flutter_feather_icons: 2.0.0+1
+  carousel_slider: ^5.1.1
+  flutter_svg: ^2.0.8
+  google_fonts: ^5.1.0
+  auto_route: ^7.8.4
+  animations: ^2.0.8
+  flutter_rating_bar: ^4.0.1
+  flutter_feather_icons: ^2.0.0+1
 
   flutter:
     sdk: flutter

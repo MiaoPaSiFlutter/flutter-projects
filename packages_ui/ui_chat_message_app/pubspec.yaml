@@ -10,7 +10,7 @@ dependencies:
   # 通用
   hzy_common_module:
     path: ../../packages/hzy_common_module
-  google_fonts: 5.1.0
+  google_fonts: ^5.1.0
 
   flutter:
     sdk: flutter

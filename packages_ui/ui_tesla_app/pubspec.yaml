@@ -10,11 +10,11 @@ dependencies:
   # 通用
   hzy_common_module:
     path: ../../packages/hzy_common_module
-  google_fonts: 5.1.0
-  intl: 0.20.2
-  carousel_slider: 5.1.1
-  font_awesome_flutter: 10.5.0
-  device_preview: 1.2.0
+  google_fonts: ^5.1.0
+  intl: ^0.20.2
+  carousel_slider: ^5.1.1
+  font_awesome_flutter: ^10.5.0
+  device_preview: ^1.2.0
 
   flutter:
     sdk: flutter
