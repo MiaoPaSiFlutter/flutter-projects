@@ -1,10 +1,33 @@
 # flutter-projects
+
 Flutter Monorepo（单体仓库）。这个仓库包含多个相关项目或包
 
-### Flutter多版本管理 (使用FVM)
+# 整理
+
+> [一些 UI 搜集整理](./packages_ui/screenshots.md)
+
+> [一些 APP 搜集整理](./packages_app/screenshots.md)
+
+> [一款基于 RethinkDB 的聊天 APP](./packages_app/flutter_chat_app/README.md)
+
+## Web
+
+web 产物在`ts-pages`分支可查看。
+[查看运行效果](https://miaopasiflutter.github.io/flutter-projects/)
+
+## Android
+
+![one_download](./screenshots/app_download.jpg)
+[JD-Android-V0.1 下载地址](https://www.pgyer.com/1lJA)
+
+## iOS
+
+无苹果开发者账号, 暂时无法打包 APP, 请亲自进行编译并在模拟器或手机上运行
+
+### Flutter 多版本管理 (使用 FVM)
 
 ```
-$ fvm list  # 查看本地的flutter sdk 列表                                                       
+$ fvm list  # 查看本地的flutter sdk 列表
 Cache directory:  /Users/aosom/fvm/versions
 Directory Size: 7.48 GB
 
@@ -18,7 +41,7 @@ Directory Size: 7.48 GB
 
 $ fvm use 3.32.4 # 设置 flutter 版本为 3.32.4
 You should add the fvm version directory ".fvm/" to .gitignore.
-✔ Would you like to do that now? · yes                                                                                                                                                               
+✔ Would you like to do that now? · yes
 ✓ Added .fvm/ to .gitignore
 
 ✓ Dependencies resolved. (2.9s)
@@ -78,9 +101,9 @@ Generating IntelliJ IDE files...
 
 $ fvm dart pub global run melos hello # 运行定义的 script
 Resolving dependencies in `/Users/aosom/Documents/yhui/github/ZYHB/flutter-projects`... (8.4s)
-Downloading packages... 
+Downloading packages...
 Got dependencies in `/Users/aosom/Documents/yhui/github/ZYHB/flutter-projects`.
-Building package executable... 
+Building package executable...
 Built melos:melos.
 melos run hello
   └> echo '$GREETING World'
@@ -91,34 +114,34 @@ $GREETING World
 ```
 
 ### melos aliases
+
 每次都要加上前缀 `fvm dart pub global run melos xxx` 才能执行命令比较繁琐，可以给 melos 创建一个 aliases
+
 ```
 在 .zshrc 文件加上：
 alias melos="fvm dart pub global run melos"
 
 ```
 
-
 ### package 介绍
+
 ```
 # 创建 package
 $ fvm flutter  create --template=package athena_network
 ```
 
-
-
-
-
 ### 推荐脚本的写法以及常用脚本分享
 
 #### hello
+
 一个简单脚本，执行后输出：
+
 ```
 $ fvm dart pub global run melos hello # 运行定义的 script
 Resolving dependencies in `/Users/aosom/Documents/yhui/github/ZYHB/flutter-projects`... (8.4s)
-Downloading packages... 
+Downloading packages...
 Got dependencies in `/Users/aosom/Documents/yhui/github/ZYHB/flutter-projects`.
-Building package executable... 
+Building package executable...
 Built melos:melos.
 melos run hello
   └> echo '$GREETING World'
@@ -126,6 +149,5 @@ melos run hello
 
 $GREETING World
 ```
+
 #### test:selective_unit_test
-
-
