@@ -17,6 +17,9 @@ workspace:
   - packages/hzy_normal_network
   - packages/hzy_common_module
 
+  - packages_game/game_the_green_ninja
+  - packages_game/game_math_app
+
   - packages_test/extended_sliver_demo
   - packages_test/scrollerview_demo
   - packages_test/animation_demo
@@ -53,7 +56,6 @@ workspace:
   - projects/athena_app
   - projects/flutter_demo
 
-
 melos:
   # All of the content of your previous melos.yaml file
   # (Except for the packages and name)
@@ -88,5 +90,3 @@ melos:
     runalone_bootstrap_athena_app:
       run: melos exec --scope="projects/athena_app" -- 'flutter pub get'
       description: 为 athena_app 单独执行 pub get
-
-
