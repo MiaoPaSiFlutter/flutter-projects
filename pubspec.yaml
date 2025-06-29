@@ -16,6 +16,8 @@ workspace:
   - packages/hzy_normal_tool
   - packages/hzy_normal_network
   - packages/hzy_common_module
+  - packages/audiotagger
+  - packages/persistent_bottom_nav_bar
 
   - packages_game/game_the_green_ninja
   - packages_game/game_math_app
@@ -52,6 +54,27 @@ workspace:
   - packages_ui/ui_ecommerce_mobile_app
   - packages_ui/ui_responsive_app
   - packages_ui/ui_shoe_app
+
+  - packages_app/flutter_chat_app
+  - packages_app/flutter_jd
+  - packages_app/flutter_books
+  - packages_app/flutter_weather
+  - packages_app/flutter_black_hole
+  - packages_app/flutter_muet_attendance_taking_app
+  - packages_app/flutter_foodhub_app
+  - packages_app/flutter_paytabs_tickets_app
+  - packages_app/flutter_oorbswallpaper_app
+  - packages_app/flutter_nimbus_app
+  - packages_app/flutter_fitness_app
+  - packages_app/flutter_periodic_table_app
+  - packages_app/flutter_to_do_app
+  - packages_app/flutter_marketky_app
+  - packages_app/flutter_crypto_market_app
+  - packages_app/flutter_chatgpt_app
+  - packages_app/flutter_valorant_app
+  - packages_app/flutter_compass_app
+  - packages_app/flutter_quiz_app
+
   - projects/athena_common_flutter
   - projects/athena_app
   - projects/flutter_demo

@@ -1,0 +1,35 @@
+name: flutter_books
+description: A new Flutter package project.
+version: 0.0.1
+publish_to: none
+homepage: "http"
+resolution: workspace
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  # 通用
+  hzy_common_module:
+    path: ../../packages/hzy_common_module
+  # 通过“json_serialized”包支持 JSON 代码生成的类和辅助函数。
+  json_annotation: ^4.9.0
+  # 通过注释 Dart 类，自动生成用于与 JSON 相互转换的代码。
+  json_serializable: ^6.9.5
+  # Flutter 的 Toast 库，一行代码轻松创建 Toast 消息
+  fluttertoast: ^8.2.2
+  # SQLite 的 Flutter 插件，SQLite 是一个独立的、高可靠性的嵌入式 SQL 数据库引擎。
+  sqflite: ^2.4.2
+  # Carousel组件，新增flutter3支持
+  flutter_swiper_null_safety_flutter3: ^4.0.0
+
+  flutter:
+    sdk: flutter
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  # 用于 Dart 代码生成和模块化编译的构建系统。
+  build_runner: ^2.4.6
+flutter:
+  assets:
+    - assets/images/
