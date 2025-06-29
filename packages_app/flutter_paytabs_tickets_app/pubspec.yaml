@@ -23,7 +23,7 @@ dependencies:
   # Dart 中的函数式编程。  使用高效的不可变数据结构、monad、镜头和其他 FP 工具来净化您的 Dart 代码。
   dartz: ^0.10.1
   # Paytabs 的 Flutter 插件，用于使用卡、Aps 等处理付款。
-  flutter_paytabs_bridge: ^2.6.3
+  flutter_paytabs_bridge: ^2.7.0
   # 大致了解您的 Flutter 应用程序在其他设备上的外观和执行情况。
   device_preview: ^1.2.0
 

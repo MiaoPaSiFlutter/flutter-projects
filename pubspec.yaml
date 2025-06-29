@@ -78,6 +78,7 @@ workspace:
   - projects/athena_common_flutter
   - projects/athena_app
   - projects/flutter_demo
+  - projects/example_normal
 
 melos:
   # All of the content of your previous melos.yaml file
