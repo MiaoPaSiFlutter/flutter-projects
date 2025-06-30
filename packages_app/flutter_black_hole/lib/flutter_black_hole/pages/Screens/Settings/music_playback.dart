@@ -1,6 +1,7 @@
 import 'package:flutter_black_hole/flutter_black_hole/pages/Constants/constants_index.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/CustomWidgets/custom_widgets_index.dart';
-import 'package:flutter_black_hole/flutter_black_hole/l10n/app_localizations.dart';
+import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
+
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Home/saavn.dart'
     as home_screen;
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Top Charts/top.dart'

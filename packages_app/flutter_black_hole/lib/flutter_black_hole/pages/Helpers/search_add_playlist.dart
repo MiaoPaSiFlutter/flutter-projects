@@ -1,7 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_black_hole/flutter_black_hole/l10n/app_localizations.dart';
+import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
+
 import 'package:http/http.dart';
 import 'package:logging/logging.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';

@@ -112,5 +112,9 @@ melos:
       description: Run `flutter test` in all packages
 
     runalone_bootstrap_athena_app:
-      run: melos exec --scope="projects/athena_app" -- 'flutter pub get'
+      run: melos exec --scope="athena_app" -- 'flutter pub get' --verbose
       description: 为 athena_app 单独执行 pub get
+
+    runalone_bootstrap_flutter_black_hole:
+      run: melos exec --scope="flutter_black_hole" -- 'flutter pub get' --verbose
+      description: 为 flutter_black_hole 单独执行 pub get

@@ -24,7 +24,8 @@ import 'package:flutter_black_hole/flutter_black_hole/pages/CustomWidgets/custom
 import 'package:flutter_black_hole/flutter_black_hole/pages/Helpers/helpers_index.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Search/search.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/constants/constants_index.dart';
-import 'package:flutter_black_hole/flutter_black_hole/l10n/app_localizations.dart';
+import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
+
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hzy_common_module/hzy_common_module.dart';

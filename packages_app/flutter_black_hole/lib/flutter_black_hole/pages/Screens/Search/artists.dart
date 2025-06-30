@@ -23,7 +23,8 @@ import 'package:flutter_black_hole/flutter_black_hole/pages/CustomWidgets/custom
 import 'package:flutter_black_hole/flutter_black_hole/pages/Models/models_index.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Common/song_list.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Services/services_index.dart';
-import 'package:flutter_black_hole/flutter_black_hole/l10n/app_localizations.dart';
+import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
+
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 

@@ -1,7 +1,7 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_black_hole/flutter_black_hole.dart';
-import 'package:flutter_black_hole/flutter_black_hole/l10n/app_localizations.dart';
+import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
 import 'package:hive/hive.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 

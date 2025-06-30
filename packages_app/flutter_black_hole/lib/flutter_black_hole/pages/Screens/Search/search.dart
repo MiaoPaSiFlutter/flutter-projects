@@ -30,7 +30,8 @@ import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Search/artis
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/YouTube/youtube_artist.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/YouTube/youtube_playlist.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Services/services_index.dart';
-import 'package:flutter_black_hole/flutter_black_hole/l10n/app_localizations.dart';
+import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
+
 import 'package:flutter_black_hole/flutter_black_hole/pages/CustomWidgets/search_bar.dart'
     as searchbar;
 import 'package:flutter/material.dart';

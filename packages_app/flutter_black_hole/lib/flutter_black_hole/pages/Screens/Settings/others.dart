@@ -5,7 +5,8 @@ import 'dart:io';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Constants/constants_index.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/CustomWidgets/custom_widgets_index.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Helpers/helpers_index.dart';
-import 'package:flutter_black_hole/flutter_black_hole/l10n/app_localizations.dart';
+import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/BlackHoleApp.dart';

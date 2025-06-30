@@ -23,7 +23,8 @@ import 'package:flutter_black_hole/flutter_black_hole/pages/CustomWidgets/custom
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Library/liked.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/LocalMusic/downed_songs.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/LocalMusic/downed_songs_desktop.dart';
-import 'package:flutter_black_hole/flutter_black_hole/l10n/app_localizations.dart';
+import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
+
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 

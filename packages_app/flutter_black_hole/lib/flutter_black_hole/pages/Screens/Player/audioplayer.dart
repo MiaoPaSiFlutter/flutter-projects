@@ -28,7 +28,8 @@ import 'package:flutter_black_hole/flutter_black_hole/pages/CustomWidgets/custom
 import 'package:flutter_black_hole/flutter_black_hole/pages/Helpers/helpers_index.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Common/song_list.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Search/albums.dart';
-import 'package:flutter_black_hole/flutter_black_hole/l10n/app_localizations.dart';
+import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/cupertino.dart';

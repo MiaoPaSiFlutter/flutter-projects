@@ -62,7 +62,7 @@ import 'app_localizations_zh.dart';
 /// `supportedLocales` list. For example:
 ///
 /// ```dart
-/// import 'l10n/app_localizations.dart';
+/// import 'l10n-output/app_localizations.dart';
 ///
 /// return MaterialApp(
 ///   localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -107,7 +107,7 @@ import 'app_localizations_zh.dart';
 /// property.
 abstract class AppLocalizations {
   AppLocalizations(String locale)
-      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -130,11 +130,11 @@ abstract class AppLocalizations {
   /// of delegates is preferred or required.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
-    delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-  ];
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
@@ -180,7 +180,7 @@ abstract class AppLocalizations {
     Locale('vi'),
     Locale('zh'),
     Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
-    Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant')
+    Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
   ];
 
   /// No description provided for @aboard.
@@ -2331,47 +2331,47 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) => <String>[
-        'ar',
-        'be',
-        'bn',
-        'cs',
-        'da',
-        'de',
-        'el',
-        'en',
-        'es',
-        'fa',
-        'fr',
-        'gu',
-        'he',
-        'hi',
-        'hu',
-        'id',
-        'it',
-        'ja',
-        'km',
-        'kn',
-        'ko',
-        'ml',
-        'mn',
-        'mr',
-        'ne',
-        'nl',
-        'or',
-        'pa',
-        'pl',
-        'pt',
-        'ru',
-        'sq',
-        'sv',
-        'ta',
-        'te',
-        'tr',
-        'uk',
-        'ur',
-        'vi',
-        'zh'
-      ].contains(locale.languageCode);
+    'ar',
+    'be',
+    'bn',
+    'cs',
+    'da',
+    'de',
+    'el',
+    'en',
+    'es',
+    'fa',
+    'fr',
+    'gu',
+    'he',
+    'hi',
+    'hu',
+    'id',
+    'it',
+    'ja',
+    'km',
+    'kn',
+    'ko',
+    'ml',
+    'mn',
+    'mr',
+    'ne',
+    'nl',
+    'or',
+    'pa',
+    'pl',
+    'pt',
+    'ru',
+    'sq',
+    'sv',
+    'ta',
+    'te',
+    'tr',
+    'uk',
+    'ur',
+    'vi',
+    'zh',
+  ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -2489,8 +2489,9 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   }
 
   throw FlutterError(
-      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-      'an issue with the localizations generation tool. Please file an issue '
-      'on GitHub with a reproducible sample app and the gen-l10n configuration '
-      'that was used.');
+    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+    'an issue with the localizations generation tool. Please file an issue '
+    'on GitHub with a reproducible sample app and the gen-l10n configuration '
+    'that was used.',
+  );
 }

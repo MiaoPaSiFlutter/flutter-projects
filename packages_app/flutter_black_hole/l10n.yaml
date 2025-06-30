@@ -9,6 +9,9 @@ arb-dir: lib/flutter_black_hole/l10n
 ## `header-file` is the file that contains a custom
 ## header for each of the generated files.
 header-file: header.txt
+
+# 将国际化生成的文件输出到该路径下
+output-dir: lib/flutter_black_hole/l10n-output
 ## `output-class` is the name of the localizations class your
 ## Flutter application will use. The file will need to be
 ## imported throughout your application.

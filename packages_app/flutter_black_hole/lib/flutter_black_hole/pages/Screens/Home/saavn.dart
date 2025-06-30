@@ -28,7 +28,8 @@ import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Common/song_
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Library/liked.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Search/artists.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Services/services_index.dart';
-import 'package:flutter_black_hole/flutter_black_hole/l10n/app_localizations.dart';
+import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
+
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
