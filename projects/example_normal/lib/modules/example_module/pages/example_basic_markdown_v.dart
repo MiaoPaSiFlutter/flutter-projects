@@ -257,7 +257,7 @@ class ExampleBasicMarkdownC extends OceanAbsCommonGetXController{
       ),
     ],
   ];
-  Rx<Color?> leadIconColor = HzyCommonColor().col000000.obs;
+  Rx<Color?> leadIconColor = OceanCommonColor().col000000.obs;
 
   /// 配置导航栏字体
   var isShowAppBar = true.obs;
@@ -270,7 +270,7 @@ class ExampleBasicMarkdownC extends OceanAbsCommonGetXController{
 
   var isShowBack = true.obs;
 
-  Rx<Color?> textColor = HzyCommonColor().col000000.obs;
+  Rx<Color?> textColor = OceanCommonColor().col000000.obs;
 
   var isShowTitle = false.obs;
 
@@ -288,7 +288,7 @@ class ExampleBasicMarkdownC extends OceanAbsCommonGetXController{
 
   var isneedScaffol = true.obs;
 
-  var backgroundColor = HzyCommonColor().whitebackgroundColor.obs;
+  var backgroundColor = OceanCommonColor().whitebackgroundColor.obs;
 
   var isChangeBoxD = false.obs;
   // --------- 生命周期  --------- //

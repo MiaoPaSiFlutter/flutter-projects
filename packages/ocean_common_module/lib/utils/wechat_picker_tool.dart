@@ -12,7 +12,7 @@ import 'package:ocean_common_module/utils/picker_tool.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 import 'package:wechat_camera_picker/wechat_camera_picker.dart';
 
-import '../config/hzy_common_color_config.dart';
+import '../config/ocean_common_color_config.dart';
 import 'utils.dart';
 
 class WechatPickerConfig {
@@ -86,7 +86,7 @@ class WechatPickerTool {
             maxAssets: maxAssets,
             selectedAssets: selectedAssets,
             requestType: requestType,
-            themeColor: themeColor ?? HzyCommonColor().colthemes,
+            themeColor: themeColor ?? OceanCommonColor().colthemes,
           ),
     );
   }

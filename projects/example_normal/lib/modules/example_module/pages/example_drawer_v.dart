@@ -48,7 +48,7 @@ class ExampleDrawerV extends OceanAbsCommonGetXWidget<ExampleDrawerC> {
       height: 100,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: HzyCommonColor().col000000.withOpacity(0.2),
+        color: OceanCommonColor().col000000.withOpacity(0.2),
         borderRadius: BorderRadius.circular(20.r),
       ),
       child: Stack(
@@ -133,7 +133,7 @@ class DrawerBodylessV extends OceanAbsCommonLessWidget {
     Widget body = Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(150.r),
-        color: HzyCommonColor().whitebackgroundColor,
+        color: OceanCommonColor().whitebackgroundColor,
         boxShadow: [configShadow()],
       ),
       width: 150.w,
@@ -214,7 +214,7 @@ class DrawerBodylessV extends OceanAbsCommonLessWidget {
           margin: EdgeInsets.only(right: 10.w),
           imageWidget: Icon(
             Icons.close,
-            color: HzyCommonColor().wbgblacktextcolor,
+            color: OceanCommonColor().wbgblacktextcolor,
             size: 20,
           ),
           tapCall: () {

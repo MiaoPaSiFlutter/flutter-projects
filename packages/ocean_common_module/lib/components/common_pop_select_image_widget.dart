@@ -139,7 +139,7 @@ class CommonSelectImageState extends OceanAbsCommonState<CommonPopSelectImageWid
       type: widget.type,
       normalSelect: selectImages,
       isMultiple: widget.isMultiple,
-      selectBorColor: HzyCommonColor().colthemes,
+      selectBorColor: OceanCommonColor().colthemes,
       selectTapCall: (selectList) {
         setState(() {
           selectImages = selectList;
@@ -177,8 +177,8 @@ class CommonSelectImageState extends OceanAbsCommonState<CommonPopSelectImageWid
                 imageWidget: configNormalCheckBoxWidget(
                   isSelcet: isCheckAll,
                   color: isCheckAll
-                      ? HzyCommonColor().colthemes
-                      : HzyCommonColor().colplacetextcolor,
+                      ? OceanCommonColor().colthemes
+                      : OceanCommonColor().colplacetextcolor,
                 ),
                 text: LaunchIdConfig.selectAll.tr,
                 margin: EdgeInsets.only(
@@ -199,12 +199,12 @@ class CommonSelectImageState extends OceanAbsCommonState<CommonPopSelectImageWid
                   : LaunchIdConfig.collection.tr,
           fontColor: selectImages.isNotEmpty
               ? HzyNormalColorS.colffffff
-              : HzyCommonColor().colplacetextcolor,
+              : OceanCommonColor().colplacetextcolor,
           width: 60,
           fontSize: 14.sp,
           decoration: BoxDecoration(
             color: selectImages.isNotEmpty
-                ? HzyCommonColor().colthemes
+                ? OceanCommonColor().colthemes
                 : HzyNormalColorS.coldadada,
             borderRadius: BorderRadius.circular(20),
           ),

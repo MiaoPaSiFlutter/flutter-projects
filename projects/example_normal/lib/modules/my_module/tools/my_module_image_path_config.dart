@@ -10,7 +10,7 @@
 import 'package:ocean_common_module/ocean_common_module.dart';
 import '../config/my_module_image_id_config.dart';
 
-class MyModuleImagePathConfig extends HzyImageAbs {
+class MyModuleImagePathConfig extends OceanImageAbs {
   @override
   Map<String, String> get lightInfo => {
         MyModuleImageIdConfig.myHeaderImg:

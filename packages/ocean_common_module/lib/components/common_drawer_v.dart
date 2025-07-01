@@ -160,7 +160,7 @@ class CommonDrawerState extends OceanAbsCommonState<CommonDrawerPage>
     );
     body = Container(
       decoration: BoxDecoration(
-        color: HzyCommonColor().whitebackgroundColor,
+        color: OceanCommonColor().whitebackgroundColor,
         boxShadow: <BoxShadow>[
           BoxShadow(
             color: HzyNormalColorS.grey.withAlpha(153),

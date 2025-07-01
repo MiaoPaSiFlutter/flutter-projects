@@ -76,7 +76,7 @@ class ExampleTuItmeImagelessV extends OceanAbsCommonLessWidget {
   @override
   configBoxDecoreation() {
     return BoxDecoration(
-      color: HzyCommonColor().backgroudgrey,
+      color: OceanCommonColor().backgroudgrey,
       borderRadius: BorderRadius.circular(
         4.r,
       ),

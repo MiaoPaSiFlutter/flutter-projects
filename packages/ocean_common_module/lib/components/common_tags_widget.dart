@@ -32,11 +32,11 @@ class CommonTagsWidget extends StatelessWidget {
       return Container();
     } else {
       Decoration decoration_ = BoxDecoration(
-        border: Border.all(color: HzyCommonColor().col000000, width: 1),
+        border: Border.all(color: OceanCommonColor().col000000, width: 1),
         borderRadius: BorderRadius.circular(2),
       );
       TextStyle style_ =
-          TextStyle(fontSize: 10, color: HzyCommonColor().col000000);
+          TextStyle(fontSize: 10, color: OceanCommonColor().col000000);
 
       return Container(
         margin: margin,

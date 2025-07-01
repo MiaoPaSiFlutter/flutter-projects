@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ocean_common_module/ocean_common_module.dart';
-import '../config/hzy_common_image_config.dart';
+import '../config/ocean_common_image_config.dart';
 
 /// 创建加载动画
 Widget configLoadWidget({Size? size}) {
@@ -100,7 +100,7 @@ Widget createNoDataWidget() {
 /// 创建主题色阴影
 BoxShadow configThemeShadow({int opacity = 204}) {
   return BoxShadow(
-    color: HzyCommonColor().colthemes.withAlpha(opacity),
+    color: OceanCommonColor().colthemes.withAlpha(opacity),
     offset: const Offset(0, 3),
     blurRadius: 10,
     spreadRadius: 0,
@@ -110,7 +110,7 @@ BoxShadow configThemeShadow({int opacity = 204}) {
 /// 创建灰色阴影
 BoxShadow configShadow({int opacity = 102}) {
   return BoxShadow(
-    color: HzyCommonColor().colc3c3c3.withAlpha(opacity),
+    color: OceanCommonColor().colc3c3c3.withAlpha(opacity),
     offset: const Offset(0, 0),
     blurRadius: 10.0,
     spreadRadius: 0,
@@ -120,8 +120,8 @@ BoxShadow configShadow({int opacity = 102}) {
 /// 创建通用nav 背景图
 Widget configNavImageBg() {
   Widget body = Image.asset(
-    HzyCommonImagePathConfig().configImagePath(
-      pathkey: HzyCommonImageIdConfig.navBgImg,
+    OceanCommonImagePathConfig().configImagePath(
+      pathkey: OceanCommonImageIdConfig.navBgImg,
     ),
     fit: BoxFit.fill,
     width: SizeMacro.screenWidth,
@@ -140,11 +140,11 @@ Widget configNormalDarkItemWidget({
   ItemTapCallback? onOtherTap,
   ItemTapCallback? onTap,
 }) {
-  itemModel.leftMsgColor = HzyCommonColor().wbgblacktextcolor;
+  itemModel.leftMsgColor = OceanCommonColor().wbgblacktextcolor;
   if (itemModel.isHintWidget == false) {
-    itemModel.backGroudColor = HzyCommonColor().whitebackgroundColor;
+    itemModel.backGroudColor = OceanCommonColor().whitebackgroundColor;
   } else {
-    itemModel.backGroudColor = HzyCommonColor().backgroudgrey;
+    itemModel.backGroudColor = OceanCommonColor().backgroudgrey;
   }
   if (index == 0 && radius != 0) {
     itemModel.borderRadius = BorderRadius.vertical(
@@ -165,7 +165,7 @@ Widget configNormalDarkItemWidget({
   if (index == 0 && allNum == 1 && radius != 0) {
     itemModel.borderRadius = BorderRadius.circular(radius);
   }
-  itemModel.lineColor = HzyCommonColor().linecolor;
+  itemModel.lineColor = OceanCommonColor().linecolor;
   Widget body = HzyNormalItemWidget(
     itemModel: itemModel,
     tapItemCallback: (itemModel, iex) {

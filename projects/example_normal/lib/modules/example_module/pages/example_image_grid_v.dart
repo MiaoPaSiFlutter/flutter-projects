@@ -50,7 +50,7 @@ class ExampleImageGridV extends OceanAbsCommonGetXWidget<ExampleImageGridC> {
             height: 30,
             fontColor: ct.isCanTap
                 ? HzyNormalColorS.colffffff
-                : HzyCommonColor().colplacetextcolor,
+                : OceanCommonColor().colplacetextcolor,
             isFittedBox: false,
             padding: EdgeInsets.symmetric(
               horizontal: 5.h,
@@ -60,7 +60,7 @@ class ExampleImageGridV extends OceanAbsCommonGetXWidget<ExampleImageGridC> {
                 4.r,
               ),
               color: ct.isCanTap
-                  ? HzyCommonColor().colthemes
+                  ? OceanCommonColor().colthemes
                   : HzyNormalColorS.coldadada,
             ),
             tapCall: () {
@@ -91,7 +91,7 @@ class ExampleImageGridV extends OceanAbsCommonGetXWidget<ExampleImageGridC> {
       width: SizeMacro.screenWidth,
       padding: EdgeInsets.all(20.w),
       decoration: BoxDecoration(
-        color: HzyCommonColor().whitebackgroundColor,
+        color: OceanCommonColor().whitebackgroundColor,
       ),
       child: body,
     );
@@ -111,8 +111,8 @@ class ExampleImageGridV extends OceanAbsCommonGetXWidget<ExampleImageGridC> {
             ),
             isShowLine: true,
             rightType: 1,
-            leftMsgColor: HzyCommonColor().wbgblacktextcolor,
-            backGroudColor: HzyCommonColor().whitebackgroundColor,
+            leftMsgColor: OceanCommonColor().wbgblacktextcolor,
+            backGroudColor: OceanCommonColor().whitebackgroundColor,
             rightWidget: configAddorSubtractWidget(
               type: 1,
               ts: "${controller.crossAxisCount}",
@@ -130,8 +130,8 @@ class ExampleImageGridV extends OceanAbsCommonGetXWidget<ExampleImageGridC> {
             leftMsg: LaunchIdConfig.row.tr + LaunchIdConfig.space.tr,
             isShowLine: true,
             rightType: 1,
-            leftMsgColor: HzyCommonColor().wbgblacktextcolor,
-            backGroudColor: HzyCommonColor().whitebackgroundColor,
+            leftMsgColor: OceanCommonColor().wbgblacktextcolor,
+            backGroudColor: OceanCommonColor().whitebackgroundColor,
             rightWidget: configAddorSubtractWidget(
               type: 2,
               ts: "${controller.mainAxisSpacing}",
@@ -151,8 +151,8 @@ class ExampleImageGridV extends OceanAbsCommonGetXWidget<ExampleImageGridC> {
               bottom: Radius.circular(16.r),
             ),
             rightType: 3,
-            leftMsgColor: HzyCommonColor().wbgblacktextcolor,
-            backGroudColor: HzyCommonColor().whitebackgroundColor,
+            leftMsgColor: OceanCommonColor().wbgblacktextcolor,
+            backGroudColor: OceanCommonColor().whitebackgroundColor,
             rightWidget: configAddorSubtractWidget(
               type: 3,
               ts: "${controller.crossAxisSpacing}",

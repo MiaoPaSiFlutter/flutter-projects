@@ -93,7 +93,7 @@ class MyState extends OceanAbsCommonState<MyPage> with AutomaticKeepAliveClientM
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 15.w),
             decoration: BoxDecoration(
-              color: HzyCommonColor().backgroudgrey,
+              color: OceanCommonColor().backgroudgrey,
               borderRadius: BorderRadius.circular(
                 16.r,
               ),
@@ -191,8 +191,8 @@ class MyState extends OceanAbsCommonState<MyPage> with AutomaticKeepAliveClientM
     return BoxDecoration(
       gradient: LinearGradient(
         colors: [
-          HzyCommonColor().backgroudgrey,
-          HzyCommonColor().backgroudgrey,
+          OceanCommonColor().backgroudgrey,
+          OceanCommonColor().backgroudgrey,
         ],
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,

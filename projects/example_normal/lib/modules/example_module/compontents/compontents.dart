@@ -39,7 +39,7 @@ configAddorSubtractWidget({
       ),
       Container(
         width: 0.5,
-        color: HzyCommonColor().linecolor,
+        color: OceanCommonColor().linecolor,
       ),
       Padding(
         padding: EdgeInsets.symmetric(horizontal: 10.w),
@@ -50,7 +50,7 @@ configAddorSubtractWidget({
       ),
       Container(
         width: 0.5,
-        color: HzyCommonColor().linecolor,
+        color: OceanCommonColor().linecolor,
       ),
       HzyBtnWidget(
         btnLayoutType: BtnLayoutType.img,
@@ -72,7 +72,7 @@ configAddorSubtractWidget({
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(4.r),
       border: Border.all(
-        color: HzyCommonColor().linecolor,
+        color: OceanCommonColor().linecolor,
         width: 0.5,
       ),
     ),

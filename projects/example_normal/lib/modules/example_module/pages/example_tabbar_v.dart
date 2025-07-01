@@ -50,7 +50,7 @@ class ExampleTabBarV extends OceanAbsCommonGetXWidget<ExampleTabBarC> {
         })
       ],
       controller: controller.tabController,
-      labelColor: HzyCommonColor().wbgblacktextcolor,
+      labelColor: OceanCommonColor().wbgblacktextcolor,
       indicatorSize: TabBarIndicatorSize.label,
       indicator: CustomUnderlineTabIndicator(
         width: 20,
@@ -58,10 +58,10 @@ class ExampleTabBarV extends OceanAbsCommonGetXWidget<ExampleTabBarC> {
         insets: EdgeInsets.only(bottom: 2.w),
         borderSide: BorderSide(
           width: 3.0,
-          color: HzyCommonColor().colthemes,
+          color: OceanCommonColor().colthemes,
         ),
       ),
-      indicatorColor: HzyCommonColor().colthemes,
+      indicatorColor: OceanCommonColor().colthemes,
       isScrollable: true,
       labelPadding: const EdgeInsets.only(left: 12, right: 18),
       unselectedLabelColor: getColorFromHex("#B1B3B8"),
@@ -71,13 +71,13 @@ class ExampleTabBarV extends OceanAbsCommonGetXWidget<ExampleTabBarC> {
       ),
       labelStyle: HzyTextStyle.fontSemi(
         size: 16,
-        color: HzyCommonColor().wbgblacktextcolor,
+        color: OceanCommonColor().wbgblacktextcolor,
       ),
     );
     body = Container(
       width: SizeMacro.screenWidth,
       decoration: BoxDecoration(
-        color: HzyCommonColor().whitebackgroundColor,
+        color: OceanCommonColor().whitebackgroundColor,
       ),
       child: body,
     );

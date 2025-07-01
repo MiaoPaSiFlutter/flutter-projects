@@ -37,7 +37,7 @@ class MyBannerBottomWidgete extends OceanAbsCommonState<MyBannerBottomWidget> {
   @override
   configBoxDecoreation() {
     return BoxDecoration(
-      color: HzyCommonColor().backgroudgrey.withOpacity(0),
+      color: OceanCommonColor().backgroudgrey.withOpacity(0),
     );
   }
 
@@ -55,7 +55,7 @@ class MyBannerBottomWidgete extends OceanAbsCommonState<MyBannerBottomWidget> {
               ),
               decoration: BoxDecoration(
                 color: selectIndex == index
-                    ? HzyCommonColor().colthemes
+                    ? OceanCommonColor().colthemes
                     : scallBackGroundColor,
                 borderRadius: BorderRadius.circular(
                   6.r,

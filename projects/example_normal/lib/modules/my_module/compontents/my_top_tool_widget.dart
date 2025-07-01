@@ -48,7 +48,7 @@ class MyTopToollessV extends OceanAbsCommonLessWidget {
       msg: "27张优惠券",
       style: HzyTextStyle.fontRegular(
         size: 12,
-        color: HzyCommonColor().col999999,
+        color: OceanCommonColor().col999999,
       ),
     ),
   ];
@@ -91,10 +91,10 @@ class MyTopToollessV extends OceanAbsCommonLessWidget {
   configBoxDecoreation() {
     return BoxDecoration(
       borderRadius: BorderRadius.circular(12.r),
-      color: HzyCommonColor().whitebackgroundColor,
+      color: OceanCommonColor().whitebackgroundColor,
       boxShadow: [
         BoxShadow(
-          color: HzyCommonColor().colc3c3c3.withOpacity(0.1),
+          color: OceanCommonColor().colc3c3c3.withOpacity(0.1),
           offset: const Offset(0, 0),
           blurRadius: 6.0,
           spreadRadius: 0,
@@ -111,7 +111,7 @@ class MyTopToollessV extends OceanAbsCommonLessWidget {
 
     if (myTopToolItemModel.type == 1) {
       body = DecoratedBox(
-        decoration: BoxDecoration(color: HzyCommonColor().linecolor),
+        decoration: BoxDecoration(color: OceanCommonColor().linecolor),
         child: const SizedBox(
           width: 0.5,
           height: 20,
@@ -122,7 +122,7 @@ class MyTopToollessV extends OceanAbsCommonLessWidget {
         myTopToolItemModel.name ?? "",
         style: HzyTextStyle.fontSemi(
           size: 16.sp,
-          color: HzyCommonColor().wbgblacktextcolor,
+          color: OceanCommonColor().wbgblacktextcolor,
         ),
       );
 

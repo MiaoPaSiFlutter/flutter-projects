@@ -71,7 +71,7 @@ class MyHeaderSliverDelegate extends SliverPersistentHeaderDelegate {
       width: userImgW,
       height: userImgW,
       decoration: BoxDecoration(
-        color: HzyCommonColor().colthemes,
+        color: OceanCommonColor().colthemes,
         borderRadius: BorderRadius.circular(50),
       ),
       alignment: Alignment.center,
@@ -122,7 +122,7 @@ class MyHeaderSliverDelegate extends SliverPersistentHeaderDelegate {
       "${LaunchIdConfig.click.tr}${LaunchIdConfig.login.tr}/${LaunchIdConfig.register.tr}",
       style: HzyTextStyle.fontSemi(
         size: fontSize,
-        color: HzyCommonColor().wbgblacktextcolor,
+        color: OceanCommonColor().wbgblacktextcolor,
       ),
     );
     body = Container(

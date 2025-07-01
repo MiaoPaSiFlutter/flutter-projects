@@ -28,7 +28,7 @@ class ExampleMoreBtnWidget extends OceanAbsCommonLessWidget {
 
   @override
   configBoxDecoreation() {
-    return BoxDecoration(color: HzyCommonColor().backgroudgrey.withOpacity(0));
+    return BoxDecoration(color: OceanCommonColor().backgroudgrey.withOpacity(0));
   }
 
   configMoreBtnWidget() {

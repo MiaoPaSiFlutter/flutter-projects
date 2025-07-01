@@ -71,11 +71,11 @@ class MyThemeV extends OceanAbsCommonGetXWidget<MyThemeC> {
   Widget createSparatorBuilder(BuildContext context, int index) {
     if (index == 2) {
       return Container(
-        decoration: BoxDecoration(color: HzyCommonColor().whitebackgroundColor),
+        decoration: BoxDecoration(color: OceanCommonColor().whitebackgroundColor),
         child: Container(
           height: 0.5,
           margin: EdgeInsets.only(left: 20.w, right: 20.w),
-          decoration: BoxDecoration(color: HzyCommonColor().linecolor),
+          decoration: BoxDecoration(color: OceanCommonColor().linecolor),
         ),
       );
     } else {
@@ -86,7 +86,7 @@ class MyThemeV extends OceanAbsCommonGetXWidget<MyThemeC> {
   // 创建跟随系统
   Widget createfirstwidget() {
     return Container(
-      decoration: BoxDecoration(color: HzyCommonColor().whitebackgroundColor),
+      decoration: BoxDecoration(color: OceanCommonColor().whitebackgroundColor),
       padding: EdgeInsets.only(
         left: 20.w,
         right: 20.w,
@@ -137,7 +137,7 @@ class MyThemeV extends OceanAbsCommonGetXWidget<MyThemeC> {
           bottom: 10.w,
           top: 10.w,
         ),
-        decoration: BoxDecoration(color: HzyCommonColor().whitebackgroundColor),
+        decoration: BoxDecoration(color: OceanCommonColor().whitebackgroundColor),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -152,7 +152,7 @@ class MyThemeV extends OceanAbsCommonGetXWidget<MyThemeC> {
                 ? Icon(
                     Icons.check,
                     size: 16.w,
-                    color: HzyCommonColor().colthemes,
+                    color: OceanCommonColor().colthemes,
                   )
                 : Container(),
           ],

@@ -52,7 +52,7 @@ class MyLaunchSettV extends OceanAbsCommonGetXWidget<MyLaunchSettC> {
       builder: (ct) {
         Color color = Colors.white.withAlpha(0);
         if (index == ct.selectIndex) {
-          color = HzyCommonColor().colthemes;
+          color = OceanCommonColor().colthemes;
         }
         Widget rightWidget = Icon(
           Icons.check,
@@ -87,7 +87,7 @@ class MyLaunchSettV extends OceanAbsCommonGetXWidget<MyLaunchSettC> {
             height: 30,
             fontColor: ct.isCanTap
                 ? HzyNormalColorS.colffffff
-                : HzyCommonColor().colplacetextcolor,
+                : OceanCommonColor().colplacetextcolor,
             isFittedBox: false,
             padding: EdgeInsets.symmetric(
               horizontal: 5.h,
@@ -97,7 +97,7 @@ class MyLaunchSettV extends OceanAbsCommonGetXWidget<MyLaunchSettC> {
                 4.r,
               ),
               color: ct.isCanTap
-                  ? HzyCommonColor().colthemes
+                  ? OceanCommonColor().colthemes
                   : HzyNormalColorS.coldadada,
             ),
             tapCall: () {

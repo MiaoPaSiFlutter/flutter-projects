@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-04-19 20:43:54
- * @LastEditors: TT
- * @LastEditTime: 2023-06-08 17:31:06
- */
-
 import 'launch_id_config.dart';
 
 const zhCN = {

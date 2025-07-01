@@ -102,7 +102,7 @@ column(
         width: 40,
         height: 40,
         decoration: BoxDecoration(
-          color: HzyCommonColor().backgroudgrey,
+          color: OceanCommonColor().backgroudgrey,
           borderRadius: BorderRadius.circular(
             20.r,
           ),
@@ -229,7 +229,7 @@ column(
     ),
     HzyNormalItemModel(
       isHintWidget: true,
-      backGroudColor: HzyCommonColor().colthemes,
+      backGroudColor: OceanCommonColor().colthemes,
       height: 50,
     ),
     HzyNormalItemModel(
@@ -375,8 +375,8 @@ column(
         ],
         gradient: LinearGradient(
           colors: [
-            HzyCommonColor().whitebackgroundColor,
-            HzyCommonColor().col000000,
+            OceanCommonColor().whitebackgroundColor,
+            OceanCommonColor().col000000,
           ],
         ),
       ),

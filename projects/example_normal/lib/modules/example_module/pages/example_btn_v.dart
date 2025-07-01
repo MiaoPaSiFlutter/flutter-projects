@@ -39,7 +39,7 @@ class ExampleBtnV extends OceanAbsCommonGetXWidget<ExampleBtnC> {
               bgColor: configScallBackgroundColor(),
               btnLayoutType: normalBtnModel.btnLayoutType,
               space: space,
-              fontColor: HzyCommonColor().wbgblacktextcolor,
+              fontColor: OceanCommonColor().wbgblacktextcolor,
               height: normalBtnModel.height,
               imageWidget: configBtnImageWidget(),
               padding: EdgeInsets.all(controller.padding.value),
@@ -92,8 +92,8 @@ class ExampleBtnV extends OceanAbsCommonGetXWidget<ExampleBtnC> {
             borderRadius: BorderRadius.vertical(
               top: Radius.circular(16.r),
             ),
-            leftMsgColor: HzyCommonColor().wbgblacktextcolor,
-            backGroudColor: HzyCommonColor().whitebackgroundColor,
+            leftMsgColor: OceanCommonColor().wbgblacktextcolor,
+            backGroudColor: OceanCommonColor().whitebackgroundColor,
             rightWidget: configAddorSubtractWidget(
               type: 0,
               ts: "${controller.margin.value}",
@@ -113,8 +113,8 @@ class ExampleBtnV extends OceanAbsCommonGetXWidget<ExampleBtnC> {
             leftMsg: LaunchIdConfig.padding.tr,
             isShowLine: true,
             rightType: 1,
-            leftMsgColor: HzyCommonColor().wbgblacktextcolor,
-            backGroudColor: HzyCommonColor().whitebackgroundColor,
+            leftMsgColor: OceanCommonColor().wbgblacktextcolor,
+            backGroudColor: OceanCommonColor().whitebackgroundColor,
             rightWidget: configAddorSubtractWidget(
               type: 1,
               ts: "${controller.padding.value}",
@@ -134,8 +134,8 @@ class ExampleBtnV extends OceanAbsCommonGetXWidget<ExampleBtnC> {
             leftMsg: LaunchIdConfig.row.tr + LaunchIdConfig.space.tr,
             isShowLine: true,
             rightType: 1,
-            leftMsgColor: HzyCommonColor().wbgblacktextcolor,
-            backGroudColor: HzyCommonColor().whitebackgroundColor,
+            leftMsgColor: OceanCommonColor().wbgblacktextcolor,
+            backGroudColor: OceanCommonColor().whitebackgroundColor,
             rightWidget: configAddorSubtractWidget(
               type: 2,
               ts: "${controller.mainAxisSpacing}",
@@ -157,8 +157,8 @@ class ExampleBtnV extends OceanAbsCommonGetXWidget<ExampleBtnC> {
               bottom: Radius.circular(16.r),
             ),
             rightType: 3,
-            leftMsgColor: HzyCommonColor().wbgblacktextcolor,
-            backGroudColor: HzyCommonColor().whitebackgroundColor,
+            leftMsgColor: OceanCommonColor().wbgblacktextcolor,
+            backGroudColor: OceanCommonColor().whitebackgroundColor,
             rightWidget: configAddorSubtractWidget(
               type: 3,
               ts: "${controller.crossAxisSpacing}",

@@ -7,7 +7,7 @@
  * @LastEditTime: 2023-07-18 14:49:35
  */
 
-import 'package:ocean_common_module/config/hzy_theme_abs.dart';
+import 'package:ocean_common_module/config/ocean_theme_abs.dart';
 
 class HzyImageId {
   static String tabHomeNormal = "homeNor";
@@ -18,7 +18,7 @@ class HzyImageId {
   static String tabWtSelect = "wtSelect";
 }
 
-class HzyThemeImageConfig extends HzyImageAbs {
+class HzyThemeImageConfig extends OceanImageAbs {
   HzyThemeImageConfig._internal();
   factory HzyThemeImageConfig() => _instance;
   static final HzyThemeImageConfig _instance = HzyThemeImageConfig._internal();

@@ -110,7 +110,7 @@ class ExampleListWidget extends OceanAbsCommonLessWidget {
       ),
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: HzyCommonColor().whitebackgroundColor,
+        color: OceanCommonColor().whitebackgroundColor,
         borderRadius: BorderRadius.circular(
           16.r,
         ),

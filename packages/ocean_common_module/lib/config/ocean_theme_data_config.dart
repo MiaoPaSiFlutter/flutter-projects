@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// 亮色主题
-ThemeData hzyThemeDataLight = ThemeData(
+ThemeData oceanThemeDataLight = ThemeData(
   brightness: Brightness.light,
 
   /// scaffold 背景色
@@ -16,7 +16,7 @@ ThemeData hzyThemeDataLight = ThemeData(
 );
 
 /// 暗黑主题
-ThemeData hzyThemeDataDark = ThemeData(
+ThemeData oceanThemeDataDark = ThemeData(
   brightness: Brightness.dark,
 
   /// scaffold 背景色

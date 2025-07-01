@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ocean_utils/ocean_utils.dart';
 
 import '../config/font_config.dart';
-import '../config/hzy_common_color_config.dart';
+import '../config/ocean_common_color_config.dart';
 import '../utils/screenutil_tools.dart';
 import 'common_widgets.dart';
 
@@ -71,7 +71,7 @@ class _CommonPlaceHoldPageState extends OceanAbsState<CommonPlaceHoldPage> {
     return Container(
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: HzyCommonColor().whitebackgroundColor,
+        color: OceanCommonColor().whitebackgroundColor,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -128,7 +128,7 @@ class _CommonPlaceHoldPageState extends OceanAbsState<CommonPlaceHoldPage> {
           boxShadow: [
             configThemeShadow(),
           ],
-          color: HzyCommonColor().colthemes,
+          color: OceanCommonColor().colthemes,
           borderRadius: BorderRadius.all(
             Radius.circular(20.w),
           ),
@@ -137,7 +137,7 @@ class _CommonPlaceHoldPageState extends OceanAbsState<CommonPlaceHoldPage> {
           "刷新",
           style: HzyTextStyle.fontMedium(
             size: 16.sp,
-            color: HzyCommonColor().colonlywhite,
+            color: OceanCommonColor().colonlywhite,
           ),
         ),
       ),

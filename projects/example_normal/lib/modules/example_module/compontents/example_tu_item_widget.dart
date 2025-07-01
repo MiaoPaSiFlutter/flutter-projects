@@ -41,7 +41,7 @@ class ExampleTuItemlessV extends OceanAbsCommonLessWidget {
       padding: EdgeInsets.symmetric(vertical: 10.w, horizontal: 12.w),
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: HzyCommonColor().whitebackgroundColor,
+        color: OceanCommonColor().whitebackgroundColor,
         borderRadius: BorderRadius.circular(10.r),
         boxShadow: [configShadow()],
       ),

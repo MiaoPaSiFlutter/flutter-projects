@@ -71,8 +71,8 @@ class ExampleComBtnlessV extends OceanAbsCommonLessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                HzyCommonColor().wbgblacktextcolor,
-                HzyCommonColor().colefedf3,
+                OceanCommonColor().wbgblacktextcolor,
+                OceanCommonColor().colefedf3,
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -99,8 +99,8 @@ class ExampleComBtnlessV extends OceanAbsCommonLessWidget {
         ...List.generate(list.length, (index) {
           NormalComBtnModel comBtnModel = list[index];
           Widget body = HzySureAndCannerBtnWidget(
-            cannerTitleColor: HzyCommonColor().wbgblacktextcolor,
-            cannerBgColor: HzyCommonColor().whitebackgroundColor,
+            cannerTitleColor: OceanCommonColor().wbgblacktextcolor,
+            cannerBgColor: OceanCommonColor().whitebackgroundColor,
             sureBgColor: comBtnModel.sureBgColor,
             sureMsg: comBtnModel.sureMsg ?? LaunchIdConfig.sure.tr,
             sureWidget: comBtnModel.sureWidget,

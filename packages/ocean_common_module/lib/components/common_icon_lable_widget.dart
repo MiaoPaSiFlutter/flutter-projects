@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ocean_utils/ocean_utils.dart';
 
-import '../config/hzy_common_color_config.dart';
+import '../config/ocean_common_color_config.dart';
 
 class CommonIconLableWidget extends StatelessWidget {
   final String? text;
@@ -41,7 +41,7 @@ class CommonIconLableWidget extends StatelessWidget {
       overflow: overflow ?? TextOverflow.ellipsis,
       text: TextSpan(
         style:
-            style ?? TextStyle(color: HzyCommonColor().col000000, fontSize: 13),
+            style ?? TextStyle(color: OceanCommonColor().col000000, fontSize: 13),
         children: children,
       ),
     );
