@@ -10,7 +10,7 @@
 import 'package:flutter/material.dart';
 import 'package:ocean_common_module/ocean_common_module.dart';
 
-class ExampleTextAnimV extends CommonGetXWidget<ExampleTextAnimC> {
+class ExampleTextAnimV extends OceanAbsCommonGetXWidget<ExampleTextAnimC> {
   ExampleTextAnimV({super.key});
   @override
   ExampleTextAnimC get controller => Get.put(ExampleTextAnimC());
@@ -78,7 +78,7 @@ class ExampleTextAnimV extends CommonGetXWidget<ExampleTextAnimC> {
   }
 }
 
-class ExampleTextAnimC extends CommonGetXController
+class ExampleTextAnimC extends OceanAbsCommonGetXController
     with GetSingleTickerProviderStateMixin, WidgetsBindingObserver {
   // --------- 属性 --------- //
   late AnimationController animationController;

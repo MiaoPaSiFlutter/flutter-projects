@@ -13,7 +13,7 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 import '../compontents/compontents.dart';
 import '../compontents/drawer_top_widget.dart';
 
-class ExampleBasicMarkdownV extends CommonGetXWidget<ExampleBasicMarkdownC> {
+class ExampleBasicMarkdownV extends OceanAbsCommonGetXWidget<ExampleBasicMarkdownC> {
   ExampleBasicMarkdownV({super.key});
   @override
   ExampleBasicMarkdownC get controller => Get.put(ExampleBasicMarkdownC());
@@ -189,7 +189,7 @@ class ExampleBasicMarkdownV extends CommonGetXWidget<ExampleBasicMarkdownC> {
   }
 }
 
-class ExampleBasicMarkdownC extends CommonGetXController {
+class ExampleBasicMarkdownC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
   List<List<HzyNormalItemModel>> basicList = [
     [

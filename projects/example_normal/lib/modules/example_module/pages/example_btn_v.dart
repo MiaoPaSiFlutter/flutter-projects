@@ -13,7 +13,7 @@ import '../module_index.dart';
 
 import '../compontents/compontents.dart';
 
-class ExampleBtnV extends CommonGetXWidget<ExampleBtnC> {
+class ExampleBtnV extends OceanAbsCommonGetXWidget<ExampleBtnC> {
   ExampleBtnV({super.key});
   @override
   ExampleBtnC get controller => Get.put(ExampleBtnC());
@@ -187,7 +187,7 @@ class ExampleBtnV extends CommonGetXWidget<ExampleBtnC> {
   }
 }
 
-class ExampleBtnC extends CommonGetXController {
+class ExampleBtnC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
   Rx<String?> title = "".obs;
 

@@ -14,7 +14,7 @@ import '../pages/pages_index.dart';
 import '../config/example_config.dart';
 import '../models/image_type_model.dart';
 
-class ExampleTabBarV extends CommonGetXWidget<ExampleTabBarC> {
+class ExampleTabBarV extends OceanAbsCommonGetXWidget<ExampleTabBarC> {
   ExampleTabBarV({super.key});
   @override
   ExampleTabBarC get controller => Get.put(ExampleTabBarC());
@@ -126,7 +126,7 @@ class ExampleTabBarV extends CommonGetXWidget<ExampleTabBarC> {
   }
 }
 
-class ExampleTabBarC extends CommonGetXController
+class ExampleTabBarC extends OceanAbsCommonGetXController
     with GetSingleTickerProviderStateMixin {
   // --------- 属性 --------- //
   late TabController tabController;

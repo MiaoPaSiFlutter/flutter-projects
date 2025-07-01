@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:ocean_common_module/ocean_common_module.dart';
 import '../routers/example_module_routers.dart';
 
-class ExampleBasicV extends CommonGetXWidget<ExampleBasicC> {
+class ExampleBasicV extends OceanAbsCommonGetXWidget<ExampleBasicC> {
   ExampleBasicV({super.key});
   @override
   ExampleBasicC get controller => Get.put(ExampleBasicC());
@@ -42,7 +42,7 @@ class ExampleBasicV extends CommonGetXWidget<ExampleBasicC> {
   }
 }
 
-class ExampleBasicC extends CommonGetXController {
+class ExampleBasicC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
   List<HzyNormalItemModel> list = [
     HzyNormalItemModel(

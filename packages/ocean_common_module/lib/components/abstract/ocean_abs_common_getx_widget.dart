@@ -6,12 +6,12 @@ import 'package:ocean_utils/ocean_utils.dart';
 import '../../utils/screenutil_tools.dart';
 import '../../config/normal_configs.dart';
 import '/components/common_place_holder_widget.dart';
-import 'common_getx_controller.dart';
+import 'ocean_abs_common_getx_controller.dart';
 
-abstract class CommonGetXWidget<T extends CommonGetXController>
+abstract class OceanAbsCommonGetXWidget<T extends CommonGetXController>
     extends GetView<T>
     with OceanAbsWidget {
-  CommonGetXWidget({super.key});
+  OceanAbsCommonGetXWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

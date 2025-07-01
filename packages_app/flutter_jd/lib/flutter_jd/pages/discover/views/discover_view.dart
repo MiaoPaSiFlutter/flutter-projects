@@ -3,8 +3,8 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 
 import 'mpsf_discover_page.dart';
 
-class DiscoverView extends CommonGetXWidget<DiscoverController> {
-  DiscoverView({Key? key}) : super(key: key);
+class DiscoverView extends OceanAbsCommonGetXWidget<DiscoverController> {
+  DiscoverView({super.key});
   @override
   bool configIsShowAppBar() => false;
   @override
@@ -16,7 +16,7 @@ class DiscoverView extends CommonGetXWidget<DiscoverController> {
   }
 }
 
-class DiscoverController extends CommonGetXController {
+class DiscoverController extends OceanAbsCommonGetXController{
   final count = 0.obs;
 
   void increment() => count.value++;

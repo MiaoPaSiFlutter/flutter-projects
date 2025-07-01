@@ -3,7 +3,7 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../models/tu_chong_model.dart';
 
-class ExampleTuTagsWidget extends CommonLessV {
+class ExampleTuTagsWidget extends OceanAbsCommonLessWidget {
   final TuChongItem tuChongItem;
   @override
   bool get isNeedScaffol => false;

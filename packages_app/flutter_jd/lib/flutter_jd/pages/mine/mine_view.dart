@@ -6,7 +6,7 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 
 import 'widgets/mine_main_home_view.dart';
 
-class MineView extends CommonGetXlistWidget<MineController> {
+class MineView extends OceanAbsCommonGetXListWidget<MineController> {
   MineView({super.key});
   @override
   bool configIsShowAppBar() => false;

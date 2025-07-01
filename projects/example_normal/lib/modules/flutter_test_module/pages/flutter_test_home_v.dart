@@ -9,8 +9,8 @@ import 'package:scrollerview_demo/scrollerview_demo/pages/TestScrollerViewApp.da
 import '../../../compontents/interesting_ui_widget.dart';
 import '../../../models/interesting_ui_model.dart';
 
-class FlutterTestHomePage extends CommonGetXWidget<FlutterTestHomeController> {
-  FlutterTestHomePage({Key? key}) : super(key: key);
+class FlutterTestHomePage extends OceanAbsCommonGetXWidget<FlutterTestHomeController> {
+  FlutterTestHomePage({super.key});
   @override
   FlutterTestHomeController get controller =>
       Get.put(FlutterTestHomeController());
@@ -36,7 +36,7 @@ class TestHomePage extends StatefulWidget {
   }
 }
 
-class TestHomePageState extends CommonState<TestHomePage>
+class TestHomePageState extends OceanAbsCommonState<TestHomePage>
     with AutomaticKeepAliveClientMixin {
   @override
   String? createAppBarTitleStr() => LaunchIdConfig.flutterTest.tr;
@@ -68,7 +68,7 @@ class TestHomePageState extends CommonState<TestHomePage>
   bool get wantKeepAlive => true;
 }
 
-class FlutterTestHomeController extends CommonGetXController {
+class FlutterTestHomeController extends OceanAbsCommonGetXController{
   FlutterTestHomeController();
 
   var uiModels = [].obs;

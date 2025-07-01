@@ -22,7 +22,7 @@ class MyBannerBottomWidget extends StatefulWidget {
   }
 }
 
-class MyBannerBottomWidgete extends CommonState<MyBannerBottomWidget> {
+class MyBannerBottomWidgete extends OceanAbsCommonState<MyBannerBottomWidget> {
   int selectIndex = 0;
   @override
   bool get isNeedScaffol => false;

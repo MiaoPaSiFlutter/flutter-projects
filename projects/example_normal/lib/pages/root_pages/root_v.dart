@@ -17,8 +17,8 @@ import 'package:example_normal/modules/example_module/module_index.dart';
 import 'package:example_normal/modules/my_module/pages/pages_index.dart';
 import 'package:example_normal/pages/root_pages/root_tab_v.dart';
 
-class RootV extends CommonGetXWidget<RootC> {
-  RootV({Key? key}) : super(key: key);
+class RootV extends OceanAbsCommonGetXWidget<RootC> {
+  RootV({super.key});
   @override
   RootC get controller => Get.put(RootC());
 
@@ -155,7 +155,7 @@ class RootV extends CommonGetXWidget<RootC> {
   }
 }
 
-class RootC extends CommonGetXController
+class RootC extends OceanAbsCommonGetXController
     with GetSingleTickerProviderStateMixin, GetTickerProviderStateMixin {
   // --------- 属性 --------- //
 

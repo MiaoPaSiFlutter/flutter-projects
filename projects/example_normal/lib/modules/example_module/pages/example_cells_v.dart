@@ -12,7 +12,7 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../../my_module/module_index.dart';
 
-class ExampleCellsV extends CommonGetXWidget<ExampleCellsC> {
+class ExampleCellsV extends OceanAbsCommonGetXWidget<ExampleCellsC> {
   ExampleCellsV({super.key});
   @override
   ExampleCellsC get controller => Get.put(ExampleCellsC());
@@ -44,7 +44,7 @@ class ExampleCellsV extends CommonGetXWidget<ExampleCellsC> {
   }
 }
 
-class ExampleCellsC extends CommonGetXController {
+class ExampleCellsC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
   Rx<String?> title = "".obs;
   List<HzyNormalItemModel> list = [

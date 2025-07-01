@@ -14,7 +14,7 @@ import '../compontents/example_list_widget.dart';
 import '../models/image_model.dart';
 import '../models/tu_chong_model.dart';
 
-class ExampleBasiclessV extends CommonLessV {
+class ExampleBasiclessV extends OceanAbsCommonLessWidget {
   ExampleBasiclessV({super.key});
   @override
   String? createAppBarTitleStr() {

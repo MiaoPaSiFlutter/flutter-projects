@@ -7,7 +7,7 @@ import '../config/config_index.dart';
 import '../utils/screenutil_tools.dart';
 import '../utils/utils.dart';
 import '../models/image_normal_model.dart';
-import 'abstract/common_state.dart';
+import 'abstract/ocean_abs_common_state.dart';
 import 'common_scroller_images_widget.dart';
 import 'common_widgets.dart';
 
@@ -48,7 +48,7 @@ class CommonPopSelectImageWidget extends StatefulWidget {
   }
 }
 
-class CommonSelectImageState extends CommonState<CommonPopSelectImageWidget> {
+class CommonSelectImageState extends OceanAbsCommonState<CommonPopSelectImageWidget> {
   @override
   bool get isNeedScaffol => false;
   @override

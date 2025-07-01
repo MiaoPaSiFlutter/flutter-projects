@@ -14,7 +14,7 @@ import '../models/tu_chong_model.dart';
 import 'example_tu_item_image_widget.dart';
 import 'example_tu_tags_widget.dart';
 
-class ExampleTuItemlessV extends CommonLessV {
+class ExampleTuItemlessV extends OceanAbsCommonLessWidget {
   ExampleTuItemlessV({super.key, required this.tuChongItem, this.tapOneKey});
   final TuChongItem tuChongItem;
   final Function(TuChongItem tuChongItem)? tapOneKey;

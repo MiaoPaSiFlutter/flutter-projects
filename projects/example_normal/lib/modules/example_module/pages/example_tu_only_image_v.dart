@@ -10,8 +10,8 @@
 import 'package:flutter/material.dart';
 import 'package:ocean_common_module/ocean_common_module.dart';
 
-class ExampleTuOnlyImageV extends CommonGetXWidget<ExampleTuOnlyImageC> {
-  ExampleTuOnlyImageV({Key? key}) : super(key: key);
+class ExampleTuOnlyImageV extends OceanAbsCommonGetXWidget<ExampleTuOnlyImageC> {
+  ExampleTuOnlyImageV({super.key});
   @override
   ExampleTuOnlyImageC get controller => Get.put(ExampleTuOnlyImageC());
   @override
@@ -78,7 +78,7 @@ class ExampleTuOnlyImageV extends CommonGetXWidget<ExampleTuOnlyImageC> {
   }
 }
 
-class ExampleTuOnlyImageC extends CommonGetXController
+class ExampleTuOnlyImageC extends OceanAbsCommonGetXController
     with GetTickerProviderStateMixin {
   // --------- 属性 --------- //
   late AnimationController doubleClickAnimationController;

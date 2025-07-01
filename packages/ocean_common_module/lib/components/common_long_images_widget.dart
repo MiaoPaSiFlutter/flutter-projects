@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ocean_utils/ocean_utils.dart';
 
 import '../models/models_index.dart';
-import 'abstract/common_state.dart';
+import 'abstract/ocean_abs_common_state.dart';
 import 'common_extendeed_image_widget.dart';
 
 class CommonLongImageSWidget extends StatefulWidget {
@@ -80,7 +80,7 @@ class CommonLongImageSWidget extends StatefulWidget {
   }
 }
 
-class CommonLongImageSState extends CommonState<CommonLongImageSWidget>
+class CommonLongImageSState extends OceanAbsCommonState<CommonLongImageSWidget>
     with AutomaticKeepAliveClientMixin {
   @override
   bool get isNeedScaffol => false;

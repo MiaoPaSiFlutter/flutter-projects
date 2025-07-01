@@ -7,8 +7,8 @@ import '../widgets/carefully_chosen/carefully_chosen_widget.dart';
 import '../widgets/news_navigationbar.dart';
 import '../widgets/tendency/qushi_view.dart';
 
-class NewsView extends CommonGetXWidget<NewsController> {
-  NewsView({Key? key}) : super(key: key);
+class NewsView extends OceanAbsCommonGetXWidget<NewsController> {
+  NewsView({super.key});
   @override
   NewsController get controller => Get.put(NewsController());
   @override
@@ -17,8 +17,10 @@ class NewsView extends CommonGetXWidget<NewsController> {
   bool configSafeAreaTop() => false;
 
   @override
-  Widget createScallBody(
-      {required BuildContext context, BoxConstraints? constraints}) {
+  Widget createScallBody({
+    required BuildContext context,
+    BoxConstraints? constraints,
+  }) {
     return ProviderWidget<NewsViewModel>(
       model: controller.vmModel,
       onReady: (model) {
@@ -33,14 +35,12 @@ class NewsView extends CommonGetXWidget<NewsController> {
                 PageView(
                   physics: const NeverScrollableScrollPhysics(),
                   controller: controller.pageController,
-                  children: const [
-                    CarefullyChosenWidget(),
-                    QuShiView(),
-                  ],
+                  children: const [CarefullyChosenWidget(), QuShiView()],
                 ),
                 Container(
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.transparent, width: 2)),
+                    border: Border.all(color: Colors.transparent, width: 2),
+                  ),
                   child: NewsNavigationBar(
                     onTap: (index) {
                       controller.pageController.jumpToPage(index);
@@ -56,7 +56,7 @@ class NewsView extends CommonGetXWidget<NewsController> {
   }
 }
 
-class NewsController extends CommonGetXController {
+class NewsController extends OceanAbsCommonGetXController{
   final PageController pageController = PageController();
   final vmModel = NewsViewModel();
 }

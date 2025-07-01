@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:ocean_utils/ocean_utils.dart';
@@ -8,7 +7,7 @@ import '../../utils/screenutil_tools.dart';
 import '../../utils/theme_tool.dart';
 import '../common_place_holder_widget.dart';
 
-abstract class CommonState<T extends StatefulWidget>
+abstract class OceanAbsCommonState<T extends StatefulWidget>
     extends OceanAbsLifeCycleState<T> {
   /// 配置缺省页状态值
   CommonPlaceHoldType placeHoldType = CommonPlaceHoldType.nothing;

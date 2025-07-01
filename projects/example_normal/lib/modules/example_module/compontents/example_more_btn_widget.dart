@@ -10,7 +10,7 @@
 import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 
-class ExampleMoreBtnWidget extends CommonLessV {
+class ExampleMoreBtnWidget extends OceanAbsCommonLessWidget {
   ExampleMoreBtnWidget({super.key, required this.onTap, this.isRefresh = true});
   final bool? isRefresh;
   final Function(int) onTap;

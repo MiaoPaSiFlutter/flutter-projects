@@ -14,7 +14,7 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../compontents/markdow_style.dart';
 
-class ExampleMarkdownV extends CommonGetXWidget<ExampleMarkdownC> {
+class ExampleMarkdownV extends OceanAbsCommonGetXWidget<ExampleMarkdownC> {
   ExampleMarkdownV({super.key});
   @override
   ExampleMarkdownC get controller => Get.put(ExampleMarkdownC());
@@ -48,7 +48,7 @@ class ExampleMarkdownV extends CommonGetXWidget<ExampleMarkdownC> {
   }
 }
 
-class ExampleMarkdownC extends CommonGetXController
+class ExampleMarkdownC extends OceanAbsCommonGetXController
     with GetTickerProviderStateMixin {
   // --------- 属性 --------- //
   String data = "";

@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:ocean_common_module/ocean_common_module.dart';
 import '../config/my_launch_id_config.dart';
 
-class MyLaunchSettV extends CommonGetXWidget<MyLaunchSettC> {
+class MyLaunchSettV extends OceanAbsCommonGetXWidget<MyLaunchSettC> {
   MyLaunchSettV({super.key});
 
   /// 配置导航栏 标题
@@ -110,7 +110,7 @@ class MyLaunchSettV extends CommonGetXWidget<MyLaunchSettC> {
   }
 }
 
-class MyLaunchSettC extends CommonGetXController {
+class MyLaunchSettC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
 
   List<HzyNormalItemModel> list = [

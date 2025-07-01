@@ -15,7 +15,7 @@ import '../config/my_launch_id_config.dart';
 import '../config/my_normal_config.dart';
 import '../pages/pages_index.dart';
 
-class MyThemeV extends CommonGetXWidget<MyThemeC> {
+class MyThemeV extends OceanAbsCommonGetXWidget<MyThemeC> {
   MyThemeV({super.key, this.isShowBack});
 
   final bool? isShowBack;
@@ -167,7 +167,7 @@ class MyThemeV extends CommonGetXWidget<MyThemeC> {
   }
 }
 
-class MyThemeC extends CommonGetXController {
+class MyThemeC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
   var switchValue = false.obs;
   var selectIndex = 2.obs;

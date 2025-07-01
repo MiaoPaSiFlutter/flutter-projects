@@ -10,8 +10,8 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 import 'widgets/order_filter_dialog.dart';
 import 'widgets/order_son_view.dart';
 
-class OrderView extends CommonGetXlistWidget<OrderController> {
-  OrderView({Key? key}) : super(key: key);
+class OrderView extends OceanAbsCommonGetXListWidget<OrderController> {
+  OrderView({super.key});
 
   @override
   String? createAppBarTitleStr() => "我的订单";

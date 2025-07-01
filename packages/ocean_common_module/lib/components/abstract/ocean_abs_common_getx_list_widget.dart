@@ -1,14 +1,14 @@
 import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/material.dart';
 import 'package:ocean_utils/ocean_utils.dart';
-import 'common_getx_controller.dart';
-import 'common_getx_v.dart';
+import 'ocean_abs_common_getx_controller.dart';
+import 'ocean_abs_common_getx_widget.dart';
 import '../common_refresh_widgets.dart';
 
-abstract class CommonGetXlistWidget<T extends CommonGetXListController>
-    extends CommonGetXWidget<T>
+abstract class OceanAbsCommonGetXListWidget<T extends CommonGetXListController>
+    extends OceanAbsCommonGetXWidget<T>
     with HzyAbstracRefreshWidget {
-  CommonGetXlistWidget({super.key});
+  OceanAbsCommonGetXListWidget({super.key});
 
   @override
   Widget createBody({

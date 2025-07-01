@@ -17,7 +17,7 @@ import '../models/tu_chong_model.dart';
 import '../routers/example_module_routers.dart';
 import '../vm/example_vm.dart';
 
-class ExampleTuDetailV extends CommonGetXWidget<ExampleTuDetailC> {
+class ExampleTuDetailV extends OceanAbsCommonGetXWidget<ExampleTuDetailC> {
   ExampleTuDetailV({super.key});
   @override
   ExampleTuDetailC get controller => Get.put(ExampleTuDetailC());
@@ -182,7 +182,7 @@ class ExampleTuDetailV extends CommonGetXWidget<ExampleTuDetailC> {
   }
 }
 
-class ExampleTuDetailC extends CommonGetXController
+class ExampleTuDetailC extends OceanAbsCommonGetXController
     with GetTickerProviderStateMixin {
   // --------- 属性 --------- //
   /// 数据源

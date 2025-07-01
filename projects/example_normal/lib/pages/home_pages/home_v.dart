@@ -18,7 +18,7 @@ class HomePage extends StatefulWidget {
   }
 }
 
-class HomeState extends CommonState<HomePage>
+class HomeState extends OceanAbsCommonState<HomePage>
     with AutomaticKeepAliveClientMixin {
   @override
   String? get appBarTitle => "首页";

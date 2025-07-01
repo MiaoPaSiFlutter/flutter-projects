@@ -10,7 +10,7 @@
 import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 
-class DrawerToplessV extends CommonLessV {
+class DrawerToplessV extends OceanAbsCommonLessWidget {
   DrawerToplessV({super.key});
   @override
   bool get isNeedScaffol => false;

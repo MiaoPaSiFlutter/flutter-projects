@@ -6,8 +6,8 @@ import '../../../compontents/interesting_ui_widget.dart';
 import '../../../models/interesting_ui_model.dart';
 
 class FlutterGamesHomePage
-    extends CommonGetXWidget<FlutterGamesHomeController> {
-  FlutterGamesHomePage({Key? key}) : super(key: key);
+    extends OceanAbsCommonGetXWidget<FlutterGamesHomeController> {
+  FlutterGamesHomePage({super.key});
   @override
   FlutterGamesHomeController get controller =>
       Get.put(FlutterGamesHomeController());
@@ -33,7 +33,7 @@ class GamesHomePage extends StatefulWidget {
   }
 }
 
-class GamesHomePageState extends CommonState<GamesHomePage>
+class GamesHomePageState extends OceanAbsCommonState<GamesHomePage>
     with AutomaticKeepAliveClientMixin {
   @override
   String? createAppBarTitleStr() => LaunchIdConfig.flutterGame.tr;
@@ -65,7 +65,7 @@ class GamesHomePageState extends CommonState<GamesHomePage>
   bool get wantKeepAlive => true;
 }
 
-class FlutterGamesHomeController extends CommonGetXController {
+class FlutterGamesHomeController extends OceanAbsCommonGetXController{
   FlutterGamesHomeController();
 
   var uiModels = [].obs;

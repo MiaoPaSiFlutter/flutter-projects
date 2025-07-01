@@ -15,7 +15,7 @@ class ExampleSubscriptWidget extends StatefulWidget {
   }
 }
 
-class ExampleSubscriptState extends CommonState<ExampleSubscriptWidget> {
+class ExampleSubscriptState extends OceanAbsCommonState<ExampleSubscriptWidget> {
   @override
   bool get isNeedScaffol => false;
 

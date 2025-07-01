@@ -13,7 +13,7 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 import '../compontents/compontents.dart';
 import '../routers/example_module_routers.dart';
 
-class ExampleImageGridV extends CommonGetXWidget<ExampleImageGridC> {
+class ExampleImageGridV extends OceanAbsCommonGetXWidget<ExampleImageGridC> {
   ExampleImageGridV({super.key});
   @override
   String? createAppBarTitleStr() => controller.title.value;
@@ -182,7 +182,7 @@ class ExampleImageGridV extends CommonGetXWidget<ExampleImageGridC> {
   }
 }
 
-class ExampleImageGridC extends CommonGetXController {
+class ExampleImageGridC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
   Rx<String?> title = "".obs;
   var crossAxisCount = 3.obs;

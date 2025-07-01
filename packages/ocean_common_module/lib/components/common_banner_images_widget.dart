@@ -50,7 +50,7 @@ class CommonBannerImagesWidget extends StatefulWidget {
   }
 }
 
-class CommonBannerImagesState extends CommonState<CommonBannerImagesWidget>
+class CommonBannerImagesState extends OceanAbsCommonState<CommonBannerImagesWidget>
     with TickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   @override
   bool get isNeedScaffol => false;

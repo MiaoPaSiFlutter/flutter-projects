@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 import '../../modules/my_module/module_index.dart';
 import 'root_tab_v.dart';
 
-class RootDrawerlessV extends CommonLessV {
+class RootDrawerlessV extends OceanAbsCommonLessWidget {
   RootDrawerlessV({super.key});
   @override
   bool get isNeedScaffol => false;

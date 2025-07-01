@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import '../../../pages/root_pages/root_v.dart';
 import '../config/my_normal_config.dart';
 
-class MyToollessV extends CommonLessV {
+class MyToollessV extends OceanAbsCommonLessWidget {
   MyToollessV({super.key});
 
   List<HzyNormalItemModel> get list => MyNormalConfig().toolItemList;

@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 
 import '../module_index.dart';
 
-class ExampleComBtnlessV extends CommonLessV {
+class ExampleComBtnlessV extends OceanAbsCommonLessWidget {
   ExampleComBtnlessV({super.key});
 
   final List<NormalComBtnModel> list = [

@@ -4,8 +4,8 @@ import 'package:flutter_jd/flutter_jd.dart';
 import 'package:flutter/material.dart';
 import 'package:ocean_common_module/ocean_common_module.dart';
 
-class AccountSetView extends CommonGetXlistWidget<AccountSetController> {
-  AccountSetView({Key? key}) : super(key: key);
+class AccountSetView extends OceanAbsCommonGetXListWidget<AccountSetController> {
+  AccountSetView({super.key});
 
   @override
   String? createAppBarTitleStr() => '账户设置';

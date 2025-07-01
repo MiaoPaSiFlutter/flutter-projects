@@ -20,7 +20,7 @@ class ExampleHomePage extends StatefulWidget {
   }
 }
 
-class ExampleHomeState extends CommonState<ExampleHomePage>
+class ExampleHomeState extends OceanAbsCommonState<ExampleHomePage>
     with AutomaticKeepAliveClientMixin {
   @override
   String? createAppBarTitleStr() => LaunchIdConfig.example.tr;

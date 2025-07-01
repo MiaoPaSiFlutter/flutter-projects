@@ -29,8 +29,8 @@ import 'package:ui_shoe_app/ui_shoe_app/pages/UIShoeApp.dart';
 import '../../../compontents/interesting_ui_widget.dart';
 import '../../../models/interesting_ui_model.dart';
 
-class FlutterUIHomePage extends CommonGetXWidget<FlutterUIHomeController> {
-  FlutterUIHomePage({Key? key}) : super(key: key);
+class FlutterUIHomePage extends OceanAbsCommonGetXWidget<FlutterUIHomeController> {
+  FlutterUIHomePage({super.key});
   @override
   FlutterUIHomeController get controller => Get.put(FlutterUIHomeController());
   @override
@@ -55,7 +55,7 @@ class UIHomePage extends StatefulWidget {
   }
 }
 
-class UIHomePageState extends CommonState<UIHomePage>
+class UIHomePageState extends OceanAbsCommonState<UIHomePage>
     with AutomaticKeepAliveClientMixin {
   @override
   String? createAppBarTitleStr() => LaunchIdConfig.flutterUI.tr;
@@ -87,7 +87,7 @@ class UIHomePageState extends CommonState<UIHomePage>
   bool get wantKeepAlive => true;
 }
 
-class FlutterUIHomeController extends CommonGetXController {
+class FlutterUIHomeController extends OceanAbsCommonGetXController{
   FlutterUIHomeController();
 
   var uiModels = [].obs;

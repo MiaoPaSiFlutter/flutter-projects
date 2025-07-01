@@ -11,8 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:ocean_common_module/ocean_common_module.dart';
 
 class ExampleViewBasicAttributesV
-    extends CommonGetXWidget<ExampleViewBasicAttributesC> {
-  ExampleViewBasicAttributesV({Key? key}) : super(key: key);
+    extends OceanAbsCommonGetXWidget<ExampleViewBasicAttributesC> {
+  ExampleViewBasicAttributesV({super.key});
   @override
   ExampleViewBasicAttributesC get controller =>
       Get.put(ExampleViewBasicAttributesC());
@@ -25,7 +25,7 @@ class ExampleViewBasicAttributesV
   }
 }
 
-class ExampleViewBasicAttributesC extends CommonGetXController {
+class ExampleViewBasicAttributesC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
 
   // --------- 生命周期  --------- //

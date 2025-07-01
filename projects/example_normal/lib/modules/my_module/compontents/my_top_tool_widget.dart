@@ -26,7 +26,7 @@ class MyTopToolItemModel {
   });
 }
 
-class MyTopToollessV extends CommonLessV {
+class MyTopToollessV extends OceanAbsCommonLessWidget {
   MyTopToollessV({super.key});
   @override
   bool get isNeedScaffol => false;

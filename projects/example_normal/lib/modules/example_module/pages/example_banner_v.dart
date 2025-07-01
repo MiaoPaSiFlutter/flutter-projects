@@ -11,8 +11,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ocean_common_module/ocean_common_module.dart';
 
-class ExampleBannerV extends CommonGetXWidget<ExampleBannerC> {
-  ExampleBannerV({Key? key}) : super(key: key);
+class ExampleBannerV extends OceanAbsCommonGetXWidget<ExampleBannerC> {
+  ExampleBannerV({super.key});
   @override
   ExampleBannerC get controller => Get.put(ExampleBannerC());
   @override
@@ -56,7 +56,7 @@ class ExampleBannerV extends CommonGetXWidget<ExampleBannerC> {
   }
 }
 
-class ExampleBannerC extends CommonGetXController {
+class ExampleBannerC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
   /// 图片数据
   List<Uint8List> list = [];

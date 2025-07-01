@@ -12,7 +12,7 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 import '../compontents/compontents.dart';
 import '../models/normal_models.dart';
 
-class ExampleModalDialogV extends CommonGetXWidget<ExampleModalDialogC> {
+class ExampleModalDialogV extends OceanAbsCommonGetXWidget<ExampleModalDialogC> {
   ExampleModalDialogV({super.key});
   @override
   ExampleModalDialogC get controller => Get.put(ExampleModalDialogC());
@@ -46,7 +46,7 @@ class ExampleModalDialogV extends CommonGetXWidget<ExampleModalDialogC> {
   }
 }
 
-class ExampleModalDialogC extends CommonGetXController {
+class ExampleModalDialogC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
   Rx<String?> title = "".obs;
 

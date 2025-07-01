@@ -3,19 +3,19 @@
 export 'common_extendeed_image_widget.dart';
 
 /// 控制器
-export 'abstract/common_getx_controller.dart';
+export 'abstract/ocean_abs_common_getx_controller.dart';
 
 /// getx 列表
-export 'abstract/common_getx_list_v.dart';
+export 'abstract/ocean_abs_common_getx_list_widget.dart';
 
 /// getx 视图
-export 'abstract/common_getx_v.dart';
+export 'abstract/ocean_abs_common_getx_widget.dart';
 
 /// 九宫格图片选择
 export 'common_grid_image_v.dart';
 
 /// less
-export 'abstract/common_less_v.dart';
+export 'abstract/ocean_abs_common_less_widget.dart';
 
 /// list state
 export 'common_list_state.dart';
@@ -27,7 +27,7 @@ export 'common_place_holder_widget.dart';
 export 'common_refresh_widgets.dart';
 
 /// state
-export 'abstract/common_state.dart';
+export 'abstract/ocean_abs_common_state.dart';
 
 /// 通用widget
 export 'common_widgets.dart';

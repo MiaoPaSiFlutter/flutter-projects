@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ocean_utils/ocean_utils.dart';
 import '../config/config_index.dart';
 import '../utils/screenutil_tools.dart';
-import 'abstract/common_state.dart';
+import 'abstract/ocean_abs_common_state.dart';
 
 enum CommonDrawerType { left, right, top, bottom }
 
@@ -58,7 +58,7 @@ class CommonDrawerPage extends StatefulWidget {
   }
 }
 
-class CommonDrawerState extends CommonState<CommonDrawerPage>
+class CommonDrawerState extends OceanAbsCommonState<CommonDrawerPage>
     with TickerProviderStateMixin {
   @override
   bool get isNeedScaffol => false;

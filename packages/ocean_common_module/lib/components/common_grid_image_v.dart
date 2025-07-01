@@ -35,7 +35,7 @@ class GridImageModel {
   });
 }
 
-class CommonGirdImageV extends CommonLessV {
+class CommonGirdImageV extends OceanAbsCommonLessWidget {
   /// 获取控制器
   final CommonGirdImageC controller = Get.put(CommonGirdImageC());
 
@@ -289,7 +289,7 @@ class CommonGirdImageV extends CommonLessV {
   }
 }
 
-class CommonGirdImageC extends CommonGetXController
+class CommonGirdImageC extends OceanAbsCommonGetXController
     with GetSingleTickerProviderStateMixin {
   // --------- 私有属性  --------- //
 

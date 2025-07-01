@@ -26,7 +26,7 @@ class ExampleBasicStatePage extends StatefulWidget {
   }
 }
 
-class ExampleBasicStateState extends CommonState<ExampleBasicStatePage> {
+class ExampleBasicStateState extends OceanAbsCommonState<ExampleBasicStatePage> {
   ExampleVM vm = ExampleVM();
   ExamplConfig config = ExamplConfig();
 

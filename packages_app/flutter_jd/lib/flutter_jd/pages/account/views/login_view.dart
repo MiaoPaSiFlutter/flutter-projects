@@ -3,8 +3,8 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 import '../widgets/pwd_login_widget.dart';
 import '../widgets/sms_login_widget.dart';
 
-class LoginView extends CommonGetXWidget<LoginController> {
-  LoginView({Key? key}) : super(key: key);
+class LoginView extends OceanAbsCommonGetXWidget<LoginController> {
+  LoginView({super.key});
   @override
   String? createAppBarTitleStr() => '登录';
   @override
@@ -54,7 +54,7 @@ class LoginView extends CommonGetXWidget<LoginController> {
   }
 }
 
-class LoginController extends CommonGetXController {
+class LoginController extends OceanAbsCommonGetXController{
   final count = 0.obs;
 
   final index = 0.obs;

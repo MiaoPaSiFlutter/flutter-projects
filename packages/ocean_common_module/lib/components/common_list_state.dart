@@ -2,11 +2,11 @@ import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/material.dart';
 import 'package:ocean_utils/ocean_utils.dart';
 import '../utils/utils.dart';
-import './abstract/common_state.dart';
+import 'abstract/ocean_abs_common_state.dart';
 import 'common_place_holder_widget.dart';
 import 'common_refresh_widgets.dart';
 
-class CommonListState<T extends StatefulWidget> extends CommonState<T>
+class CommonListState<T extends StatefulWidget> extends OceanAbsCommonState<T>
     with HzyAbstracRefreshWidget, HzyAbstracRefreshMehod {
   /// 刷新控制器
   EasyRefreshController? refreshController;

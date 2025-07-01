@@ -25,8 +25,8 @@ class TabItemModel {
   });
 }
 
-class RootTabV extends CommonGetXWidget<RootTabC> {
-  RootTabV({Key? key}) : super(key: key);
+class RootTabV extends OceanAbsCommonGetXWidget<RootTabC> {
+  RootTabV({super.key});
   @override
   RootTabC get controller => Get.put(RootTabC());
 
@@ -115,7 +115,7 @@ class RootTabV extends CommonGetXWidget<RootTabC> {
   }
 }
 
-class RootTabC extends CommonGetXController {
+class RootTabC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
 
   var selectIndex = 0.obs;

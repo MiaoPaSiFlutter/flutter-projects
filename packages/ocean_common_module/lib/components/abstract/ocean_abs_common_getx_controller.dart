@@ -2,7 +2,7 @@ import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/material.dart';
 import '/ocean_common_module.dart';
 
-abstract class CommonGetXController extends GetxController
+abstract class OceanAbsCommonGetXController extends GetxController
     with
         OceanAbstractNetWork,
         HzyAbstractNetWork,
@@ -159,7 +159,7 @@ abstract class CommonGetXController extends GetxController
   configChangeLocales(List<Locale>? locales) {}
 }
 
-abstract class CommonGetXListController extends CommonGetXController
+abstract class CommonGetXListController extends OceanAbsCommonGetXController
     with HzyAbstracRefreshMehod {
   EasyRefreshController? refreshController;
   bool controlFinishRefresh = true;

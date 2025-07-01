@@ -5,7 +5,7 @@ import '../models/tu_chong_model.dart';
 import '../routers/example_module_routers.dart';
 import 'compontents.dart';
 
-class ExampleTuItmeImagelessV extends CommonLessV {
+class ExampleTuItmeImagelessV extends OceanAbsCommonLessWidget {
   ExampleTuItmeImagelessV({
     super.key,
     required this.tuChongItem,

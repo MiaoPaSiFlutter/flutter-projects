@@ -2,8 +2,8 @@ import 'package:flutter_jd/flutter_jd.dart';
 import 'package:flutter/material.dart';
 import 'package:ocean_common_module/ocean_common_module.dart';
 
-class BrowseHistoryView extends CommonGetXlistWidget<BrowseHistoryController> {
-  BrowseHistoryView({Key? key}) : super(key: key);
+class BrowseHistoryView extends OceanAbsCommonGetXListWidget<BrowseHistoryController> {
+  BrowseHistoryView({super.key});
 
   @override
   String? createAppBarTitleStr() => "浏览历史";

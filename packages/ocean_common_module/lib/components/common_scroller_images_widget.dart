@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'common_extendeed_image_widget.dart';
 
-import 'abstract/common_state.dart';
+import 'abstract/ocean_abs_common_state.dart';
 import '../models/image_normal_model.dart';
 import 'common_widgets.dart';
 
@@ -65,7 +65,7 @@ class CommonScrollerImagesWidget extends StatefulWidget {
   }
 }
 
-class CommonScrollerImagesState extends CommonState<CommonScrollerImagesWidget>
+class CommonScrollerImagesState extends OceanAbsCommonState<CommonScrollerImagesWidget>
     with SingleTickerProviderStateMixin {
   @override
   bool get isNeedScaffol => false;

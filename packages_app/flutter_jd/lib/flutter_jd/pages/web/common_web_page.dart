@@ -11,7 +11,7 @@ class CommonWebPage extends StatefulWidget {
   }
 }
 
-class _CommonWebPageState extends CommonState<CommonWebPage> {
+class _CommonWebPageState extends OceanAbsCommonState<CommonWebPage> {
   /// 属性
   ///
   ///

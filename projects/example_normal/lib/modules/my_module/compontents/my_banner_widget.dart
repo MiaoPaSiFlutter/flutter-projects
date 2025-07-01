@@ -23,7 +23,7 @@ class MyBannerPage extends StatefulWidget {
   }
 }
 
-class MyBannerState extends CommonState<MyBannerPage> {
+class MyBannerState extends OceanAbsCommonState<MyBannerPage> {
   int selectIndex = 0;
 
   @override

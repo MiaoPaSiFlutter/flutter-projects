@@ -22,8 +22,8 @@ import 'package:flutter/material.dart';
 import '../../../compontents/interesting_ui_widget.dart';
 import '../../../models/interesting_ui_model.dart';
 
-class FlutterAppsHomePage extends CommonGetXWidget<FlutterAppsHomeController> {
-  FlutterAppsHomePage({Key? key}) : super(key: key);
+class FlutterAppsHomePage extends OceanAbsCommonGetXWidget<FlutterAppsHomeController> {
+  FlutterAppsHomePage({super.key});
   @override
   FlutterAppsHomeController get controller =>
       Get.put(FlutterAppsHomeController());
@@ -49,7 +49,7 @@ class AppsHomePage extends StatefulWidget {
   }
 }
 
-class AppsHomePageState extends CommonState<AppsHomePage>
+class AppsHomePageState extends OceanAbsCommonState<AppsHomePage>
     with AutomaticKeepAliveClientMixin {
   @override
   String? createAppBarTitleStr() => LaunchIdConfig.flutterApp.tr;
@@ -81,7 +81,7 @@ class AppsHomePageState extends CommonState<AppsHomePage>
   bool get wantKeepAlive => true;
 }
 
-class FlutterAppsHomeController extends CommonGetXController {
+class FlutterAppsHomeController extends OceanAbsCommonGetXController{
   FlutterAppsHomeController();
 
   var uiModels = [].obs;

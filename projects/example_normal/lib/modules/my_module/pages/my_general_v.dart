@@ -12,7 +12,7 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 import '../config/my_launch_id_config.dart';
 import '../config/my_normal_config.dart';
 
-class MyGeneralV extends CommonLessV {
+class MyGeneralV extends OceanAbsCommonLessWidget {
   MyGeneralV({super.key});
   @override
   String? get appBarTitle => MyLaunchIdConfig.general.tr;
@@ -51,7 +51,7 @@ class MyGeneralV extends CommonLessV {
   }
 }
 
-class MyGeneralC extends CommonGetXController {
+class MyGeneralC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
 
   List<HzyNormalItemModel> get config => MyNormalConfig().generalList;

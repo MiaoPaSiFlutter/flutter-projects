@@ -24,7 +24,7 @@ class MyPage extends StatefulWidget {
   }
 }
 
-class MyState extends CommonState<MyPage> with AutomaticKeepAliveClientMixin {
+class MyState extends OceanAbsCommonState<MyPage> with AutomaticKeepAliveClientMixin {
   @override
   bool configSafeAreaTop() => false;
   @override

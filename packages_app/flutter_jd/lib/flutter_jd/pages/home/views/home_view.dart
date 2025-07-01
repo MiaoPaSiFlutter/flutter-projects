@@ -3,8 +3,8 @@ import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../widgets/shouye/JdShouYeScreen.dart';
 
-class HomeView extends CommonGetXWidget<HomeController> {
-  HomeView({Key? key}) : super(key: key);
+class HomeView extends OceanAbsCommonGetXWidget<HomeController> {
+  HomeView({super.key});
 
   @override
   bool configIsShowAppBar() => false;
@@ -90,7 +90,7 @@ class HomeView extends CommonGetXWidget<HomeController> {
 //   }
 // }
 
-class HomeController extends CommonGetXController {
+class HomeController extends OceanAbsCommonGetXController{
   final count = 0.obs;
   @override
   void onInit() {

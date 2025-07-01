@@ -14,7 +14,7 @@ import '../compontents/example_tu_item_widget.dart';
 import '../models/tu_chong_model.dart';
 import '../vm/example_vm.dart';
 
-class ExampleTuListV extends CommonGetXlistWidget<ExampleTuListC> {
+class ExampleTuListV extends OceanAbsCommonGetXListWidget<ExampleTuListC> {
   ExampleTuListV({super.key});
 
   @override

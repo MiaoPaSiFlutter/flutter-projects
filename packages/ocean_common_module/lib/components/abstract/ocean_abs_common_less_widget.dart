@@ -5,11 +5,11 @@ import '../../config/normal_configs.dart';
 import '../../utils/screenutil_tools.dart';
 import '../components_index.dart';
 
-abstract class CommonLessV extends OceanAbsLessWidget {
+abstract class OceanAbsCommonLessWidget extends OceanAbsLessWidget {
   final CommonPlaceHoldType? placeHoldType;
   final String? placeMsg;
 
-  CommonLessV({super.key, this.placeMsg, this.placeHoldType});
+  OceanAbsCommonLessWidget({super.key, this.placeMsg, this.placeHoldType});
 
   @override
   bool get isAddPopScope => PageNormalConfig().canPopScope;

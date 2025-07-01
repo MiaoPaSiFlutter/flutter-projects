@@ -17,7 +17,7 @@ import '../compontents/example_list_widget.dart';
 import '../config/example_config.dart';
 import '../vm/example_vm.dart';
 
-class ExampleBasicGetV extends CommonGetXWidget<ExampleBasicGetC> {
+class ExampleBasicGetV extends OceanAbsCommonGetXWidget<ExampleBasicGetC> {
   ExampleBasicGetV({super.key});
   @override
   String? createAppBarTitleStr() => controller.title;
@@ -54,7 +54,7 @@ class ExampleBasicGetV extends CommonGetXWidget<ExampleBasicGetC> {
   }
 }
 
-class ExampleBasicGetC extends CommonGetXController {
+class ExampleBasicGetC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
   String title = '';
   String typeStr = "game";

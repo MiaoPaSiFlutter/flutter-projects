@@ -14,7 +14,7 @@ import 'package:example_normal/modules/example_module/compontents/compontents.da
 import 'package:example_normal/modules/example_module/models/image_model.dart';
 import 'package:example_normal/modules/example_module/models/tu_chong_model.dart';
 
-class ExampleListWidget extends CommonLessV {
+class ExampleListWidget extends OceanAbsCommonLessWidget {
   ExampleListWidget({
     super.key,
     required this.list,

@@ -14,7 +14,7 @@ import '../compontents/drawer_top_widget.dart';
 import '../config/example_launch_id_config.dart';
 import 'example_text_anim_v.dart';
 
-class ExampleDrawerV extends CommonGetXWidget<ExampleDrawerC> {
+class ExampleDrawerV extends OceanAbsCommonGetXWidget<ExampleDrawerC> {
   ExampleDrawerV({super.key});
 
   @override
@@ -72,7 +72,7 @@ class ExampleDrawerV extends CommonGetXWidget<ExampleDrawerC> {
   }
 }
 
-class ExampleDrawerC extends CommonGetXController {
+class ExampleDrawerC extends OceanAbsCommonGetXController{
   // --------- 属性 --------- //
 
   var type = CommonDrawerType.left;
@@ -115,7 +115,7 @@ class ExampleDrawerC extends CommonGetXController {
   }
 }
 
-class DrawerBodylessV extends CommonLessV {
+class DrawerBodylessV extends OceanAbsCommonLessWidget {
   DrawerBodylessV({super.key});
   final ExampleDrawerC controller = Get.put(ExampleDrawerC());
 

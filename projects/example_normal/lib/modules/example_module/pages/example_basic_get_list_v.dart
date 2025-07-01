@@ -21,7 +21,7 @@ import '../compontents/example_list_widget.dart';
 import '../compontents/compontents.dart';
 import '../vm/example_vm.dart';
 
-class ExampleBasicListV extends CommonGetXlistWidget<ExampleBasicListC> {
+class ExampleBasicListV extends OceanAbsCommonGetXListWidget<ExampleBasicListC> {
   final String? typeStr;
   final bool? isShowAppBar;
   final String? listTag;
