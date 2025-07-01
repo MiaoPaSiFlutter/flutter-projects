@@ -24,7 +24,7 @@ class _CommonWebPageState extends CommonState<CommonWebPage> {
   @override
   PageState get pageState => webstate;
   @override
-  bool get safeAreabottm => false;
+  bool get safeAreaBottom => false;
 
   int failnum = 1;
   bool isfail = false;

@@ -39,7 +39,7 @@ class MyToollessV extends CommonLessV {
             itemModel.isCanTap = true;
             Widget body = configNormalDarkItemWidget(
               itemModel: itemModel,
-              onTap: (HzyNormalItemModel itemModel) {
+              onTap: (HzyNormalItemModel itemModel, _) {
                 configTapItem(model: itemModel);
               },
             );

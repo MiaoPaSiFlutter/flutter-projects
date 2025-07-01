@@ -6,7 +6,7 @@ import 'package:loading_more_list/loading_more_list.dart';
 import 'WaterfallFlowTabRepository.dart';
 
 class WaterfallFlowTabWidget extends StatefulWidget {
-  const WaterfallFlowTabWidget(this.tabKey, this.tabInfo);
+  const WaterfallFlowTabWidget(this.tabKey, this.tabInfo, {super.key});
 
   final Key tabKey;
   final Map tabInfo;
@@ -136,7 +136,7 @@ class RecommendWareItem_0 extends StatelessWidget {
                 ),
               ),
               TextSpan(
-                  text: HyzyTextTools.mpsfStr(wname),
+                  text: OceanTextTools.safeStr(wname),
                   style: const TextStyle(color: Colors.black))
             ]),
       ),
@@ -181,7 +181,7 @@ class RecommendWareItem_0 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Text(
-            "￥${HyzyTextTools.mpsfStr(jdPrice)}",
+            "￥${OceanTextTools.safeStr(jdPrice)}",
             style: const TextStyle(fontSize: 15),
           ),
         ],
@@ -214,7 +214,7 @@ class RecommendWareItem_0 extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: HyzyTextTools.mpsfStr(tryPlusPrice),
+                  text: OceanTextTools.safeStr(tryPlusPrice),
                   style: const TextStyle(
                     color: Colors.black,
                     fontSize: 10,

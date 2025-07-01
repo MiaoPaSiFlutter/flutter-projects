@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-20 22:35:30
- * @LastEditors: TT
- * @LastEditTime: 2023-04-21 16:20:29
- */
-
 /// 字体配置文件
 export 'font_config.dart';
 

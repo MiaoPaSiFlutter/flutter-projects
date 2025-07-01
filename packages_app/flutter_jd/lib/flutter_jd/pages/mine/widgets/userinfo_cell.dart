@@ -7,11 +7,11 @@ class UserInfoCell extends StatelessWidget {
   final String displayName;
 
   const UserInfoCell({
-    Key? key,
+    super.key,
     this.avatar = "https://user-gold-cdn.xitu.io/2019/12/21/16f279cc3b91f5e9",
     this.name = "多福多寿",
     this.displayName = "东方饭店",
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

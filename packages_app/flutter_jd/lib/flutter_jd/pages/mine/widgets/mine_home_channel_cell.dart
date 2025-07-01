@@ -4,7 +4,7 @@ import 'mid_info_headerview.dart';
 
 class MineHomeChannelCell extends StatelessWidget {
   final Map? floor;
-  const MineHomeChannelCell({Key? key, this.floor}) : super(key: key);
+  const MineHomeChannelCell({super.key, this.floor});
 
   @override
   Widget build(BuildContext context) {

@@ -45,7 +45,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:rxdart/rxdart.dart' as rxdart;
 import 'package:share_plus/share_plus.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
-import 'package:hzy_common_module/hzy_common_module.dart' hide File, FileImage;
+import 'package:hzy_common_module/hzy_common_module.dart' hide File, FileImage, copyToClipboard;
 
 class PlayScreen extends StatefulWidget {
   const PlayScreen({super.key});
@@ -1380,7 +1380,7 @@ class _ArtWorkWidgetState extends State<ArtWorkWidget> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    color: Theme.of(context).cardColor.withOpacity(0.6),
+                    color: Theme.of(context).cardColor.withAlpha(153),
                     clipBehavior: Clip.antiAlias,
                     child: IconButton(
                       tooltip: AppLocalizations.of(context).copy,
@@ -1393,7 +1393,7 @@ class _ArtWorkWidgetState extends State<ArtWorkWidget> {
                       },
                       icon: const Icon(Icons.copy_rounded),
                       color:
-                          Theme.of(context).iconTheme.color!.withOpacity(0.6),
+                          Theme.of(context).iconTheme.color!.withAlpha(153),
                     ),
                   ),
                 ),
@@ -1585,7 +1585,7 @@ class _ArtWorkWidgetState extends State<ArtWorkWidget> {
                                                     Theme.of(context)
                                                         .colorScheme
                                                         .secondary
-                                                        .withOpacity(0.4),
+                                                        .withAlpha(152),
                                                 trackShape:
                                                     const RoundedRectSliderTrackShape(),
                                                 disabledActiveTrackColor:
@@ -1596,7 +1596,7 @@ class _ArtWorkWidgetState extends State<ArtWorkWidget> {
                                                     Theme.of(context)
                                                         .colorScheme
                                                         .secondary
-                                                        .withOpacity(0.4),
+                                                        .withAlpha(152),
                                               ),
                                               child: ExcludeSemantics(
                                                 child: Slider(
@@ -1658,8 +1658,8 @@ class _ArtWorkWidgetState extends State<ArtWorkWidget> {
                             decoration: BoxDecoration(
                               gradient: RadialGradient(
                                 colors: [
-                                  Colors.black.withOpacity(0.4),
-                                  Colors.black.withOpacity(0.7),
+                                  Colors.black.withAlpha(102),
+                                  Colors.black.withAlpha(178),
                                 ],
                               ),
                             ),
@@ -1771,12 +1771,12 @@ class _ArtWorkWidgetState extends State<ArtWorkWidget> {
                                     colors: value == 1
                                         ? [
                                             Colors.transparent,
-                                            Colors.black.withOpacity(0.4),
-                                            Colors.black.withOpacity(0.7),
+                                            Colors.black.withAlpha(102),
+                                            Colors.black.withAlpha(178),
                                           ]
                                         : [
-                                            Colors.black.withOpacity(0.7),
-                                            Colors.black.withOpacity(0.4),
+                                            Colors.black.withAlpha(178),
+                                            Colors.black.withAlpha(102),
                                             Colors.transparent,
                                           ],
                                   ),

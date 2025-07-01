@@ -13,14 +13,16 @@ import '../compontents/compontents.dart';
 import '../models/normal_models.dart';
 
 class ExampleModalDialogV extends CommonGetXWidget<ExampleModalDialogC> {
-  ExampleModalDialogV({Key? key}) : super(key: key);
+  ExampleModalDialogV({super.key});
   @override
   ExampleModalDialogC get controller => Get.put(ExampleModalDialogC());
   @override
   String? createAppBarTitleStr() => controller.title.value;
   @override
-  Widget createScallBody(
-      {required BuildContext context, BoxConstraints? constraints}) {
+  Widget createScallBody({
+    required BuildContext context,
+    BoxConstraints? constraints,
+  }) {
     Widget body = Container();
     body = ListView(
       children: [
@@ -31,18 +33,15 @@ class ExampleModalDialogV extends CommonGetXWidget<ExampleModalDialogC> {
             itemModel: itemModel,
             index: index,
             allNum: controller.list.length,
-            onOtherTap: (_) {
+            onOtherTap: (_, _) {
               controller.tapItem(index: index);
             },
           );
           return body;
-        })
+        }),
       ],
     );
-    body = Container(
-      margin: const EdgeInsets.all(15),
-      child: body,
-    );
+    body = Container(margin: const EdgeInsets.all(15), child: body);
     return body;
   }
 }
@@ -61,47 +60,21 @@ class ExampleModalDialogC extends CommonGetXController {
   String tile = "温馨提示";
   List<HzyNormalItemModel> list = [
     HzyNormalItemModel(
-      borderRadius: BorderRadius.vertical(
-        top: Radius.circular(16.r),
-      ),
+      borderRadius: BorderRadius.vertical(top: Radius.circular(16.r)),
       leftMsg: "默认",
     ),
-    HzyNormalItemModel(
-      leftMsg: "只有title",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "只有msg",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "只有一个按钮",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "两个按钮上下布局",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "修改按钮圆角",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "修改确认按钮样式",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "点击屏幕不可以关闭弹框",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "修改弹框背景颜色",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "自定义整体弹框",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "自定义title Widget",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "自定义msg Widget",
-    ),
-    HzyNormalItemModel(
-      leftMsg: "自定义底部组合按钮",
-    ),
+    HzyNormalItemModel(leftMsg: "只有title"),
+    HzyNormalItemModel(leftMsg: "只有msg"),
+    HzyNormalItemModel(leftMsg: "只有一个按钮"),
+    HzyNormalItemModel(leftMsg: "两个按钮上下布局"),
+    HzyNormalItemModel(leftMsg: "修改按钮圆角"),
+    HzyNormalItemModel(leftMsg: "修改确认按钮样式"),
+    HzyNormalItemModel(leftMsg: "点击屏幕不可以关闭弹框"),
+    HzyNormalItemModel(leftMsg: "修改弹框背景颜色"),
+    HzyNormalItemModel(leftMsg: "自定义整体弹框"),
+    HzyNormalItemModel(leftMsg: "自定义title Widget"),
+    HzyNormalItemModel(leftMsg: "自定义msg Widget"),
+    HzyNormalItemModel(leftMsg: "自定义底部组合按钮"),
   ];
 
   List popList = [];
@@ -115,27 +88,11 @@ class ExampleModalDialogC extends CommonGetXController {
   // --------- 数据处理  --------- //
   configNormalData() {
     popList = [
-      NormalDialogModel(
-        title: tile,
-        msg: msg,
-      ),
-      NormalDialogModel(
-        title: tile,
-      ),
-      NormalDialogModel(
-        msg: msg,
-      ),
-      NormalDialogModel(
-        title: tile,
-        msg: msg,
-        btnType: 1,
-      ),
-      NormalDialogModel(
-        title: tile,
-        msg: msg,
-        space: 10,
-        layoutType: 2,
-      ),
+      NormalDialogModel(title: tile, msg: msg),
+      NormalDialogModel(title: tile),
+      NormalDialogModel(msg: msg),
+      NormalDialogModel(title: tile, msg: msg, btnType: 1),
+      NormalDialogModel(title: tile, msg: msg, space: 10, layoutType: 2),
       NormalDialogModel(
         title: tile,
         msg: msg,
@@ -152,40 +109,20 @@ class ExampleModalDialogC extends CommonGetXController {
         sureTitleColor: HzyCommonColor().whitebackgroundColor,
         sureMsg: "我是确认按钮",
       ),
-      NormalDialogModel(
-        title: tile,
-        msg: msg,
-        barrierDismissible: false,
-      ),
+      NormalDialogModel(title: tile, msg: msg, barrierDismissible: false),
       NormalDialogModel(
         title: tile,
         msg: msg,
         dialogBackColor: HzyCommonColor().colefedf3,
       ),
-      NormalDialogModel(
-        body: configBtnImageWidget(
-          w: null,
-        ),
-      ),
-      NormalDialogModel(
-        titleWidget: configBtnImageWidget(
-          w: null,
-        ),
-        msg: msg,
-      ),
-      NormalDialogModel(
-        msgWidget: configBtnImageWidget(
-          w: null,
-        ),
-        title: tile,
-      ),
+      NormalDialogModel(body: configBtnImageWidget(w: null)),
+      NormalDialogModel(titleWidget: configBtnImageWidget(w: null), msg: msg),
+      NormalDialogModel(msgWidget: configBtnImageWidget(w: null), title: tile),
       NormalDialogModel(
         msg: msg,
         title: tile,
-        btnSWidget: configBtnImageWidget(
-          w: null,
-        ),
-      )
+        btnSWidget: configBtnImageWidget(w: null),
+      ),
     ];
     HzyNormalItemModel itemModel = currentGetArguments();
     title.value = itemModel.leftMsg;
@@ -194,38 +131,41 @@ class ExampleModalDialogC extends CommonGetXController {
 
   tapItem({required int index}) {
     NormalDialogModel dialogModel = popList[index];
-    showPopDiaLogWidget(
+    showNormalDialog(
       context: Get.context!,
-      space: dialogModel.space,
-      dialogBackColor:
-          dialogModel.dialogBackColor ?? HzyCommonColor().whitebackgroundColor,
-      barrierDismissible: dialogModel.barrierDismissible!,
-      body: dialogModel.body,
-      titleWidget: dialogModel.titleWidget,
-      title: dialogModel.title,
-      titleColor: dialogModel.titleColor ?? HzyCommonColor().col000000,
-      msgWidget: dialogModel.msgWidget,
-      msgColor: dialogModel.msgColor ?? HzyCommonColor().col5a5a5a,
-      msgFontSize: dialogModel.msgFontSize,
-      msg: dialogModel.msg,
-      btnSWidget: dialogModel.btnSWidget,
-      padding: dialogModel.padding,
-      msgAndBtnSpace: dialogModel.msgAndBtnSpace,
-      titleAndMsgSpace: dialogModel.titleAndMsgSpace,
-      sureMsg: dialogModel.sureMsg,
-      sureBgColor: dialogModel.sureBgColor,
-      sureTitleColor: dialogModel.sureTitleColor,
-      cannerMsg: dialogModel.cannerMsg,
-      cannerBgColor: dialogModel.cannerBgColor ?? HzyNormalColorS.colefedf3,
-      cannerTitleColor:
-          dialogModel.cannerTitleColor ?? HzyCommonColor().colplacetextcolor,
-      layoutType: dialogModel.layoutType,
-      btnType: dialogModel.btnType,
-      radius: dialogModel.radius,
-      tapSure: () {
-        Navigator.of(Get.context!).pop();
-      },
-      tapCanner: () {},
+      config: DialogConfig(
+        space: dialogModel.space,
+        dialogBackColor:
+            dialogModel.dialogBackColor ??
+            HzyCommonColor().whitebackgroundColor,
+        barrierDismissible: dialogModel.barrierDismissible!,
+        body: dialogModel.body,
+        titleWidget: dialogModel.titleWidget,
+        title: dialogModel.title,
+        titleColor: dialogModel.titleColor ?? HzyCommonColor().col000000,
+        msgWidget: dialogModel.msgWidget,
+        msgColor: dialogModel.msgColor ?? HzyCommonColor().col5a5a5a,
+        msgFontSize: dialogModel.msgFontSize,
+        msg: dialogModel.msg,
+        btnWidget: dialogModel.btnSWidget,
+        padding: dialogModel.padding,
+        msgAndBtnSpace: dialogModel.msgAndBtnSpace,
+        titleAndMsgSpace: dialogModel.titleAndMsgSpace,
+        sureMsg: dialogModel.sureMsg,
+        sureBgColor: dialogModel.sureBgColor,
+        sureTitleColor: dialogModel.sureTitleColor,
+        cancelMsg: dialogModel.cannerMsg,
+        cancelBgColor: dialogModel.cannerBgColor ?? HzyNormalColorS.colefedf3,
+        cancelTitleColor:
+            dialogModel.cannerTitleColor ?? HzyCommonColor().colplacetextcolor,
+        layoutType: dialogModel.layoutType,
+        btnType: dialogModel.btnType,
+        radius: dialogModel.radius,
+        tapSure: () {
+          Navigator.of(Get.context!).pop();
+        },
+        tapCancel: () {},
+      ),
     );
   }
 }

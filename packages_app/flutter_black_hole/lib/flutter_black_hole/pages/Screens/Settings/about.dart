@@ -7,7 +7,7 @@ import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizati
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:hzy_common_module/hzy_common_module.dart' hide copyToClipboard;
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:share_plus/share_plus.dart';
 

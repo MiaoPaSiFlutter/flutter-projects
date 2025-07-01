@@ -1,15 +1,6 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-19 20:59:21
- * @LastEditors: TT
- * @LastEditTime: 2023-09-07 17:43:25
- */
-
 import 'package:get/get.dart';
 
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'getx_util_tool.dart';
@@ -55,8 +46,8 @@ class PermissionHelper {
     }
     List<Permission> list = [];
     if (!flag) {
-      Map<Permission, PermissionStatus> statuses =
-          await permissionList.request();
+      Map<Permission, PermissionStatus> statuses = await permissionList
+          .request();
       statuses.forEach((key, value) {
         if (!value.isGranted) {
           list.add(key);
@@ -169,9 +160,7 @@ class PermissionHelper {
    * }
    * @return {*}
    */
-  static configPermissionMsg({
-    required Permission permission,
-  }) {
+  static configPermissionMsg({required Permission permission}) {
     String msg = "";
     if (permission == Permission.bluetooth) {
       msg = PermissionMsgConfig.bluetoothMsg;
@@ -203,9 +192,7 @@ class PermissionHelper {
    * }
    * @return {*}
    */
-  static configPermissionTitle({
-    required Permission permission,
-  }) {
+  static configPermissionTitle({required Permission permission}) {
     String title = "";
     switch (permission) {
       case Permission.bluetooth:
@@ -237,22 +224,18 @@ class PermissionHelper {
    * }
    * @return {*}
    */
-  static permissionPopUpWidget({
-    required Permission permission,
-  }) {
+  static permissionPopUpWidget({required Permission permission}) {
     loadDismiss();
-    showPopDiaLogWidget(
+    showNormalDialog(
       context: Get.context!,
-      title: configPermissionTitle(
-        permission: permission,
+      config: DialogConfig(
+        title: configPermissionTitle(permission: permission),
+        msg: configPermissionMsg(permission: permission),
+        tapSure: () {
+          currentGoback();
+          openAppSettings();
+        },
       ),
-      msg: configPermissionMsg(
-        permission: permission,
-      ),
-      tapSure: () {
-        currentGoback();
-        openAppSettings();
-      },
     );
   }
 }

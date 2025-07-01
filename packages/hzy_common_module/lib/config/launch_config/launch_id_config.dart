@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-04-19 20:42:21
- * @LastEditors: TT
- * @LastEditTime: 2023-06-13 11:05:55
- */
-
 class LaunchIdConfig {
   /// flutterUI
   static const String flutterTest = "f-test";

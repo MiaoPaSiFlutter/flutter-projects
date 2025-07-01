@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:hzy_common_module/hzy_common_module.dart';
 
 class ExampleTextAnimV extends CommonGetXWidget<ExampleTextAnimC> {
-  ExampleTextAnimV({Key? key}) : super(key: key);
+  ExampleTextAnimV({super.key});
   @override
   ExampleTextAnimC get controller => Get.put(ExampleTextAnimC());
   @override

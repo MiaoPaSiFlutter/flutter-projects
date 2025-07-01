@@ -1,15 +1,7 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-19 21:58:22
- * @LastEditors: TT
- * @LastEditTime: 2023-09-15 18:26:16
- */
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 
 import 'sp_tool.dart';
 
@@ -18,12 +10,9 @@ class ThemeTool {
   /// 0 白色
   /// 1 黑色
   /// 2 系统跟随
-  static changeTheme({
-    int type = 0,
-    bool isUserCache = false,
-  }) async {
+  static changeTheme({int type = 0, bool isUserCache = false}) async {
     if (!isUserCache) {
-      dPrint("准备存下来的主题类型$type");
+      debugLog("准备存下来的主题类型$type");
     }
 
     ThemeMode mode = getlocalprofileaboutThemeModel(
@@ -34,8 +23,8 @@ class ThemeTool {
       isUserCache: isUserCache,
       themeType: type,
     );
-    dPrint(mode);
-    dPrint(themeData);
+    debugLog(mode);
+    debugLog(themeData);
     EasyLoadingStyle easyLoadingStyle = EasyLoadingStyle.dark;
     if (mode == ThemeMode.dark) {
       easyLoadingStyle = EasyLoadingStyle.light;
@@ -68,7 +57,7 @@ class ThemeTool {
     int themeType = 0,
   }) {
     int type = isUserCache ? SpTool.themeType() : themeType;
-    dPrint(type);
+    debugLog(type);
     if (type == 0) {
       return ThemeMode.light;
     } else if (type == 1) {

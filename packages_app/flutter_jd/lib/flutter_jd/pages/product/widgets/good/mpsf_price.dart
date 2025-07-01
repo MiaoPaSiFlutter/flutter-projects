@@ -36,7 +36,7 @@ class MpsfPrice extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: HyzyTextTools.mpsfStr(splitArr.first),
+              text: OceanTextTools.safeStr(splitArr.first),
               style: TextStyle(
                 fontSize: integerSize,
                 fontWeight: bold == true ? FontWeight.bold : null,
@@ -52,7 +52,7 @@ class MpsfPrice extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: HyzyTextTools.mpsfStr(splitArr.last),
+              text: OceanTextTools.safeStr(splitArr.last),
               style: TextStyle(
                 fontSize: decimalSize,
                 fontWeight: bold == true ? FontWeight.bold : null,

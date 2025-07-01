@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-05-05 09:45:00
- * @LastEditors: TT
- * @LastEditTime: 2023-09-08 11:18:09
- */
-
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
@@ -15,7 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 import 'package:wechat_camera_picker/wechat_camera_picker.dart';
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 
 import 'image_picker_tool.dart';
 import 'permission_helper.dart';
@@ -134,20 +125,24 @@ class PickerTool {
    * @param {*}
    * @return {*}
    */
-  static permissionpopupWidget(
-      {required BuildContext context, required int status}) {
+  static permissionpopupWidget({
+    required BuildContext context,
+    required int status,
+  }) {
     loadDismiss();
     String msg = "需要打开相册权限才能加载相册哦~";
     if (status == 1) {
       msg = "需要打开相机权限才能拍照哦~";
     }
-    showPopDiaLogWidget(
+    showNormalDialog(
       context: context,
-      msg: msg,
-      tapSure: () {
-        currentGoback();
-        openAppSettings();
-      },
+      config: DialogConfig(
+        msg: msg,
+        tapSure: () {
+          currentGoback();
+          openAppSettings();
+        },
+      ),
     );
   }
 
@@ -299,14 +294,10 @@ class PickerTool {
     } else {
       permission = Permission.camera;
     }
-    list = await PermissionHelper.checkPermission(
-      permissionList: [permission],
-    );
+    list = await PermissionHelper.checkPermission(permissionList: [permission]);
 
     if (list.isEmpty && isShowPop && context != null) {
-      PermissionHelper.permissionPopUpWidget(
-        permission: permission,
-      );
+      PermissionHelper.permissionPopUpWidget(permission: permission);
     }
     if (onPerCallback != null) {
       onPerCallback(list);
@@ -350,18 +341,14 @@ class PickerTool {
         if (onFailed != null) {
           onFailed(per);
         } else {
-          PermissionHelper.permissionPopUpWidget(
-            permission: permission,
-          );
+          PermissionHelper.permissionPopUpWidget(permission: permission);
         }
       },
       onOpenSetting: (per) {
         if (onFailed != null) {
           onFailed(per);
         } else {
-          PermissionHelper.permissionPopUpWidget(
-            permission: permission,
-          );
+          PermissionHelper.permissionPopUpWidget(permission: permission);
         }
       },
     );

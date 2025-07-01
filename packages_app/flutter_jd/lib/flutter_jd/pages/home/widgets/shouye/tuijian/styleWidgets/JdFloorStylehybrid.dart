@@ -13,9 +13,9 @@ import 'JdFloorStylehybridSNslidepage.dart';
 class JdFloorStylehybrid extends StatefulWidget {
   final Map? floor;
   const JdFloorStylehybrid({
-    Key? key,
+    super.key,
     this.floor,
-  }) : super(key: key);
+  });
 
   @override
   State createState() => _JdFloorStylehybridState();
@@ -77,12 +77,12 @@ class _JdFloorStylehybridState extends State<JdFloorStylehybrid> {
     _subFloors = widget.floor?["content"]?["subFloors"] ?? [];
     _marginTop = widget.floor?["marginTop"] ?? 0;
     _marginBottom = widget.floor?["bottomMargin"] ?? 0;
-    _cornerDegree = HyzyTextTools.mpsfStr(widget.floor?["cornerDegree"],
+    _cornerDegree = OceanTextTools.safeStr(widget.floor?["cornerDegree"],
         placehold: "0,0,0,0");
   }
 
   Widget _getLogoView() {
-    if (HyzyTextTools.isEmpty(_logoImage)) {
+    if (OceanTextTools.isEmpty(_logoImage)) {
       return Container();
     }
     return CommonExtendedImageWidget.netWorkImget(url: _logoImage!);

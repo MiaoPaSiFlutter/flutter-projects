@@ -18,7 +18,7 @@ import '../config/example_config.dart';
 import '../vm/example_vm.dart';
 
 class ExampleBasicGetV extends CommonGetXWidget<ExampleBasicGetC> {
-  ExampleBasicGetV({Key? key}) : super(key: key);
+  ExampleBasicGetV({super.key});
   @override
   String? createAppBarTitleStr() => controller.title;
   @override
@@ -81,7 +81,7 @@ class ExampleBasicGetC extends CommonGetXController {
       type: typeStr,
     );
     update();
-    pageState.value = vm.state.pageState!;
+    pageState.value = vm.state.pageState;
   }
 
   // --------- 触发事件  --------- //

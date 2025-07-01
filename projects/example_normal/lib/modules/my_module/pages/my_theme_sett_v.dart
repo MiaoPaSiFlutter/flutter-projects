@@ -16,7 +16,7 @@ import '../config/my_normal_config.dart';
 import '../pages/pages_index.dart';
 
 class MyThemeV extends CommonGetXWidget<MyThemeC> {
-  MyThemeV({Key? key, this.isShowBack}) : super(key: key);
+  MyThemeV({super.key, this.isShowBack});
 
   final bool? isShowBack;
   @override
@@ -39,12 +39,7 @@ class MyThemeV extends CommonGetXWidget<MyThemeC> {
       itemCount: controller.switchValue.value ? 1 : 4,
     );
     body = Expanded(child: body);
-    body = Column(
-      children: [
-        Gaps.vGap10,
-        body,
-      ],
-    );
+    body = Column(children: [Gaps.vGap10, body]);
     return body;
   }
 
@@ -66,15 +61,9 @@ class MyThemeV extends CommonGetXWidget<MyThemeC> {
         ),
       );
     } else if (index == 2) {
-      body = createdarkitemwidget(
-        MyLaunchIdConfig.normalModel.tr,
-        index,
-      );
+      body = createdarkitemwidget(MyLaunchIdConfig.normalModel.tr, index);
     } else if (index == 3) {
-      body = createdarkitemwidget(
-        MyLaunchIdConfig.dark.tr,
-        index,
-      );
+      body = createdarkitemwidget(MyLaunchIdConfig.dark.tr, index);
     }
     return body;
   }
@@ -82,15 +71,11 @@ class MyThemeV extends CommonGetXWidget<MyThemeC> {
   Widget createSparatorBuilder(BuildContext context, int index) {
     if (index == 2) {
       return Container(
-        decoration: BoxDecoration(
-          color: HzyCommonColor().whitebackgroundColor,
-        ),
+        decoration: BoxDecoration(color: HzyCommonColor().whitebackgroundColor),
         child: Container(
           height: 0.5,
           margin: EdgeInsets.only(left: 20.w, right: 20.w),
-          decoration: BoxDecoration(
-            color: HzyCommonColor().linecolor,
-          ),
+          decoration: BoxDecoration(color: HzyCommonColor().linecolor),
         ),
       );
     } else {
@@ -101,9 +86,7 @@ class MyThemeV extends CommonGetXWidget<MyThemeC> {
   // 创建跟随系统
   Widget createfirstwidget() {
     return Container(
-      decoration: BoxDecoration(
-        color: HzyCommonColor().whitebackgroundColor,
-      ),
+      decoration: BoxDecoration(color: HzyCommonColor().whitebackgroundColor),
       padding: EdgeInsets.only(
         left: 20.w,
         right: 20.w,
@@ -136,7 +119,7 @@ class MyThemeV extends CommonGetXWidget<MyThemeC> {
             onChanged: (value) {
               controller.configSwitchOnchanged(value);
             },
-          )
+          ),
         ],
       ),
     );
@@ -154,9 +137,7 @@ class MyThemeV extends CommonGetXWidget<MyThemeC> {
           bottom: 10.w,
           top: 10.w,
         ),
-        decoration: BoxDecoration(
-          color: HzyCommonColor().whitebackgroundColor,
-        ),
+        decoration: BoxDecoration(color: HzyCommonColor().whitebackgroundColor),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -181,7 +162,7 @@ class MyThemeV extends CommonGetXWidget<MyThemeC> {
   }
 
   @override
-  configShowBack() {
+  configForceShowBack() {
     return isShowBack ?? true;
   }
 }
@@ -236,6 +217,8 @@ class MyThemeC extends CommonGetXController {
     await ThemeTool.changeTheme(type: type);
     MyGeneralC generalC = Get.put(MyGeneralC());
     generalC.msg = MyNormalConfig.configDarkModelIsOpen(
-        isUserCache: false, themeType: type);
+      isUserCache: false,
+      themeType: type,
+    );
   }
 }

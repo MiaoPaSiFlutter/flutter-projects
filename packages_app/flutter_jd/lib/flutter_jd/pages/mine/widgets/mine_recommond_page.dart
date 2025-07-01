@@ -83,11 +83,10 @@ class HomeArticlesListPage extends StatefulWidget {
   final int? activeCatId; //当前选择的栏目ID
   final Function? showTopContainer;
   const HomeArticlesListPage(
-      {Key? key,
+      {super.key,
       this.activeCatId,
       this.showTopContainer,
-      required this.uniqueKey})
-      : super(key: key);
+      required this.uniqueKey});
 
   @override
   State<HomeArticlesListPage> createState() => HomeArticlesListPageState();
@@ -241,7 +240,7 @@ class HomeArticlesListPageState extends State<HomeArticlesListPage>
 class RecommendWareItemStyle0 extends StatelessWidget {
   final Map? wareInfo;
 
-  const RecommendWareItemStyle0({Key? key, this.wareInfo}) : super(key: key);
+  const RecommendWareItemStyle0({super.key, this.wareInfo});
 
   @override
   Widget build(BuildContext context) {

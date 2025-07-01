@@ -4,7 +4,7 @@ import 'package:waterfall_flow/waterfall_flow.dart';
 
 class HomeCellRecommend extends StatefulWidget {
   final List floors;
-  const HomeCellRecommend(this.floors, {Key? key}) : super(key: key);
+  const HomeCellRecommend(this.floors, {super.key});
 
   @override
   State createState() => _HomeCellRecommendState();
@@ -28,10 +28,10 @@ class _HomeCellRecommendState extends State<HomeCellRecommend> {
               mainAxisSpacing: 10.0, //上下item间距
               crossAxisSpacing: 5.0, //左右item间距
               collectGarbage: (List<int> garbages) {
-                print('collect garbage : $garbages');
+                debugLog('collect garbage : $garbages');
               },
               viewportBuilder: (int firstIndex, int lastIndex) {
-                print('viewport : [$firstIndex,$lastIndex]');
+                debugLog('viewport : [$firstIndex,$lastIndex]');
               },
               lastChildLayoutTypeBuilder: (index) =>
                   index == widget.floors.length
@@ -64,7 +64,7 @@ class _HomeCellRecommendState extends State<HomeCellRecommend> {
 
 class RecommendWareItem_66 extends StatelessWidget {
   final Map? wareInfo;
-  const RecommendWareItem_66({Key? key, this.wareInfo}) : super(key: key);
+  const RecommendWareItem_66({super.key, this.wareInfo});
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -97,7 +97,7 @@ class RecommendWareItem_66 extends StatelessWidget {
 
 class RecommendWareItem_0 extends StatelessWidget {
   final Map? wareInfo;
-  const RecommendWareItem_0({Key? key, this.wareInfo}) : super(key: key);
+  const RecommendWareItem_0({super.key, this.wareInfo});
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -167,7 +167,7 @@ class RecommendWareItem_0 extends StatelessWidget {
                 ),
               ),
               TextSpan(
-                  text: HyzyTextTools.mpsfStr(wname),
+                  text: OceanTextTools.safeStr(wname),
                   style: const TextStyle(color: Colors.black)),
             ]),
       ),
@@ -214,7 +214,7 @@ class RecommendWareItem_0 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Text(
-            "￥${HyzyTextTools.mpsfStr(jdPrice)}",
+            "￥${OceanTextTools.safeStr(jdPrice)}",
             style: const TextStyle(fontSize: 15),
           ),
         ],
@@ -247,7 +247,7 @@ class RecommendWareItem_0 extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: HyzyTextTools.mpsfStr(tryPlusPrice),
+                  text: OceanTextTools.safeStr(tryPlusPrice),
                   style: const TextStyle(
                     color: Colors.black,
                     fontSize: 10,

@@ -5,7 +5,7 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 
 class JdFloorStyle0902 extends StatelessWidget {
   final Map? floor;
-  const JdFloorStyle0902({Key? key, this.floor}) : super(key: key);
+  const JdFloorStyle0902({super.key, this.floor});
 
   @override
   Widget build(BuildContext context) {
@@ -146,7 +146,7 @@ class JdFloorStyle0902 extends StatelessWidget {
     try {
       saleRatio = int.parse(content[position]["saleRatio"] ?? "");
     } catch (e) {
-      dPrint("int.parse解析失败 $e");
+      debugLog("int.parse解析失败 $e");
     }
     return Container(
       margin: const EdgeInsets.only(left: 5, right: 5, top: 5),

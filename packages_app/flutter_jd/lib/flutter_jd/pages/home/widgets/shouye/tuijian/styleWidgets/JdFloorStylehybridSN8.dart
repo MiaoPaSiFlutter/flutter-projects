@@ -7,10 +7,10 @@ class HomeHybrid_8 extends StatefulWidget {
   final int? subFloorNum;
   final List? subFloors;
   const HomeHybrid_8({
-    Key? key,
+    super.key,
     this.subFloorNum,
     this.subFloors,
-  }) : super(key: key);
+  });
 
   @override
   State createState() => _HomeHybrid_8State();
@@ -28,9 +28,9 @@ class _HomeHybrid_8State extends State<HomeHybrid_8> {
         Map floor = widget.subFloors?[index] ?? {};
         String subBgColor = floor["subBgColor"] ?? "#FFFFFFFF";
         List<Color> floorBgColors =
-            subBgColor.split(",").map((e) => getColorFromHex(e)).toList();
+            subBgColor.split(",").map((e) => parseHexColor(e)).toList();
         BorderRadius borderRadius =
-            HzyNormalTools.buildFeedCellRadius(widget.subFloorNum, index);
+            OceanNormalTools.buildFeedCellRadius(widget.subFloorNum, index);
         return Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -64,7 +64,7 @@ class _HomeHybrid_8State extends State<HomeHybrid_8> {
       if (showName == "京东秒杀") {
         flex.add(2);
       } else {
-        if (!HyzyTextTools.isEmpty(img) && !HyzyTextTools.isEmpty(img2)) {
+        if (!OceanTextTools.isEmpty(img) && !OceanTextTools.isEmpty(img2)) {
           flex.add(2);
         } else {
           flex.add(1);
@@ -154,7 +154,7 @@ class HomeHybrid_8_MiaoSha extends StatelessWidget {
     List imgs = [];
     for (var item in indexMiaoSha) {
       String imageurl = item["imageurl"] ?? "";
-      if (!HyzyTextTools.isEmpty(imageurl)) {
+      if (!OceanTextTools.isEmpty(imageurl)) {
         imgs.add(imageurl);
       }
     }
@@ -208,9 +208,9 @@ class HomeHybrid_8_MiaoSha extends StatelessWidget {
 class HomeHybrid_8_Sku2 extends StatelessWidget {
   final Map? moduleData;
   const HomeHybrid_8_Sku2({
-    Key? key,
+    super.key,
     this.moduleData,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -219,10 +219,10 @@ class HomeHybrid_8_Sku2 extends StatelessWidget {
     List imgs = [];
     String img = moduleData?["img"] ?? "";
     String img2 = moduleData?["img2"] ?? "";
-    if (!HyzyTextTools.isEmpty(img)) {
+    if (!OceanTextTools.isEmpty(img)) {
       imgs.add(img);
     }
-    if (!HyzyTextTools.isEmpty(img2)) {
+    if (!OceanTextTools.isEmpty(img2)) {
       imgs.add(img2);
     }
 
@@ -287,9 +287,9 @@ class HomeHybrid_8_Sku2 extends StatelessWidget {
 class HomeHybrid_8_Sku1 extends StatelessWidget {
   final Map? moduleData;
   const HomeHybrid_8_Sku1({
-    Key? key,
+    super.key,
     this.moduleData,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     String showName = moduleData?["showName"] ?? "";
@@ -326,7 +326,7 @@ class HomeHybrid_8_Sku1 extends StatelessWidget {
               ),
             ),
             Expanded(
-                child: HyzyTextTools.isEmpty(img)
+                child: OceanTextTools.isEmpty(img)
                     ? Container()
                     : Container(
                         padding: const EdgeInsets.all(5),
@@ -344,8 +344,7 @@ class ListItemWidget extends StatelessWidget {
   final double? width;
   final double? height;
 
-  const ListItemWidget({Key? key, this.listItem, this.width, this.height})
-      : super(key: key);
+  const ListItemWidget({super.key, this.listItem, this.width, this.height});
 
   @override
   Widget build(BuildContext context) {

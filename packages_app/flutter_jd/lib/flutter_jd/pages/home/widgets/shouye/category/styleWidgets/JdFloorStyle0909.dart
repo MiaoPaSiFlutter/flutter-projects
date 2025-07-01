@@ -5,7 +5,7 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 
 class JdFloorStyle0909 extends StatelessWidget {
   final Map? floor;
-  const JdFloorStyle0909({Key? key, this.floor}) : super(key: key);
+  const JdFloorStyle0909({super.key, this.floor});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class JdFloorStyle0909 extends StatelessWidget {
     String rightImg = floor?["rightImg"] ?? "";
     String rightText = floor?["rightText"] ?? "";
     List content = floor?["content"];
-    return Container(
+    return SizedBox(
       height: 80,
       child: ListView.builder(
         padding: const EdgeInsets.all(0),
@@ -37,7 +37,7 @@ class JdFloorStyle0909 extends StatelessWidget {
               decoration: BoxDecoration(
                 border: Border.all(width: 1, color: Colors.green),
                 color: Colors.white,
-                borderRadius: HzyNormalTools.buildFeedCellRadius(1, 0),
+                borderRadius: OceanNormalTools.buildFeedCellRadius(1, 0),
               ),
               child: Column(
                 children: <Widget>[

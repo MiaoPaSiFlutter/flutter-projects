@@ -14,7 +14,7 @@ import '../module_index.dart';
 import '../compontents/compontents.dart';
 
 class ExampleBtnV extends CommonGetXWidget<ExampleBtnC> {
-  ExampleBtnV({Key? key}) : super(key: key);
+  ExampleBtnV({super.key});
   @override
   ExampleBtnC get controller => Get.put(ExampleBtnC());
   @override

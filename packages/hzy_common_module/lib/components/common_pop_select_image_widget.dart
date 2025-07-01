@@ -1,21 +1,13 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-06-05 16:51:38
- * @LastEditors: TT
- * @LastEditTime: 2023-09-07 17:39:44
- */
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 import '../config/config_index.dart';
 import '../utils/screenutil_tools.dart';
 import '../utils/utils.dart';
 import '../models/image_normal_model.dart';
-import 'common_state.dart';
+import 'abstract/common_state.dart';
 import 'common_scroller_images_widget.dart';
 import 'common_widgets.dart';
 

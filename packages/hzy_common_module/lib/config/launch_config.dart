@@ -1,13 +1,5 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-04-19 21:42:49
- * @LastEditors: TT
- * @LastEditTime: 2023-09-07 17:42:34
- */
 import 'package:get/get.dart';
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 
 class LaunchenUS extends HzyNormalLaucnhAbs {
   factory LaunchenUS.getInstance() => _instance;
@@ -24,7 +16,7 @@ class LaunchzhCN extends HzyNormalLaucnhAbs {
 class LaunchConfig extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
-        'en_US': LaunchenUS.getInstance().launch,
-        'zh_CN': LaunchzhCN.getInstance().launch,
-      };
+    'en_US': LaunchenUS.getInstance().launch,
+    'zh_CN': LaunchzhCN.getInstance().launch,
+  };
 }

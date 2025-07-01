@@ -11,14 +11,15 @@ dependencies:
   # 通用
   hzy_common_module:
     path: ../../packages/hzy_common_module
+    # 用于读取 ID3 标签并将其写入 MP3 文件的库。  您可以获取 Map 对象或 Tag 对象的数据。
+  audiotagger:
+    path: ../../packages/audiotagger
+    
   cached_network_image: ^3.4.1
   # 适用于 Flutter 的 Android 应用程序链接、深层链接、iOs 通用链接和自定义 URL 方案处理程序（包括桌面版）。
   app_links: ^3.4.5
   # Flutter 插件可在屏幕关闭时在后台播放音频。
   audio_service: ^0.18.12
-  # 用于读取 ID3 标签并将其写入 MP3 文件的库。  您可以获取 Map 对象或 Tag 对象的数据。
-  audiotagger:
-    path: ../../packages/audiotagger
   # 一个轮播滑块小部件，支持无限滚动和自定义子部件。
   carousel_slider: ^5.1.1
   # Flutter 插件用于发现 Android 和 iOS 上的网络（WiFi 和移动/蜂窝）连接状态。

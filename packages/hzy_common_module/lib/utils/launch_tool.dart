@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-05-03 14:53:49
- * @LastEditors: TT
- * @LastEditTime: 2023-06-08 17:54:10
- */
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -28,7 +19,7 @@ class LaunchTool {
   }
 
   /// 获取配置语言
-// zh_CN 中文
+  // zh_CN 中文
   /// en_US 英文
   static getLocalLaunch() {
     List<String> list = ["zh", 'CN'];

@@ -8,7 +8,7 @@ import 'package:waterfall_flow/waterfall_flow.dart';
 import '../vm/follow_viewmodel.dart';
 
 class FollowView extends StatefulWidget {
-  const FollowView({Key? key}) : super(key: key);
+  const FollowView({super.key});
 
   @override
   State createState() => _FollowViewState();
@@ -112,7 +112,7 @@ class _FollowViewState extends State<FollowView>
 }
 
 class LiveWallView extends StatelessWidget {
-  const LiveWallView({Key? key}) : super(key: key);
+  const LiveWallView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -155,7 +155,7 @@ class LiveWallView extends StatelessWidget {
 
 class RecommendWareItem_0 extends StatelessWidget {
   final Map? wareInfo;
-  const RecommendWareItem_0({Key? key, this.wareInfo}) : super(key: key);
+  const RecommendWareItem_0({super.key, this.wareInfo});
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -214,7 +214,7 @@ class RecommendWareItem_0 extends StatelessWidget {
           style: const TextStyle(color: Colors.white, fontSize: 13),
           children: [
             TextSpan(
-              text: HyzyTextTools.mpsfStr(title),
+              text: OceanTextTools.safeStr(title),
               style: const TextStyle(color: Colors.black),
             ),
           ],
@@ -362,7 +362,7 @@ class RecommendWareItem_0 extends StatelessWidget {
                     style: TextStyle(color: Colors.black, fontSize: 10),
                   ),
                   TextSpan(
-                    text: HyzyTextTools.mpsfStr(tryPlusPrice),
+                    text: OceanTextTools.safeStr(tryPlusPrice),
                     style: const TextStyle(color: Colors.black, fontSize: 10),
                   ),
                   WidgetSpan(

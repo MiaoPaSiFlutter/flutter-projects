@@ -53,6 +53,11 @@ You can then use "flutter" command within the VsCode terminal.
 
 ```
 
+### 使用脚本生成 package
+创建 ocean_utils 模块儿
+sh hzy_rob_project.sh -n ocean_utils -l pro -t package
+
+
 ### 使用 Melos 管理多项目
 
 ```

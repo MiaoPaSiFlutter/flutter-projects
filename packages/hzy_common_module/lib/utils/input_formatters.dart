@@ -5,7 +5,9 @@ class InputIgnoreOtherFormatter extends TextInputFormatter {
   final _regExp = r"^[\u4E00-\u9FA5A-Za-z0-9_]+$";
   @override
   TextEditingValue formatEditUpdate(
-      TextEditingValue oldValue, TextEditingValue newValue) {
+    TextEditingValue oldValue,
+    TextEditingValue newValue,
+  ) {
     if (newValue.text.isNotEmpty) {
       if (RegExp(_regExp).firstMatch(newValue.text) != null) {
         return newValue;
@@ -22,7 +24,9 @@ class InputOnlyInputNumberAndLowWorkFormatter extends TextInputFormatter {
 
   @override
   TextEditingValue formatEditUpdate(
-      TextEditingValue oldValue, TextEditingValue newValue) {
+    TextEditingValue oldValue,
+    TextEditingValue newValue,
+  ) {
     if (newValue.text.isNotEmpty) {
       if (RegExp(_regExp).firstMatch(newValue.text) != null) {
         return newValue;
@@ -39,7 +43,9 @@ class InputOnlyInputNumberAndWorkFormatter extends TextInputFormatter {
 
   @override
   TextEditingValue formatEditUpdate(
-      TextEditingValue oldValue, TextEditingValue newValue) {
+    TextEditingValue oldValue,
+    TextEditingValue newValue,
+  ) {
     if (newValue.text.isNotEmpty) {
       if (RegExp(_regExp).firstMatch(newValue.text) != null) {
         return newValue;
@@ -63,7 +69,9 @@ class InputUsNumberTextInputFormatter extends TextInputFormatter {
 
   @override
   TextEditingValue formatEditUpdate(
-      TextEditingValue oldValue, TextEditingValue newValue) {
+    TextEditingValue oldValue,
+    TextEditingValue newValue,
+  ) {
     String value = newValue.text;
     int selectionIndex = newValue.selection.end;
     if (value == ".") {

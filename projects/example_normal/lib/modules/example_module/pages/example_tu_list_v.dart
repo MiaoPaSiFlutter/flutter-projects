@@ -15,7 +15,7 @@ import '../models/tu_chong_model.dart';
 import '../vm/example_vm.dart';
 
 class ExampleTuListV extends CommonGetXlistWidget<ExampleTuListC> {
-  ExampleTuListV({Key? key}) : super(key: key);
+  ExampleTuListV({super.key});
 
   @override
   String? createAppBarTitleStr() => LaunchIdConfig.example.tr;
@@ -25,7 +25,6 @@ class ExampleTuListV extends CommonGetXlistWidget<ExampleTuListC> {
 
   @override
   bool configIsNeedScaffol() {
-    // TODO: implement configIsNeedScaffol
     return true;
   }
 
@@ -77,7 +76,7 @@ class ExampleTuListC extends CommonGetXListController {
     update();
     endRefresh(
       type: type ?? 1,
-      pageState: vm.state.pageState!,
+      state: vm.state.pageState,
     );
   }
 

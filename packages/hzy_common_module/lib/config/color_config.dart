@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-04-21 15:55:41
- * @LastEditors: TT
- * @LastEditTime: 2023-04-21 16:19:06
- */
-
 import 'package:flutter/material.dart';
 
 /// 颜色

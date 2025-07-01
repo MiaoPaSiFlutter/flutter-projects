@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 
-import 'common_state.dart';
 import '../models/models_index.dart';
+import 'abstract/common_state.dart';
 import 'common_extendeed_image_widget.dart';
 
 class CommonLongImageSWidget extends StatefulWidget {
@@ -27,9 +27,7 @@ class CommonLongImageSWidget extends StatefulWidget {
   });
 
   /// 滚动下标回调
-  final Function(
-    int index,
-  )? scrollerIndex;
+  final Function(int index)? scrollerIndex;
 
   /// 滑动开始
   final Function(ScrollNotification notification)? scrollStar;
@@ -51,7 +49,7 @@ class CommonLongImageSWidget extends StatefulWidget {
 
   /// 长按图片回调
   final Function(int index, ImageNormalModel imageNormalModel)?
-      tapImageOnLongPress;
+  tapImageOnLongPress;
 
   /// 是否开启状态保存
   final bool? keepAlive;
@@ -114,8 +112,8 @@ class CommonLongImageSState extends CommonState<CommonLongImageSWidget>
       scrollController = widget.controller!;
     } else {
       scrollController = ScrollController(
-          initialScrollOffset:
-              configScrollerJumpToHeight(index: widget.index!));
+        initialScrollOffset: configScrollerJumpToHeight(index: widget.index!),
+      );
     }
     list = createListImage();
     super.initState();
@@ -175,8 +173,9 @@ class CommonLongImageSState extends CommonState<CommonLongImageSWidget>
       imageNormalModel: imageNormalModel,
       index: index,
       cache: widget.cache ?? true,
-      heroStr:
-          widget.heroSub == null ? widget.heroSub : "${widget.heroSub}$index",
+      heroStr: widget.heroSub == null
+          ? widget.heroSub
+          : "${widget.heroSub}$index",
       isNeedHero: widget.isNeedHero ?? true,
       cacheName: widget.cacheName,
       isCanTap: widget.tapImageCall != null,
@@ -200,9 +199,7 @@ class CommonLongImageSState extends CommonState<CommonLongImageSWidget>
   }) {
     Widget body = SingleChildScrollView(
       controller: scrollController,
-      child: Column(
-        children: list,
-      ),
+      child: Column(children: list),
     );
     // Widget body = ListView.builder(
     //   controller: scrollController,
@@ -224,18 +221,18 @@ class CommonLongImageSState extends CommonState<CommonLongImageSWidget>
   configNotification({required ScrollNotification notification}) {
     //1.监听事件的类型
     if (notification is ScrollStartNotification) {
-      dPrint("开始滑动");
+      debugLog("开始滑动");
       configScrollStar(notification: notification);
     } else if (notification is ScrollUpdateNotification) {
       //当前滚动的位置和总长度
       configScrollUpdate(notification: notification);
     } else if (notification is OverscrollNotification) {
-      dPrint("OverscrollNotification");
+      debugLog("OverscrollNotification");
     } else if (notification is ScrollEndNotification) {
-      dPrint("滑动停止");
+      debugLog("滑动停止");
       configScrollEnd(notification: notification);
     } else if (notification is UserScrollNotification) {
-      dPrint("UserScrollNotification");
+      debugLog("UserScrollNotification");
       configUserScroll(notification: notification);
     }
   }
@@ -280,9 +277,7 @@ class CommonLongImageSState extends CommonState<CommonLongImageSWidget>
   }
 
   /// 根据图片 大小  获取 滚动距离
-  configScrollerJumpToHeight({
-    required int index,
-  }) {
+  configScrollerJumpToHeight({required int index}) {
     double jumptoheight = 0;
     for (var i = 0; i < index; i++) {
       ImageNormalModel imageNormalModel = widget.imageModellist[i];
@@ -292,9 +287,7 @@ class CommonLongImageSState extends CommonState<CommonLongImageSWidget>
   }
 
   /// 对外公开跳转到指定的下标
-  configLongImageSjumpToIndex({
-    required int index,
-  }) {
+  configLongImageSjumpToIndex({required int index}) {
     double jumpH = configScrollerJumpToHeight(index: index);
     if (index == num - 1) {
       jumpH = scrollController.position.maxScrollExtent;

@@ -12,7 +12,7 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 import '../routers/example_module_routers.dart';
 
 class ExampleBasicV extends CommonGetXWidget<ExampleBasicC> {
-  ExampleBasicV({Key? key}) : super(key: key);
+  ExampleBasicV({super.key});
   @override
   ExampleBasicC get controller => Get.put(ExampleBasicC());
 

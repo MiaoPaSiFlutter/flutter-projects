@@ -41,7 +41,7 @@ class _SecondaryTabViewState extends State<SecondaryTabView>
             items: vm.tabList.map((e) {
               int index = vm.tabList.indexOf(e);
               Map itemInfo = vm.tabList[index];
-              String text = HyzyTextTools.mpsfStr(itemInfo["firstTabName"]);
+              String text = OceanTextTools.safeStr(itemInfo["firstTabName"]);
               return text;
             }).toList(),
             onTap: (index) {

@@ -26,7 +26,7 @@ class NormalModuleUtils {
   }
 
   static ImageProvider getImageProvider(String imageUrl) {
-    if (HyzyTextTools.isEmpty(imageUrl)) {
+    if (imageUrl.isEmpty) {
       return AssetImage(normalModuleImagePath(name: 'assets/image_error.png'));
     } else if (imageUrl.contains("http")) {
       return ExtendedNetworkImageProvider(imageUrl);

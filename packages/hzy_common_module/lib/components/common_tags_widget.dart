@@ -12,7 +12,7 @@ class CommonTagsWidget extends StatelessWidget {
   final TextStyle? style;
   final void Function(int index)? onTap;
   const CommonTagsWidget({
-    Key? key,
+    super.key,
     this.margin,
     this.padding,
     this.tags,
@@ -22,7 +22,7 @@ class CommonTagsWidget extends StatelessWidget {
     this.decoration,
     this.style,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

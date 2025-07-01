@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-07-10 16:31:39
- * @LastEditors: TT
- * @LastEditTime: 2023-09-07 17:32:20
- */
-
 import 'dart:typed_data';
 
 import 'package:extended_image_library/extended_image_library.dart';

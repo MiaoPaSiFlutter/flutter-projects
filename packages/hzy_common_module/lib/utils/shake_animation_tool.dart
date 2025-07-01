@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-29 21:14:29
- * @LastEditors: TT
- * @LastEditTime: 2023-03-29 21:34:01
- */
-
 import 'package:flutter/material.dart';
 
 class ShakeAnimationTool {
@@ -16,9 +7,7 @@ class ShakeAnimationTool {
   Function({AnimationStatus status})? listener;
 
   /// 开始动画
-  star({
-    bool? reverse = true,
-  }) {
+  star({bool? reverse = true}) {
     if (reverse == true) {
       shakeController.repeat(reverse: true);
     } else {
@@ -49,12 +38,7 @@ class ShakeAnimationTool {
       duration: duration,
       reverseDuration: duration,
     );
-    animation = Tween(
-      begin: begin,
-      end: end,
-    ).animate(
-      shakeController,
-    );
+    animation = Tween(begin: begin, end: end).animate(shakeController);
 
     if (isListen) {
       shakeController.addStatusListener((status) {

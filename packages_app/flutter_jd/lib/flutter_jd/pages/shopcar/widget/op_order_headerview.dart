@@ -31,13 +31,13 @@ class _OPOrderHeaderViewState extends State<OPOrderHeaderView> {
         children: [
           Expanded(
             child: Text(
-              HyzyTextTools.mpsfStr("$shopName"),
+              OceanTextTools.safeStr("$shopName"),
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
           timeLeft > 0 ? MpsfCountdown(timeLeft: timeLeft) : Container(),
           Text(
-            HyzyTextTools.mpsfStr("$orderStatusShow"),
+            OceanTextTools.safeStr("$orderStatusShow"),
           )
         ],
       ),

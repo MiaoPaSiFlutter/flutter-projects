@@ -1,26 +1,9 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-26 15:17:46
- * @LastEditors: TT
- * @LastEditTime: 2023-05-08 12:12:09
- */
-
-import 'package:extended_image_library/extended_image_library.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import 'package:hzy_common_module/hzy_common_module.dart';
-
 import 'package:reorderables/reorderables.dart';
 
-enum GridImageType {
-  file,
-  assent,
-  network,
-  bytes,
-}
+enum GridImageType { file, assent, network, bytes }
 
 class GridImageModel {
   /// 加载图片类型
@@ -115,8 +98,10 @@ class CommonGirdImageV extends CommonLessV {
   bool get isNeedScaffol => false;
 
   @override
-  Widget createScallBody(
-      {required BuildContext context, BoxConstraints? constraints}) {
+  Widget createScallBody({
+    required BuildContext context,
+    BoxConstraints? constraints,
+  }) {
     controller.cameraConfig = cameraConfig ?? const CameraPickerConfig();
     controller.maxAssets = maxAssets ?? 9;
     controller.onChange = onChange;
@@ -127,10 +112,8 @@ class CommonGirdImageV extends CommonLessV {
     double? sizeW = constraints == null
         ? null
         : (constraints.maxWidth - crossAxisSpacing! * (crossAxisCount! - 1)) /
-            crossAxisCount!;
-    Widget body = configReorderableWrap(
-      sizeW: sizeW,
-    );
+              crossAxisCount!;
+    Widget body = configReorderableWrap(sizeW: sizeW);
     return body;
   }
 
@@ -145,9 +128,7 @@ class CommonGirdImageV extends CommonLessV {
   }
 
   /// 创建可移动
-  configReorderableWrap({
-    double? sizeW,
-  }) {
+  configReorderableWrap({double? sizeW}) {
     Widget body = GetBuilder<CommonGirdImageC>(
       builder: (controller) {
         List<Widget> list = List.generate(
@@ -164,11 +145,8 @@ class CommonGirdImageV extends CommonLessV {
           runSpacing: mainAxisSpacing!,
           minMainAxisCount: crossAxisCount,
           onReorder: (oldIndex, newIndex) {
-            dPrint("onReorder");
-            controller.configReorder(
-              oldIndex: oldIndex,
-              newIndex: newIndex,
-            );
+            debugLog("onReorder");
+            controller.configReorder(oldIndex: oldIndex, newIndex: newIndex);
           },
           buildDraggableFeedback: (context, constraints, child) {
             return Transform.scale(
@@ -178,26 +156,23 @@ class CommonGirdImageV extends CommonLessV {
                 color: Colors.transparent,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12.r),
-                  child: ConstrainedBox(
-                    constraints: constraints,
-                    child: child,
-                  ),
+                  child: ConstrainedBox(constraints: constraints, child: child),
                 ),
               ),
             );
           },
           onNoReorder: (int index) {
             debugPrint(
-                '${DateTime.now().toString().substring(5, 22)} reorder cancelled. index:$index');
+              '${DateTime.now().toString().substring(5, 22)} reorder cancelled. index:$index',
+            );
           },
           onReorderStarted: (int index) {
             controller.configStar();
             debugPrint(
-                '${DateTime.now().toString().substring(5, 22)} reorder started: index:$index');
+              '${DateTime.now().toString().substring(5, 22)} reorder started: index:$index',
+            );
           },
-          footer: configAddImageItemWidget(
-            sizeW: sizeW,
-          ),
+          footer: configAddImageItemWidget(sizeW: sizeW),
           children: list,
         );
         return bt;
@@ -245,15 +220,10 @@ class CommonGirdImageV extends CommonLessV {
       assetPath: gridImageModel.assetPath,
       bytes: gridImageModel.bytes,
       fit: BoxFit.cover,
-      borderRadius: BorderRadius.circular(
-        12.r,
-      ),
+      borderRadius: BorderRadius.circular(12.r),
     );
 
-    body = configNormalItemBgWidget(
-      body: body,
-      sizeW: sizeW,
-    );
+    body = configNormalItemBgWidget(body: body, sizeW: sizeW);
     body = controller.isShowDelectBtn
         ? Stack(
             children: [
@@ -262,15 +232,11 @@ class CommonGirdImageV extends CommonLessV {
                 width: sizeW,
                 height: sizeW,
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(
-                    0.2,
-                  ),
+                  color: Colors.black.withAlpha(51),
                   borderRadius: BorderRadius.circular(12.r),
                 ),
               ),
-              configItemCloseWidget(
-                index: index,
-              ),
+              configItemCloseWidget(index: index),
             ],
           )
         : body;
@@ -278,44 +244,25 @@ class CommonGirdImageV extends CommonLessV {
   }
 
   /// 创建关闭按钮
-  configItemCloseWidget({
-    required int index,
-  }) {
-    Widget body = const Icon(
-      Icons.close,
-      size: 20,
-      color: Colors.white,
-    );
+  configItemCloseWidget({required int index}) {
+    Widget body = const Icon(Icons.close, size: 20, color: Colors.white);
 
     body = InkWell(
       onTap: () {
-        controller.confitTapDelectImage(
-          index: index,
-        );
+        controller.confitTapDelectImage(index: index);
       },
       child: body,
     );
 
-    body = Positioned(
-      right: 5,
-      top: 5,
-      child: body,
-    );
+    body = Positioned(right: 5, top: 5, child: body);
 
     return body;
   }
 
   /// 创建添加图片item
   configAddImageItemWidget({double? sizeW}) {
-    Widget body = Icon(
-      Icons.add,
-      size: 40,
-      color: getColorFromHex("#C9CED4"),
-    );
-    body = configNormalItemBgWidget(
-      body: body,
-      sizeW: sizeW,
-    );
+    Widget body = Icon(Icons.add, size: 40, color: parseHexColor("#C9CED4"));
+    body = configNormalItemBgWidget(body: body, sizeW: sizeW);
     body = InkWell(
       onTap: () {
         controller.tapAddImage();
@@ -326,24 +273,18 @@ class CommonGirdImageV extends CommonLessV {
   }
 
   /// 创建默认 item 背景
-  configNormalItemBgWidget({
-    required Widget body,
-    double? sizeW,
-  }) {
+  configNormalItemBgWidget({required Widget body, double? sizeW}) {
     body = Container(
       width: sizeW,
       height: sizeW,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.r),
-        color: getColorFromHex("#F2F6FB"),
+        color: parseHexColor("#F2F6FB"),
       ),
       child: body,
     );
 
-    body = ClipRRect(
-      borderRadius: BorderRadius.circular(12.r),
-      child: body,
-    );
+    body = ClipRRect(borderRadius: BorderRadius.circular(12.r), child: body);
     return body;
   }
 }
@@ -394,10 +335,7 @@ class CommonGirdImageC extends CommonGetXController
 
   // --------- 触发事件  --------- //
 
-  configReorder({
-    required int oldIndex,
-    required int newIndex,
-  }) {
+  configReorder({required int oldIndex, required int newIndex}) {
     GridImageModel imageModel = itmeList.removeAt(oldIndex);
     itmeList.insert(newIndex, imageModel);
     update();
@@ -444,11 +382,7 @@ class CommonGirdImageC extends CommonGetXController
       cList = list;
     } else {
       /// web 图片去重
-      List<XFile> xlist = imageList
-          .map(
-            (e) => e as XFile,
-          )
-          .toList();
+      List<XFile> xlist = imageList.map((e) => e as XFile).toList();
       xlist.addAll(list as List<XFile>);
       final name = xlist.map((e) => e.name).toSet();
       xlist.retainWhere((element) => name.remove(element.name));
@@ -483,9 +417,7 @@ class CommonGirdImageC extends CommonGetXController
         Uint8List? orginBt = await assetEntity.originBytes;
         selectImageBtList.add(orginBt ?? Uint8List(0));
       }
-      itmeList.add(
-        GridImageModel(type: GridImageType.bytes, bytes: thumbtyes),
-      );
+      itmeList.add(GridImageModel(type: GridImageType.bytes, bytes: thumbtyes));
     }
     configSelectImageCallBack();
     Future.delayed(const Duration(milliseconds: 100)).then((value) => update());
@@ -505,9 +437,7 @@ class CommonGirdImageC extends CommonGetXController
   }
 
   /// 配置点击删除事件
-  confitTapDelectImage({
-    required int index,
-  }) {
+  confitTapDelectImage({required int index}) {
     imageList.removeAt(index);
     itmeList.removeAt(index);
     update();

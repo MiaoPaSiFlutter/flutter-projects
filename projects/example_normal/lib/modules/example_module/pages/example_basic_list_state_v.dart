@@ -79,7 +79,7 @@ class ExampleBasicListState extends CommonListState<ExampleBasicListPage> {
       page: page,
     );
     isShowLoading = false;
-    endRefresh(type: type ?? 1, pageState: vm.state.pageState!);
+    endRefresh(type: type ?? 1, state: vm.state.pageState);
     setState(() {});
   }
 
@@ -97,7 +97,7 @@ class ExampleBasicListState extends CommonListState<ExampleBasicListPage> {
       duration: const Duration(milliseconds: 200),
       curve: Curves.ease,
     );
-    endRefresh(type: 2, pageState: PageState.noMoreDataState);
+    endRefresh(type: 2, state: PageState.noMoreDataState);
   }
 
   // 点击缺省页触发事件

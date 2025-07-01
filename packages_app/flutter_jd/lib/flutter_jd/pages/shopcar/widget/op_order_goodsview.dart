@@ -171,7 +171,7 @@ class _OPOrderGoodsViewState extends State<OPOrderGoodsView> {
   Widget _buildSecKillEndTime() {
     // "secKillEndTime": "07月28日 00:00",
     String secKillEndTime = _product["secKillEndTime"] ?? "";
-    if (HyzyTextTools.isEmpty(secKillEndTime)) {
+    if (OceanTextTools.isEmpty(secKillEndTime)) {
       return Container();
     }
 
@@ -246,7 +246,7 @@ class _OPOrderGoodsViewState extends State<OPOrderGoodsView> {
   Widget _buildPrice() {
     String priceShow = _product["PriceShow"] ?? "";
     TextStyle style = const TextStyle(fontSize: 18, color: Colors.red);
-    if (HyzyTextTools.isEmpty(priceShow)) {
+    if (OceanTextTools.isEmpty(priceShow)) {
       return Container();
     }
     return Container(
@@ -263,7 +263,7 @@ class _OPOrderGoodsViewState extends State<OPOrderGoodsView> {
   ///预估到手价
   Widget _buildLandedPrice() {
     String landedPrice = _product["landedPrice"] ?? "";
-    if (HyzyTextTools.isEmpty(landedPrice)) {
+    if (OceanTextTools.isEmpty(landedPrice)) {
       return Container();
     }
     return Container(

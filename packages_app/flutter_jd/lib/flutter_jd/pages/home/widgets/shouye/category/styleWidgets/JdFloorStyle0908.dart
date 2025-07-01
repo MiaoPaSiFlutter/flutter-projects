@@ -5,7 +5,7 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 
 class JdFloorStyle0908 extends StatelessWidget {
   final Map? floor;
-  const JdFloorStyle0908({Key? key, this.floor}) : super(key: key);
+  const JdFloorStyle0908({super.key, this.floor});
 
   @override
   Widget build(BuildContext context) {

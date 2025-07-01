@@ -63,7 +63,7 @@ class BPProductBottomView extends StatelessWidget {
                       top: 0, bottom: 0, left: 5, right: 5),
                   color: Colors.red,
                   child: Text(
-                    HyzyTextTools.mpsfStr("14"),
+                    OceanTextTools.safeStr("14"),
                     maxLines: 1,
                     style: const TextStyle(fontSize: 9, color: Colors.white),
                   ),

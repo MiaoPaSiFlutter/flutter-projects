@@ -12,7 +12,7 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 import '../config/my_launch_id_config.dart';
 
 class MyLaunchSettV extends CommonGetXWidget<MyLaunchSettC> {
-  MyLaunchSettV({Key? key}) : super(key: key);
+  MyLaunchSettV({super.key});
 
   /// 配置导航栏 标题
   @override
@@ -34,7 +34,7 @@ class MyLaunchSettV extends CommonGetXWidget<MyLaunchSettC> {
               itemModel: itemModel,
               index: index,
               allNum: controller.list.length,
-              onOtherTap: (HzyNormalItemModel itemModel) {
+              onOtherTap: (HzyNormalItemModel itemModel, _) {
                 controller.tapItem(index: index);
               },
             );
@@ -50,7 +50,7 @@ class MyLaunchSettV extends CommonGetXWidget<MyLaunchSettC> {
   configRightCheckWidget({required int index}) {
     return GetBuilder<MyLaunchSettC>(
       builder: (ct) {
-        Color color = Colors.white.withOpacity(0);
+        Color color = Colors.white.withAlpha(0);
         if (index == ct.selectIndex) {
           color = HzyCommonColor().colthemes;
         }
@@ -116,7 +116,7 @@ class MyLaunchSettC extends CommonGetXController {
   List<HzyNormalItemModel> list = [
     HzyNormalItemModel(
       isHintWidget: true,
-      backGroudColor: Colors.white.withOpacity(0),
+      backGroudColor: Colors.white.withAlpha(0),
     ),
     HzyNormalItemModel(
       leftMsg: "简体中文",

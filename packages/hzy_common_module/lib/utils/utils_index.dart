@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-20 22:36:09
- * @LastEditors: TT
- * @LastEditTime: 2023-07-10 11:38:10
- */
-
 export 'getx_util_tool.dart';
 export 'permission_helper.dart';
 export 'screenutil_tools.dart';

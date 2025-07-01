@@ -9,7 +9,7 @@ import '../../../../vm/home_viewmodel.dart';
 
 class JdFloorStylebanner extends StatefulWidget {
   final Map? floor;
-  const JdFloorStylebanner({Key? key, this.floor}) : super(key: key);
+  const JdFloorStylebanner({super.key, this.floor});
 
   @override
   State createState() => _JdFloorStylebannerState();
@@ -56,7 +56,7 @@ class _JdFloorStylebannerState extends State<JdFloorStylebanner> {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: ExtendedNetworkImageProvider(
-                  HyzyTextTools.mpsfStr(topBgImgBig)),
+                  OceanTextTools.safeStr(topBgImgBig)),
               fit: BoxFit.cover,
             ),
           ),

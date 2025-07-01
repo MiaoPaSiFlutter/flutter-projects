@@ -18,7 +18,7 @@ import '../routers/example_module_routers.dart';
 import '../vm/example_vm.dart';
 
 class ExampleTuDetailV extends CommonGetXWidget<ExampleTuDetailC> {
-  ExampleTuDetailV({Key? key}) : super(key: key);
+  ExampleTuDetailV({super.key});
   @override
   ExampleTuDetailC get controller => Get.put(ExampleTuDetailC());
 

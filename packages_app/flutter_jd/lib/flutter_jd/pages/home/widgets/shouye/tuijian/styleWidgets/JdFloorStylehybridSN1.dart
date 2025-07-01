@@ -1,4 +1,3 @@
-// ignore_for_file: unused_field, unused_local_variable
 
 import 'package:flutter/material.dart';
 import 'package:hzy_common_module/hzy_common_module.dart';
@@ -9,11 +8,11 @@ class HomeHybrid_1 extends StatefulWidget {
   final int? subFloorNum;
   final List? subFloors;
   const HomeHybrid_1({
-    Key? key,
+    super.key,
     this.floor,
     this.subFloorNum,
     this.subFloors,
-  }) : super(key: key);
+  });
 
   @override
   State createState() => _HomeHybrid_1State();
@@ -44,7 +43,7 @@ class _HomeHybrid_1State extends State<HomeHybrid_1> {
       decoration: BoxDecoration(
         // border: Border.all(width: 1, color: Colors.green),
         color: Colors.white,
-        borderRadius: HzyNormalTools.buildFeedCellRadius(1, 0),
+        borderRadius: OceanNormalTools.buildFeedCellRadius(1, 0),
       ),
       child: Column(
         children: <Widget>[
@@ -77,7 +76,6 @@ class _HomeHybrid_1State extends State<HomeHybrid_1> {
       var item = _datas[i];
       String img = item["img"] ?? "";
       String showName = item["showName"] ?? "";
-      String channelLogo = item["channelLogo"] ?? "";
       String moduleBgImg = item["moduleBgImg"] ?? "";
 
       Widget itemWidget;

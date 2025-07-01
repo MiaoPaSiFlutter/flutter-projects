@@ -1,13 +1,4 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-04-09 22:11:20
- * @LastEditors: TT
- * @LastEditTime: 2023-09-07 17:42:13
- */
-
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 
 import '../utils/theme_tool.dart';
 

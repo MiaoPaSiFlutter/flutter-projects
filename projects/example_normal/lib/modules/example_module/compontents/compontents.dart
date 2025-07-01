@@ -103,7 +103,7 @@ configPopImage({
   if (isgesture == true && (doubleClickAnimationController == null)) {
     isgesture = false;
   }
-  showDig(
+  OceanNormalTools.showDig(
     context: Get.context!,
     widget: Stack(
       children: [
@@ -172,7 +172,7 @@ configHeroNetImageWidget({
     loadradius: 15,
   );
   String heroStr = index != -1 ? "ImageHero$index" : (url ?? "tag");
-  dPrint(heroStr);
+  debugLog(heroStr);
   body = Hero(
     tag: heroStr,
     child: body,

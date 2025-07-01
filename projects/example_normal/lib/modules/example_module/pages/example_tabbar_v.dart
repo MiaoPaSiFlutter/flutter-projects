@@ -15,7 +15,7 @@ import '../config/example_config.dart';
 import '../models/image_type_model.dart';
 
 class ExampleTabBarV extends CommonGetXWidget<ExampleTabBarC> {
-  ExampleTabBarV({Key? key}) : super(key: key);
+  ExampleTabBarV({super.key});
   @override
   ExampleTabBarC get controller => Get.put(ExampleTabBarC());
 

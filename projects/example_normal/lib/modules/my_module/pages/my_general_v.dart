@@ -13,7 +13,7 @@ import '../config/my_launch_id_config.dart';
 import '../config/my_normal_config.dart';
 
 class MyGeneralV extends CommonLessV {
-  MyGeneralV({Key? key}) : super(key: key);
+  MyGeneralV({super.key});
   @override
   String? get appBarTitle => MyLaunchIdConfig.general.tr;
 
@@ -40,7 +40,7 @@ class MyGeneralV extends CommonLessV {
     HzyNormalItemModel itemModel = controller.config[index];
     Widget body = configNormalDarkItemWidget(
       itemModel: itemModel,
-      onOtherTap: (HzyNormalItemModel itemModel) {
+      onOtherTap: (HzyNormalItemModel itemModel, _) {
         controller.tapItemOtherEvent(
           itemModel: itemModel,
         );

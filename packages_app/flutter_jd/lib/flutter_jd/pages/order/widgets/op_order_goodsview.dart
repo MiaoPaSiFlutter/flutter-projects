@@ -33,7 +33,7 @@ class _OPOrderGoodsViewState extends State<OPOrderGoodsView> {
         border: Border.all(width: 1, color: Colors.red),
       ),
       child: Text(
-        HyzyTextTools.mpsfStr(shopName),
+        OceanTextTools.safeStr(shopName),
       ),
     );
   }
@@ -61,7 +61,7 @@ class _OPOrderGoodsViewState extends State<OPOrderGoodsView> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: CommonExtendedImageWidget.netWorkImget(
-                    url: HyzyTextTools.mpsfStr(imageUrl)),
+                    url: OceanTextTools.safeStr(imageUrl)),
               ),
             ),
             onTap: () {
@@ -91,7 +91,7 @@ class _OPOrderGoodsViewState extends State<OPOrderGoodsView> {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: HyzyTextTools.mpsfStr(listPrice),
+                      text: OceanTextTools.safeStr(listPrice),
                       style: const TextStyle(
                         fontSize: 14,
                         color: Colors.black,
@@ -107,7 +107,7 @@ class _OPOrderGoodsViewState extends State<OPOrderGoodsView> {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: HyzyTextTools.mpsfStr(wareCountMessageNew),
+                      text: OceanTextTools.safeStr(wareCountMessageNew),
                       style: const TextStyle(
                         fontSize: 12,
                         color: Colors.grey,
@@ -148,7 +148,7 @@ class _OPOrderGoodsViewState extends State<OPOrderGoodsView> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: CommonExtendedImageWidget.netWorkImget(
-                        url: HyzyTextTools.mpsfStr(imageUrl)),
+                        url: OceanTextTools.safeStr(imageUrl)),
                   ),
                   onTap: () {
                     // currentToPage(CommonPageId.PRODUCT);
@@ -170,7 +170,7 @@ class _OPOrderGoodsViewState extends State<OPOrderGoodsView> {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: HyzyTextTools.mpsfStr(listPrice),
+                      text: OceanTextTools.safeStr(listPrice),
                       style: const TextStyle(
                         fontSize: 14,
                         color: Colors.black,
@@ -186,7 +186,7 @@ class _OPOrderGoodsViewState extends State<OPOrderGoodsView> {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: HyzyTextTools.mpsfStr(wareCountMessageNew),
+                      text: OceanTextTools.safeStr(wareCountMessageNew),
                       style: const TextStyle(
                         fontSize: 12,
                         color: Colors.grey,

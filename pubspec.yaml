@@ -13,7 +13,7 @@ workspace:
   - packages/athena_core
   - packages/athena_utils
   - packages/athena_network
-  - packages/hzy_normal_tool
+  - packages/ocean_utils
   - packages/hzy_normal_network
   - packages/hzy_common_module
   - packages/audiotagger
@@ -75,9 +75,7 @@ workspace:
   - packages_app/flutter_compass_app
   - packages_app/flutter_quiz_app
 
-  - projects/athena_common_flutter
   - projects/athena_app
-  - projects/flutter_demo
   - projects/example_normal
 
 melos:

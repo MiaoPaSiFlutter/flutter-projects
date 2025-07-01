@@ -1,14 +1,5 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-19 21:57:21
- * @LastEditors: TT
- * @LastEditTime: 2023-08-26 16:57:47
- */
 import 'package:flutter/material.dart';
-
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 
 import 'hzy_theme_abs.dart';
 
@@ -72,56 +63,56 @@ class HzyThemeColorConfig extends HzyColorAbs {
 
   @override
   Map<String, Color?> get lightInfo => {
-        HzyColorSring.coltheme: HzyNormalColorS.col2865ff,
-        HzyColorSring.colffffff: HzyNormalColorS.colffffff,
-        HzyColorSring.col000000: HzyNormalColorS.col000000,
-        HzyColorSring.colefedf3: HzyNormalColorS.colefedf3,
-        HzyColorSring.col666666: HzyNormalColorS.col666666,
-        HzyColorSring.col999999: HzyNormalColorS.col999999,
-        HzyColorSring.colc3c3c3: HzyNormalColorS.colc3c3c3,
-        HzyColorSring.cola6a6a6: HzyNormalColorS.cola6a6a6,
-        HzyColorSring.colonlywhite: HzyNormalColorS.colffffff,
-        HzyColorSring.coldddddd: HzyNormalColorS.coldddddd,
-        HzyColorSring.cole8e8e8: HzyNormalColorS.cole8e8e8,
-        HzyColorSring.cole3e3e3: HzyNormalColorS.cole3e3e3,
-        HzyColorSring.colababab: HzyNormalColorS.colababab,
-        HzyColorSring.col5a5a5a: HzyNormalColorS.col5a5a5a,
-        HzyColorSring.coldadada: HzyNormalColorS.coldadada,
-        HzyColorSring.cole9e9e9: HzyNormalColorS.cole9e9e9,
-        HzyColorSring.colb0b0b0: HzyColors.colb0b0b0,
-        HzyColorSring.colf5f5f5: const Color.fromRGBO(245, 245, 245, 1),
-        HzyColorSring.backGroupColor: HzyNormalColorS.colf4f5f9,
-        HzyColorSring.whitebgblacktextcolor: HzyColors.col181818,
-        HzyColorSring.agreementtextcolor: HzyColors.col61678b,
-        HzyColorSring.colline: HzyNormalColorS.coldddddd,
-        HzyColorSring.disableBtnBackGroudColor: HzyNormalColorS.colf0f0f0,
-        HzyColorSring.disableBtnTitleColor: HzyNormalColorS.colbdbdbd,
-      };
+    HzyColorSring.coltheme: HzyNormalColorS.col2865ff,
+    HzyColorSring.colffffff: HzyNormalColorS.colffffff,
+    HzyColorSring.col000000: HzyNormalColorS.col000000,
+    HzyColorSring.colefedf3: HzyNormalColorS.colefedf3,
+    HzyColorSring.col666666: HzyNormalColorS.col666666,
+    HzyColorSring.col999999: HzyNormalColorS.col999999,
+    HzyColorSring.colc3c3c3: HzyNormalColorS.colc3c3c3,
+    HzyColorSring.cola6a6a6: HzyNormalColorS.cola6a6a6,
+    HzyColorSring.colonlywhite: HzyNormalColorS.colffffff,
+    HzyColorSring.coldddddd: HzyNormalColorS.coldddddd,
+    HzyColorSring.cole8e8e8: HzyNormalColorS.cole8e8e8,
+    HzyColorSring.cole3e3e3: HzyNormalColorS.cole3e3e3,
+    HzyColorSring.colababab: HzyNormalColorS.colababab,
+    HzyColorSring.col5a5a5a: HzyNormalColorS.col5a5a5a,
+    HzyColorSring.coldadada: HzyNormalColorS.coldadada,
+    HzyColorSring.cole9e9e9: HzyNormalColorS.cole9e9e9,
+    HzyColorSring.colb0b0b0: HzyColors.colb0b0b0,
+    HzyColorSring.colf5f5f5: const Color.fromRGBO(245, 245, 245, 1),
+    HzyColorSring.backGroupColor: HzyNormalColorS.colf4f5f9,
+    HzyColorSring.whitebgblacktextcolor: HzyColors.col181818,
+    HzyColorSring.agreementtextcolor: HzyColors.col61678b,
+    HzyColorSring.colline: HzyNormalColorS.coldddddd,
+    HzyColorSring.disableBtnBackGroudColor: HzyNormalColorS.colf0f0f0,
+    HzyColorSring.disableBtnTitleColor: HzyNormalColorS.colbdbdbd,
+  };
   @override
   Map<String, Color?> get darkInfo => {
-        HzyColorSring.coltheme: HzyNormalColorS.col2865ff,
-        HzyColorSring.colffffff: const Color.fromRGBO(27, 27, 27, 1),
-        HzyColorSring.col000000: HzyNormalColorS.colffffff,
-        HzyColorSring.colefedf3: HzyNormalColorS.col151515,
-        HzyColorSring.col666666: HzyNormalColorS.colCACACA,
-        HzyColorSring.col999999: HzyNormalColorS.col7C7C7C,
-        HzyColorSring.colc3c3c3: HzyNormalColorS.col101010,
-        HzyColorSring.cola6a6a6: HzyNormalColorS.col4d4d4d,
-        HzyColorSring.colonlywhite: HzyNormalColorS.colffffff,
-        HzyColorSring.coldddddd: HzyNormalColorS.col2d2d2d,
-        HzyColorSring.cole8e8e8: HzyNormalColorS.col0e0e0e,
-        HzyColorSring.cole3e3e3: HzyNormalColorS.col252525,
-        HzyColorSring.colababab: HzyNormalColorS.col505050,
-        HzyColorSring.col5a5a5a: HzyNormalColorS.col909090,
-        HzyColorSring.coldadada: HzyNormalColorS.coldadada,
-        HzyColorSring.cole9e9e9: HzyNormalColorS.col0e0e0e,
-        HzyColorSring.colb0b0b0: HzyColors.col606060,
-        HzyColorSring.colf5f5f5: const Color.fromRGBO(20, 20, 20, 1),
-        HzyColorSring.whitebgblacktextcolor: HzyColors.coldddde6,
-        HzyColorSring.agreementtextcolor: HzyColors.col8b8ca8,
-        HzyColorSring.backGroupColor: HzyNormalColorS.col0e0e0e,
-        HzyColorSring.colline: HzyNormalColorS.col2d2d2d,
-        HzyColorSring.disableBtnBackGroudColor: HzyNormalColorS.colf0f0f0,
-        HzyColorSring.disableBtnTitleColor: HzyNormalColorS.colbdbdbd,
-      };
+    HzyColorSring.coltheme: HzyNormalColorS.col2865ff,
+    HzyColorSring.colffffff: const Color.fromRGBO(27, 27, 27, 1),
+    HzyColorSring.col000000: HzyNormalColorS.colffffff,
+    HzyColorSring.colefedf3: HzyNormalColorS.col151515,
+    HzyColorSring.col666666: HzyNormalColorS.colCACACA,
+    HzyColorSring.col999999: HzyNormalColorS.col7C7C7C,
+    HzyColorSring.colc3c3c3: HzyNormalColorS.col101010,
+    HzyColorSring.cola6a6a6: HzyNormalColorS.col4d4d4d,
+    HzyColorSring.colonlywhite: HzyNormalColorS.colffffff,
+    HzyColorSring.coldddddd: HzyNormalColorS.col2d2d2d,
+    HzyColorSring.cole8e8e8: HzyNormalColorS.col0e0e0e,
+    HzyColorSring.cole3e3e3: HzyNormalColorS.col252525,
+    HzyColorSring.colababab: HzyNormalColorS.col505050,
+    HzyColorSring.col5a5a5a: HzyNormalColorS.col909090,
+    HzyColorSring.coldadada: HzyNormalColorS.coldadada,
+    HzyColorSring.cole9e9e9: HzyNormalColorS.col0e0e0e,
+    HzyColorSring.colb0b0b0: HzyColors.col606060,
+    HzyColorSring.colf5f5f5: const Color.fromRGBO(20, 20, 20, 1),
+    HzyColorSring.whitebgblacktextcolor: HzyColors.coldddde6,
+    HzyColorSring.agreementtextcolor: HzyColors.col8b8ca8,
+    HzyColorSring.backGroupColor: HzyNormalColorS.col0e0e0e,
+    HzyColorSring.colline: HzyNormalColorS.col2d2d2d,
+    HzyColorSring.disableBtnBackGroudColor: HzyNormalColorS.colf0f0f0,
+    HzyColorSring.disableBtnTitleColor: HzyNormalColorS.colbdbdbd,
+  };
 }

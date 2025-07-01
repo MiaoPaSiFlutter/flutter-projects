@@ -15,14 +15,16 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 import '../compontents/markdow_style.dart';
 
 class ExampleMarkdownV extends CommonGetXWidget<ExampleMarkdownC> {
-  ExampleMarkdownV({Key? key}) : super(key: key);
+  ExampleMarkdownV({super.key});
   @override
   ExampleMarkdownC get controller => Get.put(ExampleMarkdownC());
   @override
   String? createAppBarTitleStr() => controller.title;
   @override
-  Widget createScallBody(
-      {required BuildContext context, BoxConstraints? constraints}) {
+  Widget createScallBody({
+    required BuildContext context,
+    BoxConstraints? constraints,
+  }) {
     Widget body = Markdown(
       data: controller.data,
       syntaxHighlighter: HighLight(),
@@ -31,9 +33,7 @@ class ExampleMarkdownV extends CommonGetXWidget<ExampleMarkdownC> {
         if (uri.path.contains("/assets")) {
           path = uri.path.substring(1);
         }
-        Widget body = Image.asset(
-          path,
-        );
+        Widget body = Image.asset(path);
 
         body = InkWell(
           onTap: () {
@@ -79,7 +79,7 @@ class ExampleMarkdownC extends CommonGetXController
 
   // --------- 触发事件  --------- //
   tapImage({required String path}) {
-    showDig(
+    OceanNormalTools.showDig(
       context: Get.context!,
       widget: Stack(
         children: [
@@ -104,7 +104,7 @@ class ExampleMarkdownC extends CommonGetXController
                 currentGoback();
               },
             ),
-          )
+          ),
         ],
       ),
     );

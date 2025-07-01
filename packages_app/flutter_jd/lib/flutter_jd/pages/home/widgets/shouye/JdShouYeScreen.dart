@@ -9,7 +9,7 @@ import 'category/hg_category_page.dart';
 import 'tuijian/hg_welcome_home_page.dart';
 
 class JdShouYeScreen extends StatefulWidget {
-  const JdShouYeScreen({Key? key}) : super(key: key);
+  const JdShouYeScreen({super.key});
 
   @override
   State createState() => _JdShouYeScreenState();
@@ -145,9 +145,9 @@ class _JdShouYeScreenState extends State<JdShouYeScreen>
 ///////////SegmentView
 class CommonSegmentView extends StatefulWidget {
   const CommonSegmentView({
-    Key? key,
+    super.key,
     this.onTap,
-  }) : super(key: key);
+  });
   final void Function(int)? onTap;
 
   @override
@@ -210,7 +210,7 @@ class _CommonSegmentViewState extends State<CommonSegmentView>
               int index = model.segments.indexOf(e);
               Map itemInfo = model.segments[index];
               String text =
-                  HyzyTextTools.mpsfStr(itemInfo["tabTitle"], placehold: "推荐");
+                  OceanTextTools.safeStr(itemInfo["tabTitle"], placehold: "推荐");
               bool isSelect = model.selectIndex == index;
               return Container(
                 alignment: Alignment.center,
@@ -231,7 +231,7 @@ class _CommonSegmentViewState extends State<CommonSegmentView>
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: ExtendedNetworkImageProvider(
-                      HyzyTextTools.mpsfStr(topBgImgBig)),
+                      OceanTextTools.safeStr(topBgImgBig)),
                   fit: BoxFit.cover,
                 ),
               ),

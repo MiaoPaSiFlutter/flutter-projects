@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 
 import '../config/font_config.dart';
 import '../config/hzy_common_color_config.dart';
@@ -34,13 +34,14 @@ class CommonPlaceHoldPage extends StatefulWidget {
   }
 }
 
-class _CommonPlaceHoldPageState extends HzyState<CommonPlaceHoldPage> {
+class _CommonPlaceHoldPageState extends OceanAbsState<CommonPlaceHoldPage> {
   /// 属性
   ///
   ///
 
   @override
-  bool get safeAreabottm => false;
+  bool get safeAreaBottom => false;
+  
   @override
   bool configSafeAreaTop() => false;
 

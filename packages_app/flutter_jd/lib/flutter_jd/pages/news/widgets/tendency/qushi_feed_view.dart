@@ -161,14 +161,14 @@ class TrendHeaderView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //图片尺寸299x344
-    String pictureUrl = HyzyTextTools.mpsfStr(info["pictureUrl"]);
+    String pictureUrl = OceanTextTools.safeStr(info["pictureUrl"]);
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.width / (299 / 344),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: NormalModuleUtils.getImageProvider(
-              HyzyTextTools.mpsfStr(pictureUrl)),
+              OceanTextTools.safeStr(pictureUrl)),
           fit: BoxFit.cover,
         ),
       ),
@@ -250,7 +250,7 @@ class TrendHeaderView extends StatelessWidget {
           style: const TextStyle(color: Colors.white, fontSize: 13),
           children: [
             TextSpan(
-                text: HyzyTextTools.mpsfStr(wname),
+                text: OceanTextTools.safeStr(wname),
                 style: const TextStyle(color: Colors.black))
           ],
         ),
@@ -331,7 +331,7 @@ class RecommendWareItem_0 extends StatelessWidget {
                 ),
               ),
               TextSpan(
-                  text: HyzyTextTools.mpsfStr(wname),
+                  text: OceanTextTools.safeStr(wname),
                   style: const TextStyle(color: Colors.black)),
             ]),
       ),
@@ -378,7 +378,7 @@ class RecommendWareItem_0 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Text(
-            "￥${HyzyTextTools.mpsfStr(jdPrice)}",
+            "￥${OceanTextTools.safeStr(jdPrice)}",
             style: const TextStyle(fontSize: 15),
           ),
         ],
@@ -411,7 +411,7 @@ class RecommendWareItem_0 extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: HyzyTextTools.mpsfStr(tryPlusPrice),
+                  text: OceanTextTools.safeStr(tryPlusPrice),
                   style: const TextStyle(
                     color: Colors.black,
                     fontSize: 10,

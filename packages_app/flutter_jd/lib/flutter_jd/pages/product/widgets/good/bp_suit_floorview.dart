@@ -12,7 +12,7 @@ class BpSuitFloorView extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(width: 1, color: Colors.red),
       ),
-      child: Text(HyzyTextTools.mpsfStr(floor?["mId"])),
+      child: Text(OceanTextTools.safeStr(floor?["mId"])),
     );
   }
 }

@@ -6,7 +6,7 @@ import '../mine_view.dart';
 
 class MineOrderIdFloorCell extends StatelessWidget {
   final Map? floor;
-  const MineOrderIdFloorCell({Key? key, this.floor}) : super(key: key);
+  const MineOrderIdFloorCell({super.key, this.floor});
 
   @override
   Widget build(BuildContext context) {
@@ -140,12 +140,12 @@ class AttentionItem extends StatelessWidget {
   final String? number;
 
   const AttentionItem({
-    Key? key,
+    super.key,
     this.numImage,
     this.title,
     this.titleColor,
     this.number,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

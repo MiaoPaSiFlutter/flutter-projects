@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 import '../utils/screenutil_tools.dart';
 import 'hzy_common_color_config.dart';
 

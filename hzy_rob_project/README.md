@@ -32,3 +32,5 @@
     sh hzy_rob_project.sh -ocom.example.example -nexample
     sh hzy_rob_project.sh --org=com.example.example --name=example
     ```
+
+sh hzy_rob_project.sh --org=com.example.example --name=example --template=package

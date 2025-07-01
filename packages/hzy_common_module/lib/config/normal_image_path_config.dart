@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-19 21:08:58
- * @LastEditors: TT
- * @LastEditTime: 2023-03-19 21:11:13
- */
-
 import 'package:hzy_common_module/utils/utils.dart';
 
 class NormalImagePathConfit {

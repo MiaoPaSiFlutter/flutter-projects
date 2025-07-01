@@ -4,7 +4,7 @@ import 'mid_info_headerview.dart';
 
 class MineWodeguanzhuCell extends StatelessWidget {
   final Map? floor;
-  const MineWodeguanzhuCell({Key? key, this.floor}) : super(key: key);
+  const MineWodeguanzhuCell({super.key, this.floor});
 
   @override
   Widget build(BuildContext context) {

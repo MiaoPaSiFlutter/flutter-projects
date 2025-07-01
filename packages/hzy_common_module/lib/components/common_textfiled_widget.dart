@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_utils/ocean_utils.dart';
+
+import '../utils/utils.dart';
 
 ///输入框封装
 class CommonTextFieldWidget extends StatefulWidget {
@@ -18,7 +20,7 @@ class CommonTextFieldWidget extends StatefulWidget {
   final TextStyle? hintStyle;
 
   const CommonTextFieldWidget({
-    Key? key,
+    super.key,
     this.keyName,
     this.enabled = true,
     this.controller,
@@ -30,7 +32,7 @@ class CommonTextFieldWidget extends StatefulWidget {
     this.obscureText = false,
     this.style,
     this.hintStyle,
-  }) : super(key: key);
+  });
 
   @override
   State createState() => _CommonTextFieldWidgetState();
@@ -57,7 +59,7 @@ class _CommonTextFieldWidgetState extends State<CommonTextFieldWidget> {
   }
 
   bool _checkShowDelete() {
-    if (!HyzyTextTools.isEmpty(widget.controller?.text)) {
+    if (!OceanTextTools.isEmpty(widget.controller?.text)) {
       return true;
     } else {
       return false;

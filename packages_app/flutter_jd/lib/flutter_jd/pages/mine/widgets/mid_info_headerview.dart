@@ -5,10 +5,10 @@ class MidInfoHeaderView extends StatelessWidget {
   final String labelName;
   final String? rightIconText;
   const MidInfoHeaderView({
-    Key? key,
+    super.key,
     required this.labelName,
     this.rightIconText,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class MidInfoHeaderView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Expanded(child: Text(labelName, style: FontConfig().fontBold14Black)),
-          HyzyTextTools.isEmpty(rightIconText)
+          OceanTextTools.isEmpty(rightIconText)
               ? Container()
               : Text(rightIconText!, style: FontConfig().fontBold12Black),
           const Icon(Icons.arrow_forward_ios, size: 10),

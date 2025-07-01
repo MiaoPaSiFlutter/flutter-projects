@@ -10,11 +10,11 @@ class HomeHybrid_Default extends StatelessWidget {
   final int? subFloorNum;
   final List? subFloors;
   const HomeHybrid_Default({
-    Key? key,
+    super.key,
     this.floor,
     this.subFloorNum,
     this.subFloors,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -1,16 +1,7 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-06-05 17:20:32
- * @LastEditors: TT
- * @LastEditTime: 2023-09-07 17:41:51
- */
-
 import 'package:flutter/material.dart';
 import 'common_extendeed_image_widget.dart';
 
-import 'common_state.dart';
+import 'abstract/common_state.dart';
 import '../models/image_normal_model.dart';
 import 'common_widgets.dart';
 
@@ -90,11 +81,9 @@ class CommonScrollerImagesState extends CommonState<CommonScrollerImagesWidget>
   double itemH = 0;
   @override
   void initState() {
-    controller = widget.tabController ??
-        TabController(
-          length: widget.list.length,
-          vsync: this,
-        );
+    controller =
+        widget.tabController ??
+        TabController(length: widget.list.length, vsync: this);
 
     for (var i = 0; i < widget.list.length; i++) {
       ImageNormalModel imageNormalModel = widget.list[i];
@@ -124,14 +113,12 @@ class CommonScrollerImagesState extends CommonState<CommonScrollerImagesWidget>
     Widget body = SizedBox(
       width: constraints?.maxWidth,
       child: TabBar(
-        tabs: configTabBarTabs(
-          constraints: constraints,
-        ),
+        tabs: configTabBarTabs(constraints: constraints),
         isScrollable: true,
         controller: controller,
         indicatorSize: TabBarIndicatorSize.label,
         labelPadding: EdgeInsets.zero,
-        indicatorColor: Colors.white.withOpacity(0),
+        indicatorColor: Colors.white.withAlpha(0),
       ),
     );
     return body;
@@ -141,22 +128,14 @@ class CommonScrollerImagesState extends CommonState<CommonScrollerImagesWidget>
   List<Widget> configTabBarTabs({BoxConstraints? constraints}) {
     List<Widget> list = [];
     for (var i = 0; i < widget.list.length; i++) {
-      Widget body = configItemWidget(
-        index: i,
-        constraints: constraints,
-      );
-      list.add(
-        body,
-      );
+      Widget body = configItemWidget(index: i, constraints: constraints);
+      list.add(body);
     }
     return list;
   }
 
   /// 创建每个item
-  configItemWidget({
-    BoxConstraints? constraints,
-    required int index,
-  }) {
+  configItemWidget({BoxConstraints? constraints, required int index}) {
     Widget body = createImageBuilder(
       imageNormalModel: data[index],
       width: itemW,
@@ -165,12 +144,12 @@ class CommonScrollerImagesState extends CommonState<CommonScrollerImagesWidget>
       boxFit: BoxFit.fill,
       border: widget.type == 0
           ? (selectIndex == index
-              ? (widget.border ??
-                  Border.all(
-                    width: widget.borW,
-                    color: widget.selectBorColor,
-                  ))
-              : null)
+                ? (widget.border ??
+                      Border.all(
+                        width: widget.borW,
+                        color: widget.selectBorColor,
+                      ))
+                : null)
           : null,
     );
 
@@ -178,17 +157,12 @@ class CommonScrollerImagesState extends CommonState<CommonScrollerImagesWidget>
       body = Stack(
         children: [
           body,
-          configCheckBoxWidget(
-            index: index,
-          ),
+          configCheckBoxWidget(index: index),
         ],
       );
     }
     body = Padding(
-      padding: const EdgeInsets.only(
-        left: 5,
-        right: 5,
-      ),
+      padding: const EdgeInsets.only(left: 5, right: 5),
       child: body,
     );
 
@@ -202,9 +176,7 @@ class CommonScrollerImagesState extends CommonState<CommonScrollerImagesWidget>
   }
 
   /// 创建点击item
-  configTapItem({
-    required int index,
-  }) {
+  configTapItem({required int index}) {
     if (widget.type == 0 || !widget.isMultiple) {
       if (index != selectIndex) {
         selectImageS.clear();
@@ -227,9 +199,7 @@ class CommonScrollerImagesState extends CommonState<CommonScrollerImagesWidget>
   }
 
   /// 创建勾选框
-  configCheckBoxWidget({
-    required int index,
-  }) {
+  configCheckBoxWidget({required int index}) {
     bool isSelect = false;
     if (widget.isMultiple) {
       if (selectImageS.contains(data[index])) isSelect = true;
@@ -241,11 +211,7 @@ class CommonScrollerImagesState extends CommonState<CommonScrollerImagesWidget>
       isSelcet: isSelect,
       color: isSelect ? widget.selectBorColor : null,
     );
-    body = Positioned(
-      right: 5,
-      top: 5,
-      child: body,
-    );
+    body = Positioned(right: 5, top: 5, child: body);
     return body;
   }
 

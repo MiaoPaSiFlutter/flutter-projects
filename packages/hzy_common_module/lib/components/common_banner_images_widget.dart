@@ -55,6 +55,21 @@ class CommonBannerImagesState extends CommonState<CommonBannerImagesWidget>
   @override
   bool get isNeedScaffol => false;
 
+  @override
+  bool get wantKeepAlive => widget.keepAlive ?? true;
+
+  @override
+  bool get safeAreaBottom => false;
+
+  @override
+  bool configSafeAreaTop() => false;
+
+  @override
+  Color? get scallBackGroundColor => Colors.white.withAlpha(0);
+
+  /// 当前下标
+  late int normalIndex;
+
   /// 轮播图控制器
   late ExtendedPageController extendedPageController;
 
@@ -63,17 +78,6 @@ class CommonBannerImagesState extends CommonState<CommonBannerImagesWidget>
 
   /// 双击点击动画
   late AnimationController doubleClickAnimationController;
-  @override
-  bool get safeAreabottm => false;
-
-  @override
-  bool configSafeAreaTop() => false;
-
-  /// 当前下标
-  late int normalIndex;
-
-  @override
-  Color? get scallBackGroundColor => Colors.white.withOpacity(0);
 
   @override
   void initState() {
@@ -148,9 +152,7 @@ class CommonBannerImagesState extends CommonState<CommonBannerImagesWidget>
   // ======== 触发方法 ======== //
   /// 创建动画控制器
   configAnimationS() {
-    extendedPageController = ExtendedPageController(
-      initialPage: normalIndex,
-    );
+    extendedPageController = ExtendedPageController(initialPage: normalIndex);
     doubleClickAnimationController = AnimationController(
       duration: const Duration(milliseconds: 150),
       vsync: this,
@@ -170,7 +172,4 @@ class CommonBannerImagesState extends CommonState<CommonBannerImagesWidget>
   reladState() {
     setState(() {});
   }
-
-  @override
-  bool get wantKeepAlive => widget.keepAlive ?? true;
 }

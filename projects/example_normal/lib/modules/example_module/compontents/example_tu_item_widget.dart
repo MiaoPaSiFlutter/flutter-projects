@@ -15,19 +15,17 @@ import 'example_tu_item_image_widget.dart';
 import 'example_tu_tags_widget.dart';
 
 class ExampleTuItemlessV extends CommonLessV {
-  ExampleTuItemlessV({
-    super.key,
-    required this.tuChongItem,
-    this.tapOneKey,
-  });
+  ExampleTuItemlessV({super.key, required this.tuChongItem, this.tapOneKey});
   final TuChongItem tuChongItem;
   final Function(TuChongItem tuChongItem)? tapOneKey;
 
   @override
   bool get isNeedScaffol => false;
   @override
-  Widget createScallBody(
-      {required BuildContext context, BoxConstraints? constraints}) {
+  Widget createScallBody({
+    required BuildContext context,
+    BoxConstraints? constraints,
+  }) {
     Widget body = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -39,24 +37,13 @@ class ExampleTuItemlessV extends CommonLessV {
       ],
     );
     body = Container(
-      margin: EdgeInsets.only(
-        left: 10.w,
-        right: 10.w,
-        top: 10.w,
-      ),
-      padding: EdgeInsets.symmetric(
-        vertical: 10.w,
-        horizontal: 12.w,
-      ),
+      margin: EdgeInsets.only(left: 10.w, right: 10.w, top: 10.w),
+      padding: EdgeInsets.symmetric(vertical: 10.w, horizontal: 12.w),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: HzyCommonColor().whitebackgroundColor,
-        borderRadius: BorderRadius.circular(
-          10.r,
-        ),
-        boxShadow: [
-          configShadow(),
-        ],
+        borderRadius: BorderRadius.circular(10.r),
+        boxShadow: [configShadow()],
       ),
       child: body,
     );
@@ -81,7 +68,7 @@ class ExampleTuItemlessV extends CommonLessV {
               Text(
                 tuChongItem.site?.description ?? LaunchIdConfig.solg.tr,
                 style: FontConfig().fontMedium12LightGrey,
-              )
+              ),
             ],
           ),
         ),
@@ -93,10 +80,7 @@ class ExampleTuItemlessV extends CommonLessV {
             color: HzyNormalColorS.colfe58a1,
           ),
           height: null,
-          padding: const EdgeInsets.symmetric(
-            vertical: 2,
-            horizontal: 7,
-          ),
+          padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 7),
           tapCall: () {
             if (tapOneKey != null) {
               tapOneKey!(tuChongItem);
@@ -104,12 +88,9 @@ class ExampleTuItemlessV extends CommonLessV {
           },
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
-            border: Border.all(
-              color: HzyNormalColorS.colfe58a1,
-              width: 0.5.w,
-            ),
+            border: Border.all(color: HzyNormalColorS.colfe58a1, width: 0.5.w),
           ),
-        )
+        ),
       ],
     );
     return body;
@@ -133,11 +114,7 @@ class ExampleTuItemlessV extends CommonLessV {
     );
     body = Container(
       decoration: BoxDecoration(
-        boxShadow: [
-          configThemeShadow(
-            opacity: 0.4,
-          ),
-        ],
+        boxShadow: [configThemeShadow(opacity: 102)],
         borderRadius: BorderRadius.circular(50.r),
       ),
       child: body,
@@ -147,17 +124,13 @@ class ExampleTuItemlessV extends CommonLessV {
 
   /// 创建tags
   configTagsWidget() {
-    Widget body = ExampleTuTagsWidget(
-      tuChongItem: tuChongItem,
-    );
+    Widget body = ExampleTuTagsWidget(tuChongItem: tuChongItem);
     return body;
   }
 
   /// 配置九宫格
   configImageItemWidget() {
-    Widget body = ExampleTuItmeImagelessV(
-      tuChongItem: tuChongItem,
-    );
+    Widget body = ExampleTuItmeImagelessV(tuChongItem: tuChongItem);
     return body;
   }
 
@@ -166,23 +139,17 @@ class ExampleTuItemlessV extends CommonLessV {
       children: [
         HzyBtnWidget(
           btnLayoutType: BtnLayoutType.letfImg,
-          imageWidget: Icon(
-            Icons.public,
-          ),
+          imageWidget: Icon(Icons.public),
           text: "发布",
         ),
         HzyBtnWidget(
           btnLayoutType: BtnLayoutType.letfImg,
-          imageWidget: Icon(
-            Icons.public,
-          ),
+          imageWidget: Icon(Icons.public),
           text: "喜欢",
         ),
         HzyBtnWidget(
           btnLayoutType: BtnLayoutType.letfImg,
-          imageWidget: Icon(
-            Icons.public,
-          ),
+          imageWidget: Icon(Icons.public),
           text: "分享",
         ),
       ],

@@ -1,17 +1,9 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-04-10 13:00:27
- * @LastEditors: TT
- * @LastEditTime: 2023-09-18 10:22:56
- */
-
 import 'dart:convert';
 
 import 'dart:async';
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_utils/ocean_utils.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesTool {
   static SharedPreferencesTool? _singleton;
@@ -33,9 +25,9 @@ class SharedPreferencesTool {
   Future _init() async {
     _store = await SharedPreferences.getInstance();
     if (_store == null) {
-      dPrint("本地存储库,初始化失败");
+      debugLog("本地存储库,初始化失败");
     } else {
-      dPrint("本地存储库,初始化完成");
+      debugLog("本地存储库,初始化完成");
     }
   }
 
@@ -65,8 +57,11 @@ class SharedPreferencesTool {
   }
 
   /// get obj list.
-  static List<T>? getObjList<T>(String key, T Function(Map v) f,
-      {List<T>? defValue = const []}) {
+  static List<T>? getObjList<T>(
+    String key,
+    T Function(Map v) f, {
+    List<T>? defValue = const [],
+  }) {
     List<Map>? dataList = getObjectList(key);
     List<T>? list = dataList?.map((value) {
       return f(value);
@@ -124,8 +119,10 @@ class SharedPreferencesTool {
   }
 
   /// get string list.
-  static List<String>? getStringList(String key,
-      {List<String>? defValue = const []}) {
+  static List<String>? getStringList(
+    String key, {
+    List<String>? defValue = const [],
+  }) {
     return _store?.getStringList(key) ?? defValue;
   }
 

@@ -8,12 +8,12 @@ class SmallCollectionItem extends StatelessWidget {
   final String? subtitle;
   final int? redDotValue;
   const SmallCollectionItem({
-    Key? key,
+    super.key,
     this.imageUrl,
     this.title,
     this.subtitle,
     this.redDotValue,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

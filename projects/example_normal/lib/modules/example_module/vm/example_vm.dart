@@ -11,7 +11,6 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hzy_common_module/hzy_common_module.dart';
-import 'package:hzy_common_module/models/image_normal_model.dart';
 import '../models/image_model.dart';
 import '../models/tu_chong_model.dart';
 import '../models/tu_mock_data.dart';
@@ -29,9 +28,7 @@ class ExampleState extends BaseState {
 
 class ExampleVM {
   ExampleState state = ExampleState();
-  configListNormalData({
-    required int page,
-  }) async {
+  configListNormalData({required int page}) async {
     if (page == 1) {
       state.data.clear();
     }
@@ -42,8 +39,10 @@ class ExampleVM {
       for (var i = 0; i < netNum; i++) {
         state.data.add("i");
       }
-      state.pageState = HzyNormalTools.configPageState(
-          allNum: state.data.length, networkNum: netNum);
+      state.pageState = determinePageState(
+        totalCount: state.data.length,
+        currentPageCount: netNum,
+      );
     });
   }
 
@@ -67,17 +66,14 @@ class ExampleVM {
       netList = imageListModel.list ?? [];
     }
     state.imageList.addAll(netList);
-    state.pageState = HzyNormalTools.configPageState(
-      allNum: state.imageList.length,
-      networkNum: netList.length,
+    state.pageState = determinePageState(
+      totalCount: state.imageList.length,
+      currentPageCount: netList.length,
     );
   }
 
   /// 配置图虫图片数据
-  configTuchongData({
-    int page = 1,
-    bool isshowload = false,
-  }) async {
+  configTuchongData({int page = 1, bool isshowload = false}) async {
     int? psid;
     if (state.feedList.isNotEmpty) {
       psid = state.feedList.last.postId;
@@ -98,7 +94,7 @@ class ExampleVM {
           "feedList": [],
           "message": "添加成功",
           "more": true,
-          "result": "SUCCESS"
+          "result": "SUCCESS",
         };
       }
     } else {
@@ -113,9 +109,9 @@ class ExampleVM {
       list = tuChongSource.feedList ?? [];
     }
     state.feedList.addAll(list);
-    state.pageState = HzyNormalTools.configPageState(
-      allNum: state.feedList.length,
-      networkNum: list.length,
+    state.pageState = determinePageState(
+      totalCount: state.feedList.length,
+      currentPageCount: list.length,
     );
   }
 
@@ -126,21 +122,16 @@ class ExampleVM {
     bool isshowload = false,
   }) async {
     if (kIsWeb) {
-      await configTuchongData(
-        page: page,
-        isshowload: isshowload,
-      );
+      await configTuchongData(page: page, isshowload: isshowload);
     } else {
-      await configLoadImageS(
-        page: page,
-        type: type,
-        isshowload: isshowload,
-      );
+      await configLoadImageS(page: page, type: type, isshowload: isshowload);
     }
   }
 
-  static configDetailImageModelList(
-      {required TuChongItem tuChongItem, double? width}) {
+  static configDetailImageModelList({
+    required TuChongItem tuChongItem,
+    double? width,
+  }) {
     List<ImageNormalModel> list = List<ImageNormalModel>.from(
       tuChongItem.images!.map(
         (e) => ImageNormalModel(

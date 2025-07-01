@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-26 16:25:00
- * @LastEditors: TT
- * @LastEditTime: 2023-05-05 12:34:01
- */
-
 import 'package:flutter/material.dart';
 import 'package:hzy_common_module/utils/picker_tool.dart';
 import 'package:image_picker/image_picker.dart';

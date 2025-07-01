@@ -4,7 +4,7 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 class MineUserinfoCell extends StatefulWidget {
   final Map? floor;
 
-  const MineUserinfoCell({Key? key, this.floor}) : super(key: key);
+  const MineUserinfoCell({super.key, this.floor});
 
   @override
   State createState() => _MineUserinfoCellState();
@@ -133,10 +133,10 @@ class _MineUserinfoCellState extends State<MineUserinfoCell> {
 
     TextStyle titleStyle = TextStyle(
         fontSize: 14,
-        color: getColorFromHex(info["title"]?["color"] ?? "#FFEEEEEE"));
+        color: parseHexColor(info["title"]?["color"] ?? "#FFEEEEEE"));
     TextStyle subtitleStyle = TextStyle(
         fontSize: 12,
-        color: getColorFromHex(info["subtitle"]?["color"] ?? "#FFEEEEEE"));
+        color: parseHexColor(info["subtitle"]?["color"] ?? "#FFEEEEEE"));
 
     WidgetSpan bizArrowWidget = WidgetSpan(
       alignment: PlaceholderAlignment.middle,

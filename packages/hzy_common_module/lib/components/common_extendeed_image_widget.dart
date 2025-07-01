@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-19 21:06:33
- * @LastEditors: TT
- * @LastEditTime: 2023-09-09 09:04:10
- */
-
 import 'dart:math';
 
 import 'package:extended_image/extended_image.dart';
@@ -200,10 +191,7 @@ class CommonExtendedImageWidget {
     );
 
     if (heroStr != null) {
-      child = Hero(
-        tag: heroStr,
-        child: child,
-      );
+      child = Hero(tag: heroStr, child: child);
     }
     return child;
   }
@@ -270,47 +258,43 @@ class CommonExtendedImageWidget {
 
     ///
     BlendMode? colorBlendMode,
-  }) =>
-      ExtendedImage.asset(
-        assetPath,
-        mode: isGesture ? ExtendedImageMode.gesture : ExtendedImageMode.none,
-        width: width,
-        height: height,
-        imageCacheName: cacheName,
-        border: border,
-        shape: borderRadius != null ? BoxShape.rectangle : shape,
-        borderRadius: borderRadius,
-        loadStateChanged: isGesture
-            ? null
-            : (state) {
-                return configLoadStateChange(
-                  state: state,
-                  width: width,
-                  height: height,
-                  widget: placeHoldWidget,
-                  fit: fit,
-                  isShowLoading: isShowLoadIng,
-                  loadradius: loadRadius,
-                );
-              },
-        initGestureConfigHandler: (state) {
-          return initGestureConfighandler(
-            state: state,
-            size: size!,
-          );
-        },
-        onDoubleTap: (state) {
-          configDoubleTap(
-            state: state,
-            size: size!,
-            isgesture: isGesture,
-            doubleClickAnimationController: doubleClickAnimationController,
-          );
-        },
-        cacheRawData: cache,
-        fit: fit,
-        colorBlendMode: colorBlendMode,
+  }) => ExtendedImage.asset(
+    assetPath,
+    mode: isGesture ? ExtendedImageMode.gesture : ExtendedImageMode.none,
+    width: width,
+    height: height,
+    imageCacheName: cacheName,
+    border: border,
+    shape: borderRadius != null ? BoxShape.rectangle : shape,
+    borderRadius: borderRadius,
+    loadStateChanged: isGesture
+        ? null
+        : (state) {
+            return configLoadStateChange(
+              state: state,
+              width: width,
+              height: height,
+              widget: placeHoldWidget,
+              fit: fit,
+              isShowLoading: isShowLoadIng,
+              loadradius: loadRadius,
+            );
+          },
+    initGestureConfigHandler: (state) {
+      return initGestureConfighandler(state: state, size: size!);
+    },
+    onDoubleTap: (state) {
+      configDoubleTap(
+        state: state,
+        size: size!,
+        isgesture: isGesture,
+        doubleClickAnimationController: doubleClickAnimationController,
       );
+    },
+    cacheRawData: cache,
+    fit: fit,
+    colorBlendMode: colorBlendMode,
+  );
 
   /*
     加载字节流图片
@@ -378,55 +362,52 @@ class CommonExtendedImageWidget {
 
     ///
     BlendMode? colorBlendMode,
-  }) =>
-      ExtendedImage.memory(
-        bytes,
-        mode: mode ??
-            (isGesture ? ExtendedImageMode.gesture : ExtendedImageMode.none),
-        width: width,
-        border: border,
-        borderRadius: borderRadius,
-        height: height,
-        extendedImageEditorKey: extendedImageEditorKey,
-        enableLoadState: enableLoadState,
-        initEditorConfigHandler: (state) {
-          if (editorConfig != null) {
-            return editorConfig;
-          }
-          return null;
-        },
-        shape: borderRadius != null ? BoxShape.rectangle : shape,
-        loadStateChanged: isGesture
-            ? null
-            : (state) {
-                return configLoadStateChange(
-                  state: state,
-                  width: width,
-                  height: height,
-                  widget: placeHoldWidget,
-                  fit: fit,
-                  isShowLoading: isShowLoadIng,
-                  loadradius: loadRadius,
-                );
-              },
-        initGestureConfigHandler: (ExtendedImageState state) {
-          return initGestureConfighandler(
-            state: state,
-            size: size!,
-          );
-        },
-        onDoubleTap: (ExtendedImageGestureState state) {
-          configDoubleTap(
-            state: state,
-            size: size!,
-            isgesture: isGesture,
-            doubleClickAnimationController: doubleClickAnimationController,
-          );
-        },
-        cacheRawData: cache,
-        fit: fit,
-        colorBlendMode: colorBlendMode,
+  }) => ExtendedImage.memory(
+    bytes,
+    mode:
+        mode ??
+        (isGesture ? ExtendedImageMode.gesture : ExtendedImageMode.none),
+    width: width,
+    border: border,
+    borderRadius: borderRadius,
+    height: height,
+    extendedImageEditorKey: extendedImageEditorKey,
+    enableLoadState: enableLoadState,
+    initEditorConfigHandler: (state) {
+      if (editorConfig != null) {
+        return editorConfig;
+      }
+      return null;
+    },
+    shape: borderRadius != null ? BoxShape.rectangle : shape,
+    loadStateChanged: isGesture
+        ? null
+        : (state) {
+            return configLoadStateChange(
+              state: state,
+              width: width,
+              height: height,
+              widget: placeHoldWidget,
+              fit: fit,
+              isShowLoading: isShowLoadIng,
+              loadradius: loadRadius,
+            );
+          },
+    initGestureConfigHandler: (ExtendedImageState state) {
+      return initGestureConfighandler(state: state, size: size!);
+    },
+    onDoubleTap: (ExtendedImageGestureState state) {
+      configDoubleTap(
+        state: state,
+        size: size!,
+        isgesture: isGesture,
+        doubleClickAnimationController: doubleClickAnimationController,
       );
+    },
+    cacheRawData: cache,
+    fit: fit,
+    colorBlendMode: colorBlendMode,
+  );
 
   /*
       加载File图片
@@ -491,55 +472,52 @@ class CommonExtendedImageWidget {
 
     ///
     BlendMode? colorBlendMode,
-  }) =>
-      ExtendedImage.file(
-        file,
-        mode: mode ??
-            (isGesture ? ExtendedImageMode.gesture : ExtendedImageMode.none),
-        width: width,
-        height: height,
-        border: border,
-        shape: borderRadius != null ? BoxShape.rectangle : shape,
-        borderRadius: borderRadius,
-        extendedImageEditorKey: extendedImageEditorKey,
-        enableLoadState: enableLoadState,
-        initEditorConfigHandler: (state) {
-          if (editorConfig != null) {
-            return editorConfig;
-          }
-          return null;
-        },
-        loadStateChanged: isGesture
-            ? null
-            : (state) {
-                return configLoadStateChange(
-                  state: state,
-                  width: width,
-                  height: height,
-                  widget: placeHoldWidget,
-                  fit: fit,
-                  isShowLoading: isShowLoadIng,
-                  loadradius: loadRadius,
-                );
-              },
-        initGestureConfigHandler: (ExtendedImageState state) {
-          return initGestureConfighandler(
-            state: state,
-            size: size!,
-          );
-        },
-        onDoubleTap: (ExtendedImageGestureState state) {
-          configDoubleTap(
-            state: state,
-            size: size!,
-            isgesture: isGesture,
-            doubleClickAnimationController: doubleClickAnimationController,
-          );
-        },
-        cacheRawData: true,
-        fit: fit,
-        colorBlendMode: colorBlendMode,
+  }) => ExtendedImage.file(
+    file,
+    mode:
+        mode ??
+        (isGesture ? ExtendedImageMode.gesture : ExtendedImageMode.none),
+    width: width,
+    height: height,
+    border: border,
+    shape: borderRadius != null ? BoxShape.rectangle : shape,
+    borderRadius: borderRadius,
+    extendedImageEditorKey: extendedImageEditorKey,
+    enableLoadState: enableLoadState,
+    initEditorConfigHandler: (state) {
+      if (editorConfig != null) {
+        return editorConfig;
+      }
+      return null;
+    },
+    loadStateChanged: isGesture
+        ? null
+        : (state) {
+            return configLoadStateChange(
+              state: state,
+              width: width,
+              height: height,
+              widget: placeHoldWidget,
+              fit: fit,
+              isShowLoading: isShowLoadIng,
+              loadradius: loadRadius,
+            );
+          },
+    initGestureConfigHandler: (ExtendedImageState state) {
+      return initGestureConfighandler(state: state, size: size!);
+    },
+    onDoubleTap: (ExtendedImageGestureState state) {
+      configDoubleTap(
+        state: state,
+        size: size!,
+        isgesture: isGesture,
+        doubleClickAnimationController: doubleClickAnimationController,
       );
+    },
+    cacheRawData: true,
+    fit: fit,
+    colorBlendMode: colorBlendMode,
+  );
   /*
     加载网络图片
   */
@@ -603,57 +581,54 @@ class CommonExtendedImageWidget {
 
     ///
     BlendMode? colorBlendMode,
-  }) =>
-      ExtendedImage.network(
-        url,
-        mode: mode ??
-            (isGesture ? ExtendedImageMode.gesture : ExtendedImageMode.none),
-        width: width,
-        height: height,
-        fit: fit,
-        cache: cache!,
-        border: border,
-        imageCacheName: cacheName ?? _package,
-        shape: borderRadius != null ? BoxShape.rectangle : shape,
-        borderRadius: borderRadius,
-        extendedImageEditorKey: extendedImageEditorKey,
-        enableLoadState: enableLoadState,
-        initEditorConfigHandler: (state) {
-          if (editorConfig != null) {
-            return editorConfig;
-          }
-          return null;
-        },
-        loadStateChanged: isGesture
-            ? null
-            : (state) {
-                return configLoadStateChange(
-                  state: state,
-                  width: width,
-                  height: height,
-                  widget: placeHoldWidget,
-                  fit: fit,
-                  isShowLoading: isShowLoadIng,
-                  loadradius: loadRadius,
-                );
-              },
-        initGestureConfigHandler: (state) {
-          return initGestureConfighandler(
-            state: state,
-            size: size!,
-          );
-        },
-        onDoubleTap: (state) {
-          configDoubleTap(
-            state: state,
-            size: size!,
-            isgesture: isGesture,
-            doubleClickAnimationController: doubleClickAnimationController,
-          );
-        },
-        cacheRawData: cache,
-        colorBlendMode: colorBlendMode,
+  }) => ExtendedImage.network(
+    url,
+    mode:
+        mode ??
+        (isGesture ? ExtendedImageMode.gesture : ExtendedImageMode.none),
+    width: width,
+    height: height,
+    fit: fit,
+    cache: cache!,
+    border: border,
+    imageCacheName: cacheName ?? _package,
+    shape: borderRadius != null ? BoxShape.rectangle : shape,
+    borderRadius: borderRadius,
+    extendedImageEditorKey: extendedImageEditorKey,
+    enableLoadState: enableLoadState,
+    initEditorConfigHandler: (state) {
+      if (editorConfig != null) {
+        return editorConfig;
+      }
+      return null;
+    },
+    loadStateChanged: isGesture
+        ? null
+        : (state) {
+            return configLoadStateChange(
+              state: state,
+              width: width,
+              height: height,
+              widget: placeHoldWidget,
+              fit: fit,
+              isShowLoading: isShowLoadIng,
+              loadradius: loadRadius,
+            );
+          },
+    initGestureConfigHandler: (state) {
+      return initGestureConfighandler(state: state, size: size!);
+    },
+    onDoubleTap: (state) {
+      configDoubleTap(
+        state: state,
+        size: size!,
+        isgesture: isGesture,
+        doubleClickAnimationController: doubleClickAnimationController,
       );
+    },
+    cacheRawData: cache,
+    colorBlendMode: colorBlendMode,
+  );
 
   static double? initScale({
     required Size imageSize,
@@ -663,13 +638,19 @@ class CommonExtendedImageWidget {
     final double n1 = imageSize.height / imageSize.width;
     final double n2 = size.height / size.width;
     if (n1 > n2) {
-      final FittedSizes fittedSizes =
-          applyBoxFit(BoxFit.contain, imageSize, size);
+      final FittedSizes fittedSizes = applyBoxFit(
+        BoxFit.contain,
+        imageSize,
+        size,
+      );
       final Size destinationSize = fittedSizes.destination;
       return size.width / destinationSize.width;
     } else if (n1 / n2 < 1 / 4) {
-      final FittedSizes fittedSizes =
-          applyBoxFit(BoxFit.contain, imageSize, size);
+      final FittedSizes fittedSizes = applyBoxFit(
+        BoxFit.contain,
+        imageSize,
+        size,
+      );
       final Size destinationSize = fittedSizes.destination;
       return size.height / destinationSize.height;
     }
@@ -731,14 +712,9 @@ class CommonExtendedImageWidget {
         );
       };
       doubleClickAnimation = doubleClickAnimationController.drive(
-        Tween<double>(
-          begin: begin,
-          end: end,
-        ),
+        Tween<double>(begin: begin, end: end),
       );
-      doubleClickAnimation.addListener(
-        doubleClickAnimationListener,
-      );
+      doubleClickAnimation.addListener(doubleClickAnimationListener);
       doubleClickAnimationController.forward();
     }
   }
@@ -775,9 +751,7 @@ class CommonExtendedImageWidget {
           fit: fit,
         );
       case LoadState.failed:
-        return Image.asset(
-          NormalImagePathConfit.imageFail,
-        );
+        return Image.asset(NormalImagePathConfit.imageFail);
     }
   }
 }

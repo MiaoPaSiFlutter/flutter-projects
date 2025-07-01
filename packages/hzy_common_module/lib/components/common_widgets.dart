@@ -1,23 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hzy_normal_tool/hzy_normal_widgets/hzy_normal_widgets_index.dart';
-import '../config/hzy_common_color_config.dart';
+import 'package:hzy_common_module/hzy_common_module.dart';
 import '../config/hzy_common_image_config.dart';
-import '../utils/utils_index.dart';
-
-typedef ItemTapCallback = void Function(HzyNormalItemModel itemModel);
 
 /// 创建加载动画
-Widget configLoadWidget({
-  Size? size,
-}) {
+Widget configLoadWidget({Size? size}) {
   return SizedBox(
     width: size?.width ?? 100,
     height: size?.height ?? 100,
     child: Image.asset(
-      NormalModuleUtils.normalModuleImagePath(
-        name: "assets/loadingg.gif",
-      ),
+      NormalModuleUtils.normalModuleImagePath(name: "assets/loadingg.gif"),
       fit: BoxFit.scaleDown,
     ),
   );
@@ -31,11 +22,7 @@ createNormalCloseBtnWidget({
   Function? onTapClose,
   bool isPosition = true,
 }) {
-  Widget body = Icon(
-    Icons.close,
-    size: size,
-    color: iconColor,
-  );
+  Widget body = Icon(Icons.close, size: size, color: iconColor);
   body = InkWell(
     onTap: () {
       currentGoback();
@@ -43,18 +30,10 @@ createNormalCloseBtnWidget({
         onTapClose();
       }
     },
-    child: SizedBox(
-      width: 40,
-      height: 40,
-      child: body,
-    ),
+    child: SizedBox(width: 40, height: 40, child: body),
   );
   if (isPosition) {
-    body = Positioned(
-      right: 0,
-      top: 0,
-      child: body,
-    );
+    body = Positioned(right: 0, top: 0, child: body);
   }
   return body;
 }
@@ -65,11 +44,7 @@ Widget creatDeviceNetWorkImage({
   required double width,
   required double height,
 }) {
-  return Image.network(
-    isNocarObu ? '' : '',
-    width: width,
-    height: height,
-  );
+  return Image.network(isNocarObu ? '' : '', width: width, height: height);
 }
 
 /// 创建通用Card 内边距 12.w
@@ -84,21 +59,22 @@ Widget createNormalCardWidget({
   EdgeInsetsGeometry? margin,
 }) {
   return Container(
-    decoration: decoration ??
+    decoration:
+        decoration ??
         BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(
-            radius.r,
-          ),
+          borderRadius: BorderRadius.circular(radius.r),
         ),
     width: SizeMacro.screenWidth,
-    padding: padding ??
+    padding:
+        padding ??
         EdgeInsets.only(
           left: paddingW ?? 16.w,
           right: paddingW ?? 16.w,
           top: paddingW ?? 16.w,
         ),
-    margin: margin ??
+    margin:
+        margin ??
         EdgeInsets.only(
           left: marginW ?? 12.w,
           right: marginW ?? 12.w,
@@ -113,28 +89,18 @@ Widget createNoDataWidget() {
   return Container(
     width: 200,
     height: 200,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(
-        10,
-      ),
-    ),
+    decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
     child: Image.asset(
-      NormalModuleUtils.normalModuleImagePath(
-        name: "assets/img_record.png",
-      ),
+      NormalModuleUtils.normalModuleImagePath(name: "assets/img_record.png"),
       fit: BoxFit.scaleDown,
     ),
   );
 }
 
 /// 创建主题色阴影
-BoxShadow configThemeShadow({
-  double opacity = 0.8,
-}) {
+BoxShadow configThemeShadow({int opacity = 204}) {
   return BoxShadow(
-    color: HzyCommonColor().colthemes.withOpacity(
-          opacity,
-        ),
+    color: HzyCommonColor().colthemes.withAlpha(opacity),
     offset: const Offset(0, 3),
     blurRadius: 10,
     spreadRadius: 0,
@@ -142,11 +108,9 @@ BoxShadow configThemeShadow({
 }
 
 /// 创建灰色阴影
-BoxShadow configShadow({
-  double opacity = 0.4,
-}) {
+BoxShadow configShadow({int opacity = 102}) {
   return BoxShadow(
-    color: HzyCommonColor().colc3c3c3.withOpacity(opacity),
+    color: HzyCommonColor().colc3c3c3.withAlpha(opacity),
     offset: const Offset(0, 0),
     blurRadius: 10.0,
     spreadRadius: 0,
@@ -156,8 +120,9 @@ BoxShadow configShadow({
 /// 创建通用nav 背景图
 Widget configNavImageBg() {
   Widget body = Image.asset(
-    HzyCommonImagePathConfig()
-        .configImagePath(pathkey: HzyCommonImageIdConfig.navBgImg),
+    HzyCommonImagePathConfig().configImagePath(
+      pathkey: HzyCommonImageIdConfig.navBgImg,
+    ),
     fit: BoxFit.fill,
     width: SizeMacro.screenWidth,
     height: SizeMacro.navh,
@@ -183,9 +148,7 @@ Widget configNormalDarkItemWidget({
   }
   if (index == 0 && radius != 0) {
     itemModel.borderRadius = BorderRadius.vertical(
-      top: Radius.circular(
-        radius,
-      ),
+      top: Radius.circular(radius),
     );
   }
   itemModel.isShowLine = isShowLine;
@@ -194,17 +157,13 @@ Widget configNormalDarkItemWidget({
       itemModel.isShowLine = false;
       if (radius != 0) {
         itemModel.borderRadius = BorderRadius.vertical(
-          bottom: Radius.circular(
-            radius,
-          ),
+          bottom: Radius.circular(radius),
         );
       }
     }
   }
   if (index == 0 && allNum == 1 && radius != 0) {
-    itemModel.borderRadius = BorderRadius.circular(
-      radius,
-    );
+    itemModel.borderRadius = BorderRadius.circular(radius);
   }
   itemModel.lineColor = HzyCommonColor().linecolor;
   Widget body = HzyNormalItemWidget(
@@ -212,16 +171,13 @@ Widget configNormalDarkItemWidget({
     tapItemCallback: (itemModel, iex) {
       if (itemModel.tapType == 1 && itemModel.router != null) {
         if (onTap != null) {
-          onTap(itemModel);
+          onTap(itemModel, iex);
         } else {
-          currentToPage(
-            itemModel.router!,
-            arguments: itemModel,
-          );
+          currentToPage(itemModel.router!, arguments: itemModel);
         }
       } else {
         if (onOtherTap != null) {
-          onOtherTap(itemModel);
+          onOtherTap(itemModel, iex);
         }
       }
     },
@@ -238,10 +194,6 @@ configNormalCheckBoxWidget({
   IconData? icon = Icons.radio_button_unchecked;
 
   if (isSelcet) icon = Icons.check_circle_rounded;
-  Widget body = Icon(
-    icon,
-    size: size,
-    color: color,
-  );
+  Widget body = Icon(icon, size: size, color: color);
   return body;
 }

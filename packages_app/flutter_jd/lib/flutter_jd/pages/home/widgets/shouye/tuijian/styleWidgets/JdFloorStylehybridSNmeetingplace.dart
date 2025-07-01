@@ -9,11 +9,11 @@ class HomeHybrid_MeetingPlace extends StatefulWidget {
   final int? subFloorNum;
   final List? subFloors;
   const HomeHybrid_MeetingPlace({
-    Key? key,
+    super.key,
     this.floor,
     this.subFloorNum,
     this.subFloors,
-  }) : super(key: key);
+  });
 
   @override
   State createState() => _HomeHybrid_MeetingPlaceState();
@@ -46,7 +46,7 @@ class _HomeHybrid_MeetingPlaceState extends State<HomeHybrid_MeetingPlace> {
       decoration: BoxDecoration(
         border: Border.all(width: 1, color: Colors.green),
         // color: Colors.white,
-        borderRadius: HzyNormalTools.buildFeedCellRadius(1, 0),
+        borderRadius: OceanNormalTools.buildFeedCellRadius(1, 0),
       ),
       child: Container(
         padding: const EdgeInsets.only(left: 5, right: 5),

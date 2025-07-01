@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 import '../config/config_index.dart';
 import '../utils/screenutil_tools.dart';
-import 'common_state.dart';
+import 'abstract/common_state.dart';
 
-enum CommonDrawerType {
-  left,
-  right,
-  top,
-  bottom,
-}
+enum CommonDrawerType { left, right, top, bottom }
 
 class CommonDrawerPage extends StatefulWidget {
   /// 抽屉宽度
@@ -65,19 +60,19 @@ class CommonDrawerPage extends StatefulWidget {
 
 class CommonDrawerState extends CommonState<CommonDrawerPage>
     with TickerProviderStateMixin {
-  late ScrollController scrollController;
-  late AnimationController iconAnimationController;
-  late AnimationController animationController;
-  double scrolloffset = 0.0;
   @override
   bool get isNeedScaffol => false;
   @override
-  bool get safeAreabottm => false;
+  bool get safeAreaBottom => false;
   @override
   bool configSafeAreaTop() => false;
 
   /// 配置抽屉布局样式
   late CommonDrawerType drawerType;
+  late ScrollController scrollController;
+  late AnimationController iconAnimationController;
+  late AnimationController animationController;
+  double scrolloffset = 0.0;
 
   /// 进度条
   double progress = 0;
@@ -122,9 +117,7 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
     body = SingleChildScrollView(
       controller: scrollController,
       scrollDirection: configScrollDirection(),
-      physics: const PageScrollPhysics(
-        parent: ClampingScrollPhysics(),
-      ),
+      physics: const PageScrollPhysics(parent: ClampingScrollPhysics()),
       child: body,
     );
 
@@ -137,10 +130,7 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
       animation: iconAnimationController,
       builder: (context, child) {
         Widget bt = widget.drawerWidget ?? Container();
-        bt = Transform(
-          transform: configTranslationValues(),
-          child: bt,
-        );
+        bt = Transform(transform: configTranslationValues(), child: bt);
         return bt;
       },
     );
@@ -165,7 +155,7 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
       children: [
         widget.bodyView ?? Container(),
         configAppBarBtnWidget(),
-        configSmegmaWidget()
+        configSmegmaWidget(),
       ],
     );
     body = Container(
@@ -173,7 +163,7 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
         color: HzyCommonColor().whitebackgroundColor,
         boxShadow: <BoxShadow>[
           BoxShadow(
-            color: HzyNormalColorS.grey.withOpacity(0.6),
+            color: HzyNormalColorS.grey.withAlpha(153),
             blurRadius: 24.r,
           ),
         ],
@@ -190,14 +180,10 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
 
   /// 创建灰色蒙层
   configSmegmaWidget() {
-    double ct = Tween<double>(begin: 0, end: 0.2).transform(
-      progress,
-    );
+    double ct = Tween<double>(begin: 0, end: 0.2).transform(progress);
 
     Widget body = Container(
-      decoration: BoxDecoration(
-        color: Color.fromRGBO(0, 0, 0, ct),
-      ),
+      decoration: BoxDecoration(color: Color.fromRGBO(0, 0, 0, ct)),
     );
 
     body = InkWell(
@@ -207,13 +193,12 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
       child: body,
     );
 
-    body = Positioned.fill(
-      child: body,
-    );
+    body = Positioned.fill(child: body);
 
-    body =
-        ((widget.isShowSmegma ?? true) && progress > 0.2) ? body : Container();
-    dPrint(body);
+    body = ((widget.isShowSmegma ?? true) && progress > 0.2)
+        ? body
+        : Container();
+    debugLog(body);
     return body;
   }
 
@@ -221,11 +206,10 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
   configAppBarBtnWidget() {
     /// 创建按钮
     Widget body = InkWell(
-      borderRadius: BorderRadius.circular(
-        AppBar().preferredSize.height,
-      ),
+      borderRadius: BorderRadius.circular(AppBar().preferredSize.height),
       child: Center(
-        child: widget.menuView ??
+        child:
+            widget.menuView ??
             AnimatedIcon(
               icon: widget.animatedIconData != null
                   ? widget.animatedIconData!
@@ -238,11 +222,7 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
       },
     );
 
-    body = SizedBox(
-      width: 40,
-      height: 40,
-      child: body,
-    );
+    body = SizedBox(width: 40, height: 40, child: body);
 
     switch (drawerType) {
       case CommonDrawerType.left:
@@ -271,12 +251,7 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
     Widget body = Container();
     switch (drawerType) {
       case CommonDrawerType.left:
-        body = Row(
-          children: [
-            configDrawerWidget(),
-            configNormalBodyWidget(),
-          ],
-        );
+        body = Row(children: [configDrawerWidget(), configNormalBodyWidget()]);
         break;
       case CommonDrawerType.right:
         body = Stack(
@@ -293,18 +268,12 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
         break;
       case CommonDrawerType.top:
         body = Column(
-          children: [
-            configDrawerWidget(),
-            configNormalBodyWidget(),
-          ],
+          children: [configDrawerWidget(), configNormalBodyWidget()],
         );
         break;
       case CommonDrawerType.bottom:
         body = Column(
-          children: [
-            configNormalBodyWidget(),
-            configDrawerWidget(),
-          ],
+          children: [configNormalBodyWidget(), configDrawerWidget()],
         );
         body = Stack(
           children: [
@@ -367,17 +336,11 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
     switch (drawerType) {
       case CommonDrawerType.top:
       case CommonDrawerType.bottom:
-        size = Size(
-          mW,
-          dw,
-        );
+        size = Size(mW, dw);
         break;
       case CommonDrawerType.left:
       case CommonDrawerType.right:
-        size = Size(
-          dw,
-          mH,
-        );
+        size = Size(dw, mH);
         break;
     }
     return size;
@@ -493,7 +456,7 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
         pg = normalOffSet;
         break;
     }
-    dPrint("进度条$pg");
+    debugLog("进度条$pg");
     setState(() {
       progress = pg;
     });
@@ -535,63 +498,53 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
   }
 
   initaddListener() {
-    scrollController.addListener(
-      () {
-        if (widget.onScroll != null) {
-          widget.onScroll!(scrollController.offset);
+    scrollController.addListener(() {
+      if (widget.onScroll != null) {
+        widget.onScroll!(scrollController.offset);
+      }
+      debugLog(scrollController.offset);
+      if (scrollController.offset <= 0) {
+        if (scrolloffset != 1.0) {
+          setState(() {
+            scrolloffset = 1.0;
+            if (widget.drawerIsOpen != null) {
+              widget.drawerIsOpen!(true);
+            }
+          });
         }
-        dPrint(scrollController.offset);
-        if (scrollController.offset <= 0) {
-          if (scrolloffset != 1.0) {
-            setState(
-              () {
-                scrolloffset = 1.0;
-                if (widget.drawerIsOpen != null) {
-                  widget.drawerIsOpen!(true);
-                }
-              },
-            );
-          }
-          iconAnimationController.animateTo(
-            configIconAnimSlidEnd(),
-            duration: const Duration(milliseconds: 0),
-            curve: Curves.fastOutSlowIn,
-          );
-        } else if (scrollController.offset > 0 &&
-            scrollController.offset <= widget.drawerWidth!) {
-          iconAnimationController.animateTo(
-            configIconAnimSliding(),
-            duration: const Duration(milliseconds: 0),
-            curve: Curves.fastOutSlowIn,
-          );
-          if (scrolloffset != 0.0) {
-            setState(
-              () {
-                scrolloffset = 0.0;
-                if (widget.drawerIsOpen != null) {
-                  widget.drawerIsOpen!(false);
-                }
-              },
-            );
-          }
+        iconAnimationController.animateTo(
+          configIconAnimSlidEnd(),
+          duration: const Duration(milliseconds: 0),
+          curve: Curves.fastOutSlowIn,
+        );
+      } else if (scrollController.offset > 0 &&
+          scrollController.offset <= widget.drawerWidth!) {
+        iconAnimationController.animateTo(
+          configIconAnimSliding(),
+          duration: const Duration(milliseconds: 0),
+          curve: Curves.fastOutSlowIn,
+        );
+        if (scrolloffset != 0.0) {
+          setState(() {
+            scrolloffset = 0.0;
+            if (widget.drawerIsOpen != null) {
+              widget.drawerIsOpen!(false);
+            }
+          });
         }
-      },
-    );
+      }
+    });
   }
 
   /// 初始化所需要的控制器
   initAniamtionS() {
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(
-        milliseconds: 2000,
-      ),
+      duration: const Duration(milliseconds: 2000),
     );
     iconAnimationController = AnimationController(
       vsync: this,
-      duration: const Duration(
-        milliseconds: 0,
-      ),
+      duration: const Duration(milliseconds: 0),
     );
     iconAnimationController.animateTo(
       configIconAnimSlidStar(),
@@ -605,9 +558,7 @@ class CommonDrawerState extends CommonState<CommonDrawerPage>
 
   /// 页面渲染完成后，进行界面滚动操作
   Future<bool> getInitState() async {
-    scrollController.jumpTo(
-      configInitialScrollOffset(),
-    );
+    scrollController.jumpTo(configInitialScrollOffset());
     return true;
   }
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_utils/ocean_utils.dart';
+
+import '../config/hzy_common_color_config.dart';
 
 class CommonIconLableWidget extends StatelessWidget {
   final String? text;
@@ -8,28 +10,30 @@ class CommonIconLableWidget extends StatelessWidget {
   final Widget? iconWidget;
   final TextStyle? style;
   const CommonIconLableWidget({
-    Key? key,
+    super.key,
     this.text,
     this.maxLines,
     this.overflow,
     this.iconWidget,
     this.style,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    if (HyzyTextTools.isEmpty(text)) {
+    if (OceanTextTools.isEmpty(text)) {
       return Container();
     }
     List<InlineSpan> children = [];
 
     if (iconWidget != null) {
       WidgetSpan iconSpan = WidgetSpan(
-          alignment: PlaceholderAlignment.middle, child: iconWidget!);
+        alignment: PlaceholderAlignment.middle,
+        child: iconWidget!,
+      );
       children.add(iconSpan);
     }
 
-    TextSpan textSpan = TextSpan(text: HyzyTextTools.mpsfStr(text));
+    TextSpan textSpan = TextSpan(text: OceanTextTools.safeStr(text));
     children.add(textSpan);
 
     return RichText(

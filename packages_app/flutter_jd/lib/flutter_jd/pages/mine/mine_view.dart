@@ -7,7 +7,7 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 import 'widgets/mine_main_home_view.dart';
 
 class MineView extends CommonGetXlistWidget<MineController> {
-  MineView({Key? key}) : super(key: key);
+  MineView({super.key});
   @override
   bool configIsShowAppBar() => false;
   @override

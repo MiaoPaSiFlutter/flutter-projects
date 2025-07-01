@@ -5,7 +5,7 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 import '../vm/home_viewmodel.dart';
 
 class HomeNavigationBar extends StatefulWidget {
-  const HomeNavigationBar({Key? key}) : super(key: key);
+  const HomeNavigationBar({super.key});
 
   @override
   State createState() => _HomeNavigationBarState();
@@ -27,7 +27,7 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
               border: Border.all(color: Colors.red, width: 3),
               image: DecorationImage(
                 image: ExtendedNetworkImageProvider(
-                    HyzyTextTools.mpsfStr(topBgImgBig)),
+                    OceanTextTools.safeStr(topBgImgBig)),
                 fit: BoxFit.cover,
               ),
             ),
@@ -94,7 +94,7 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
           borderRadius: const BorderRadius.all(Radius.circular(20.0)),
           boxShadow: <BoxShadow>[
             BoxShadow(
-                color: Colors.grey.withOpacity(0.2),
+                color: Colors.grey.withAlpha(51),
                 offset: const Offset(1.1, 1.1),
                 blurRadius: 10.0),
           ],

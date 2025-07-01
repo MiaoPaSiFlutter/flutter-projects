@@ -4,7 +4,7 @@ import 'mid_info_headerview.dart';
 
 class MineSortIconCell extends StatelessWidget {
   final Map? floor;
-  const MineSortIconCell({Key? key, this.floor}) : super(key: key);
+  const MineSortIconCell({super.key, this.floor});
 
   @override
   Widget build(BuildContext context) {

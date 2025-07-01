@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-19 21:29:33
- * @LastEditors: TT
- * @LastEditTime: 2023-05-31 11:43:26
- */
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -130,21 +121,11 @@ class Gaps {
   static Widget vGap45 = configvbox(height: Dimens.dp45);
   static Widget vGap50 = configvbox(height: Dimens.dp50);
 
-  static confighbox({
-    required double width,
-    bool reversal = false,
-  }) {
-    return SizedBox(
-      width: reversal ? width.h : width.w,
-    );
+  static confighbox({required double width, bool reversal = false}) {
+    return SizedBox(width: reversal ? width.h : width.w);
   }
 
-  static configvbox({
-    required double height,
-    bool reversal = false,
-  }) {
-    return SizedBox(
-      height: reversal ? height.w : height.h,
-    );
+  static configvbox({required double height, bool reversal = false}) {
+    return SizedBox(height: reversal ? height.w : height.h);
   }
 }

@@ -7,11 +7,11 @@ class HomeHybrid_MyChannel extends StatefulWidget {
   final int? subFloorNum;
   final List? subFloors;
   const HomeHybrid_MyChannel({
-    Key? key,
+    super.key,
     this.floor,
     this.subFloorNum,
     this.subFloors,
-  }) : super(key: key);
+  });
 
   @override
   State createState() => _HomeHybrid_MyChannelState();
@@ -25,7 +25,6 @@ class _HomeHybrid_MyChannelState extends State<HomeHybrid_MyChannel> {
   List _datas = [];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _showName = widget.floor?["showName"] ?? "";
     _rightCorner = widget.floor?["rightCorner"] ?? "";
@@ -45,7 +44,7 @@ class _HomeHybrid_MyChannelState extends State<HomeHybrid_MyChannel> {
       decoration: BoxDecoration(
         // border: Border.all(width: 1, color: Colors.green),
         color: Colors.white,
-        borderRadius: HzyNormalTools.buildFeedCellRadius(1, 0),
+        borderRadius: OceanNormalTools.buildFeedCellRadius(1, 0),
       ),
       child: Container(
         padding: const EdgeInsets.only(left: 5, right: 5),

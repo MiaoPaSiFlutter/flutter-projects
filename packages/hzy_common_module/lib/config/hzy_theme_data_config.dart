@@ -1,14 +1,4 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-04-13 08:46:46
- * @LastEditors: TT
- * @LastEditTime: 2023-04-13 09:19:59
- */
-
 import 'package:flutter/material.dart';
-
 
 /// 亮色主题
 ThemeData hzyThemeDataLight = ThemeData(
@@ -22,8 +12,7 @@ ThemeData hzyThemeDataLight = ThemeData(
   splashFactory: NoSplash.splashFactory,
 
   /// 水波纹颜色
-  splashColor: Colors.white.withOpacity(0),
-  
+  splashColor: Colors.white.withAlpha(0),
 );
 
 /// 暗黑主题
@@ -38,5 +27,5 @@ ThemeData hzyThemeDataDark = ThemeData(
   splashFactory: NoSplash.splashFactory,
 
   /// 水波纹颜色
-  splashColor: Colors.white.withOpacity(0),
+  splashColor: Colors.white.withAlpha(0),
 );

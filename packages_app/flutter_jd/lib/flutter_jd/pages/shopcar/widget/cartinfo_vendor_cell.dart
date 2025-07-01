@@ -198,7 +198,7 @@ class _CartShopSortedProduct9ViewState
         fontSize: 10, color: Colors.white, fontWeight: FontWeight.bold);
     TextStyle sTipStyle = const TextStyle(
         fontSize: 12, color: Colors.black, fontWeight: FontWeight.bold);
-    if (HyzyTextTools.isEmpty(STip)) {
+    if (OceanTextTools.isEmpty(STip)) {
       return Container();
     }
     return Container(

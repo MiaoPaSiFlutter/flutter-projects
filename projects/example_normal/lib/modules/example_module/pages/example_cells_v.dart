@@ -13,7 +13,7 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 import '../../my_module/module_index.dart';
 
 class ExampleCellsV extends CommonGetXWidget<ExampleCellsC> {
-  ExampleCellsV({Key? key}) : super(key: key);
+  ExampleCellsV({super.key});
   @override
   ExampleCellsC get controller => Get.put(ExampleCellsC());
   @override
@@ -32,7 +32,7 @@ class ExampleCellsV extends CommonGetXWidget<ExampleCellsC> {
           itemModel.rightMsg = LaunchIdConfig.solgright.tr;
           Widget body = configNormalDarkItemWidget(
             itemModel: itemModel,
-            onOtherTap: (_) {
+            onOtherTap: (_, _) {
               showToastMsg("我是其他事件触发的");
             },
           );

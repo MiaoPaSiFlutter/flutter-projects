@@ -14,7 +14,7 @@ import '../compontents/compontents.dart';
 import '../routers/example_module_routers.dart';
 
 class ExampleImageGridV extends CommonGetXWidget<ExampleImageGridC> {
-  ExampleImageGridV({Key? key}) : super(key: key);
+  ExampleImageGridV({super.key});
   @override
   String? createAppBarTitleStr() => controller.title.value;
   @override

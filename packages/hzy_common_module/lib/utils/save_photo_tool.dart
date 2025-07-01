@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-06-06 11:28:28
- * @LastEditors: TT
- * @LastEditTime: 2023-09-01 11:29:46
- */
-
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
@@ -23,8 +14,9 @@ class SavePhotoTool {
   }) async {
     final String title = '${DateTime.now().millisecondsSinceEpoch}.jpg';
 
-    Uint8List? bytes =
-        await configImageDataWithBytes(imageNormalModel: imageNormalModel);
+    Uint8List? bytes = await configImageDataWithBytes(
+      imageNormalModel: imageNormalModel,
+    );
     if (bytes != null) {
       final AssetEntity? imageEntity = await PhotoManager.editor.saveImage(
         bytes,

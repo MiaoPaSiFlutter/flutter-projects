@@ -286,7 +286,7 @@ class MySliverDelegate extends SliverPersistentHeaderDelegate {
 class FloorViewWrap extends StatelessWidget {
   final Map? floor;
 
-  FloorViewWrap({Key? key, this.floor}) : super(key: key);
+  FloorViewWrap({super.key, this.floor});
 
   final controller = Get.put(MineController());
 
@@ -329,7 +329,7 @@ class FloorViewWrap extends StatelessWidget {
 }
 
 class CurrentNavigationBar extends StatefulWidget {
-  const CurrentNavigationBar({Key? key}) : super(key: key);
+  const CurrentNavigationBar({super.key});
 
   @override
   State<CurrentNavigationBar> createState() => _CurrentNavigationBarState();

@@ -24,7 +24,7 @@ class BpBpUnionRank extends StatelessWidget {
         border: Border.all(width: 1, color: Colors.transparent),
         image: DecorationImage(
           image:
-              ExtendedNetworkImageProvider(HyzyTextTools.mpsfStr(floorBgImage)),
+              ExtendedNetworkImageProvider(OceanTextTools.safeStr(floorBgImage)),
           fit: BoxFit.cover,
         ),
       ),

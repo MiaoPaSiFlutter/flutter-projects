@@ -101,7 +101,7 @@ class ErrorStateWidget extends StatelessWidget {
     return Center(
       child: Container(
         child: Text(
-          HyzyTextTools.mpsfStr(reason, placehold: "请求失败"),
+          OceanTextTools.safeStr(reason, placehold: "请求失败"),
           style: const TextStyle(color: Colors.grey, fontSize: 14),
         ),
       ),

@@ -163,7 +163,7 @@ class _CommonSegmentViewState extends State<CommonSegmentView>
         List<Widget> tabs = modelVM.tabList.map((e) {
           int index = modelVM.tabList.indexOf(e);
           Map itemInfo = modelVM.tabList[index];
-          String name = HyzyTextTools.mpsfStr(itemInfo["name"]);
+          String name = OceanTextTools.safeStr(itemInfo["name"]);
           bool isSelect = modelVM.selectIndex == index;
           return Consumer<NewsViewModel>(
             builder: (context, model, child) {

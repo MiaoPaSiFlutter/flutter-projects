@@ -9,11 +9,11 @@ class HomeHybrid_1111 extends StatefulWidget {
   final int? subFloorNum;
   final List? subFloors;
   const HomeHybrid_1111({
-    Key? key,
+    super.key,
     this.floor,
     this.subFloorNum,
     this.subFloors,
-  }) : super(key: key);
+  });
 
   @override
   State createState() => _HomeHybrid_1111State();
@@ -24,7 +24,7 @@ class _HomeHybrid_1111State extends State<HomeHybrid_1111> {
   String? _rightCorner;
   String? _rightCornerImg;
 
-  List _datas = [];
+  final List _datas = [];
   @override
   void initState() {
     _showName = widget.floor?["showName"] ?? "";
@@ -59,7 +59,7 @@ class _HomeHybrid_1111State extends State<HomeHybrid_1111> {
       decoration: BoxDecoration(
         border: Border.all(width: 1, color: Colors.transparent),
         color: Colors.white,
-        borderRadius: HzyNormalTools.buildFeedCellRadius(1, 0),
+        borderRadius: OceanNormalTools.buildFeedCellRadius(1, 0),
       ),
       child: Column(
         children: <Widget>[

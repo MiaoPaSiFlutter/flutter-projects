@@ -39,7 +39,7 @@ export 'package:shared_preferences/shared_preferences.dart';
  * 5. 通用UI
  * */
 
-export 'package:hzy_normal_tool/hzy_normal_tool.dart';
+export 'package:ocean_utils/ocean_utils.dart';
 // 网络请求
 export 'package:hzy_normal_network/hzy_normal_network.dart' hide MultipartFile;
 // 图片工具

@@ -1,14 +1,7 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-06-12 15:08:24
- * @LastEditors: TT
- * @LastEditTime: 2023-06-12 15:08:25
- */
 
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/components/stick_render.dart';
+
+import 'stick_render.dart';
 
 class CommonStickWidget extends MultiChildRenderObjectWidget {
   ///顺序添加 stickHeader 和 stickContent

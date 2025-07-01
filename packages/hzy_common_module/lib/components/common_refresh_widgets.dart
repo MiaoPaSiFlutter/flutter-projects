@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-20 08:49:44
- * @LastEditors: TT
- * @LastEditTime: 2023-03-20 08:49:46
- */
-
 import 'package:easy_refresh/easy_refresh.dart';
 
 class CommonRefreshWidget {

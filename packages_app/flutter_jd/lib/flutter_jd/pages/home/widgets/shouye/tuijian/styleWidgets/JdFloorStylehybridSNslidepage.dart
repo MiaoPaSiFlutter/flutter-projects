@@ -1,4 +1,3 @@
-// ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
 import 'package:hzy_common_module/hzy_common_module.dart';
@@ -9,11 +8,11 @@ class HomeHybrid_SlidePage extends StatefulWidget {
   final int? subFloorNum;
   final List? subFloors;
   const HomeHybrid_SlidePage({
-    Key? key,
+    super.key,
     this.floor,
     this.subFloorNum,
     this.subFloors,
-  }) : super(key: key);
+  });
 
   @override
   State createState() => _HomeHybrid_SlidePageState();
@@ -27,7 +26,6 @@ class _HomeHybrid_SlidePageState extends State<HomeHybrid_SlidePage> {
   List _datas = [];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _showName = widget.floor?["showName"] ?? "";
     _rightCorner = widget.floor?["rightCorner"] ?? "";
@@ -46,7 +44,7 @@ class _HomeHybrid_SlidePageState extends State<HomeHybrid_SlidePage> {
       decoration: BoxDecoration(
         // border: Border.all(width: 1, color: Colors.green),
         color: Colors.white,
-        borderRadius: HzyNormalTools.buildFeedCellRadius(1, 0),
+        borderRadius: OceanNormalTools.buildFeedCellRadius(1, 0),
       ),
       child: Container(
         padding: const EdgeInsets.only(left: 5, right: 5),
@@ -73,7 +71,6 @@ class _HomeHybrid_SlidePageState extends State<HomeHybrid_SlidePage> {
         itemBuilder: (context, index) {
           String img = _datas[index]["img"] ?? "";
           String showName = _datas[index]["showName"] ?? "";
-          String channelLogo = _datas[index]["channelLogo"] ?? "";
 
           return GestureDetector(
             onTap: () {

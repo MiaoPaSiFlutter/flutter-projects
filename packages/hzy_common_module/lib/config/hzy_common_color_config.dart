@@ -1,11 +1,4 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-19 21:57:04
- * @LastEditors: TT
- * @LastEditTime: 2023-08-26 16:59:01
- */
+
 import 'package:flutter/material.dart';
 
 import 'hzy_theme_color_config.dart';

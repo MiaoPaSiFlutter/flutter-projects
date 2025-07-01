@@ -14,7 +14,7 @@ import '../compontents/compontents.dart';
 import '../compontents/drawer_top_widget.dart';
 
 class ExampleBasicMarkdownV extends CommonGetXWidget<ExampleBasicMarkdownC> {
-  ExampleBasicMarkdownV({Key? key}) : super(key: key);
+  ExampleBasicMarkdownV({super.key});
   @override
   ExampleBasicMarkdownC get controller => Get.put(ExampleBasicMarkdownC());
 
@@ -65,7 +65,7 @@ class ExampleBasicMarkdownV extends CommonGetXWidget<ExampleBasicMarkdownC> {
 
               Widget body = configNormalDarkItemWidget(
                 itemModel: itemModel,
-                onOtherTap: (_) {
+                onOtherTap: (_, _) {
                   controller.tapItem(itemModel: itemModel);
                 },
               );
@@ -112,7 +112,7 @@ class ExampleBasicMarkdownV extends CommonGetXWidget<ExampleBasicMarkdownC> {
 
   /// 是否显示返回按钮
   @override
-  bool configShowBack() {
+  bool configForceShowBack() {
     return controller.isShowBack.value;
   }
 
@@ -163,7 +163,7 @@ class ExampleBasicMarkdownV extends CommonGetXWidget<ExampleBasicMarkdownC> {
   }
 
   @override
-  bool configIsshowLoading() {
+  bool configIsShowLoading() {
     return controller.isShowLoadWidget.value;
   }
 
@@ -282,9 +282,9 @@ class ExampleBasicMarkdownC extends CommonGetXController {
 
   var isCloseOnWillPop = false.obs;
 
-  var safeAreabottm = false.obs;
+  var safeAreaBottom = false.obs;
 
-  var safeAreatop = false.obs;
+  var safeAreaTop = false.obs;
 
   var isneedScaffol = true.obs;
 

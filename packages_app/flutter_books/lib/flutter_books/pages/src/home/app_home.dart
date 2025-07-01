@@ -23,27 +23,50 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State {
   int _tabIndex = 0;
   final List<Image> _tabImages = [
-    Image.asset(Utils.getImag('images/icon_tab_bookshelf_n.png'),
-        width: BooksDimens.homeImageSize, height: BooksDimens.homeImageSize),
-    Image.asset(Utils.getImag('images/icon_tab_bookshelf_p.png'),
-        width: BooksDimens.homeImageSize, height: BooksDimens.homeImageSize),
-    Image.asset(Utils.getImag('images/icon_tab_home_n.png'),
-        width: BooksDimens.homeImageSize, height: BooksDimens.homeImageSize),
-    Image.asset(Utils.getImag('images/icon_tab_home_p.png'),
-        width: BooksDimens.homeImageSize, height: BooksDimens.homeImageSize),
-    Image.asset(Utils.getImag('images/icon_tab_me_n.png'),
-        width: BooksDimens.homeImageSize, height: BooksDimens.homeImageSize),
-    Image.asset(Utils.getImag('images/icon_tab_me_p.png'),
-        width: BooksDimens.homeImageSize, height: BooksDimens.homeImageSize),
+    Image.asset(
+      Utils.getImag('images/icon_tab_bookshelf_n.png'),
+      width: BooksDimens.homeImageSize,
+      height: BooksDimens.homeImageSize,
+    ),
+    Image.asset(
+      Utils.getImag('images/icon_tab_bookshelf_p.png'),
+      width: BooksDimens.homeImageSize,
+      height: BooksDimens.homeImageSize,
+    ),
+    Image.asset(
+      Utils.getImag('images/icon_tab_home_n.png'),
+      width: BooksDimens.homeImageSize,
+      height: BooksDimens.homeImageSize,
+    ),
+    Image.asset(
+      Utils.getImag('images/icon_tab_home_p.png'),
+      width: BooksDimens.homeImageSize,
+      height: BooksDimens.homeImageSize,
+    ),
+    Image.asset(
+      Utils.getImag('images/icon_tab_me_n.png'),
+      width: BooksDimens.homeImageSize,
+      height: BooksDimens.homeImageSize,
+    ),
+    Image.asset(
+      Utils.getImag('images/icon_tab_me_p.png'),
+      width: BooksDimens.homeImageSize,
+      height: BooksDimens.homeImageSize,
+    ),
   ];
 
   @override
   void initState() {
     super.initState();
-//    动态申请相机权限示例，原生部分请查看 Android 下的 MainActivity
+    //    动态申请相机权限示例，原生部分请查看 Android 下的 MainActivity
     // _getPermission();
     Future.delayed(const Duration(milliseconds: 1000), () {
-      showPopDiaLogWidget(context: context, msg: "小说源已不可用，目前仅做参考代码");
+      if (context.mounted) {
+        showNormalDialog(
+          context: context,
+          config: DialogConfig(msg: "小说源已不可用，目前仅做参考代码"),
+        );
+      }
     });
   }
 
@@ -58,26 +81,13 @@ class _MyHomePageState extends State {
     return Scaffold(
       body: IndexedStack(
         index: _tabIndex,
-        children: <Widget>[
-          BookshelfPage(),
-          TabHomePage(),
-          MePage(),
-        ],
+        children: <Widget>[BookshelfPage(), TabHomePage(), MePage()],
       ),
       bottomNavigationBar: CupertinoTabBar(
         items: [
-          BottomNavigationBarItem(
-            icon: _getBookshelfImage(0),
-            label: "书架",
-          ),
-          BottomNavigationBarItem(
-            icon: _getHomeImage(1),
-            label: "书城",
-          ),
-          BottomNavigationBarItem(
-            icon: _getMeImage(2),
-            label: "我的",
-          ),
+          BottomNavigationBarItem(icon: _getBookshelfImage(0), label: "书架"),
+          BottomNavigationBarItem(icon: _getHomeImage(1), label: "书城"),
+          BottomNavigationBarItem(icon: _getMeImage(2), label: "我的"),
         ],
         currentIndex: _tabIndex,
         backgroundColor: BooksColors.white,

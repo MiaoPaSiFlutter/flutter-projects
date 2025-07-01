@@ -66,7 +66,7 @@ class _MpsfWebViewState extends State<MpsfWebView> {
             },
           ),
         );
-      if (!HyzyTextTools.isEmpty(widget.url)) {
+      if (!OceanTextTools.isEmpty(widget.url)) {
         _controller.loadRequest(Uri.parse(widget.url!));
       }
     }

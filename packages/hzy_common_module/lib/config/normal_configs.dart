@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-04-10 17:56:27
- * @LastEditors: TT
- * @LastEditTime: 2023-07-01 17:52:30
- */
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 

@@ -8,7 +8,7 @@ import 'package:waterfall_flow/waterfall_flow.dart';
 import '../vm/recommend_viewmodel.dart';
 
 class RecommendView extends StatefulWidget {
-  const RecommendView({Key? key}) : super(key: key);
+  const RecommendView({super.key});
 
   @override
   State createState() => _RecommendViewState();
@@ -25,7 +25,7 @@ class _RecommendViewState extends State<RecommendView>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((mag) {
-      print("  页面渲染完毕");
+      debugLog("  页面渲染完毕");
       //监听滚动事件，打印滚动位置
       _modelVM.scrollController.addListener(() {
         if (_modelVM.scrollController.position.pixels ==
@@ -112,7 +112,7 @@ class _RecommendViewState extends State<RecommendView>
 }
 
 class LiveWallView extends StatelessWidget {
-  const LiveWallView({Key? key}) : super(key: key);
+  const LiveWallView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -136,7 +136,7 @@ class LiveWallView extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: ExtendedNetworkImageProvider(
-                        HyzyTextTools.mpsfStr(imageUrl),
+                        OceanTextTools.safeStr(imageUrl),
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -170,7 +170,7 @@ class LiveWallView extends StatelessWidget {
 
 class RecommendWareItem_0 extends StatelessWidget {
   final Map? wareInfo;
-  const RecommendWareItem_0({Key? key, this.wareInfo}) : super(key: key);
+  const RecommendWareItem_0({super.key, this.wareInfo});
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -232,7 +232,7 @@ class RecommendWareItem_0 extends StatelessWidget {
           style: const TextStyle(color: Colors.white, fontSize: 13),
           children: [
             TextSpan(
-              text: HyzyTextTools.mpsfStr(title),
+              text: OceanTextTools.safeStr(title),
               style: TextStyle(color: Colors.black),
             ),
           ],
@@ -247,7 +247,7 @@ class RecommendWareItem_0 extends StatelessWidget {
     String imgUri = wareInfo?["imgUri"] ?? "";
     return ClipRRect(
       borderRadius: BorderRadius.circular(12),
-      child: Container(
+      child: SizedBox(
         width: 160,
         child: CommonExtendedImageWidget.netWorkImget(url: imgUri),
       ),
@@ -380,7 +380,7 @@ class RecommendWareItem_0 extends StatelessWidget {
                     style: TextStyle(color: Colors.black, fontSize: 10),
                   ),
                   TextSpan(
-                    text: HyzyTextTools.mpsfStr(tryPlusPrice),
+                    text: OceanTextTools.safeStr(tryPlusPrice),
                     style: const TextStyle(color: Colors.black, fontSize: 10),
                   ),
                   WidgetSpan(

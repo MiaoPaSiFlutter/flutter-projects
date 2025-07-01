@@ -15,7 +15,7 @@ import '../config/example_launch_id_config.dart';
 import 'example_text_anim_v.dart';
 
 class ExampleDrawerV extends CommonGetXWidget<ExampleDrawerC> {
-  ExampleDrawerV({Key? key}) : super(key: key);
+  ExampleDrawerV({super.key});
 
   @override
   ExampleDrawerC get controller => Get.put(ExampleDrawerC());
@@ -228,7 +228,7 @@ class DrawerBodylessV extends CommonLessV {
 
   /// 配置是否显示返回按钮
   @override
-  bool configShowBack() {
+  bool configForceShowBack() {
     return controller.type == CommonDrawerType.left ? false : true;
   }
 

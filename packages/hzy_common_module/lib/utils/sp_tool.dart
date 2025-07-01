@@ -1,13 +1,5 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-04-10 18:09:36
- * @LastEditors: TT
- * @LastEditTime: 2023-04-19 21:53:39
- */
-
-import 'package:hzy_common_module/hzy_common_module.dart';
+import '../config/normal_configs.dart';
+import 'shared_preferences_tool.dart';
 
 class SpTool {
   /// 存主题

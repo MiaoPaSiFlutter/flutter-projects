@@ -64,7 +64,7 @@ class ExampleHomeState extends CommonState<ExampleHomePage>
     itemModel.isShowLine = (index != config.itemList.length - 1);
     Widget body = configNormalDarkItemWidget(
       itemModel: itemModel,
-      onOtherTap: (_) {},
+      onOtherTap: (_, _) {},
     );
     return body;
   }

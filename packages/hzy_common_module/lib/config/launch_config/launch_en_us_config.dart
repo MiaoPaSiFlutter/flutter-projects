@@ -1,12 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-04-19 20:44:19
- * @LastEditors: TT
- * @LastEditTime: 2023-06-13 11:07:20
- */
-
 import 'launch_id_config.dart';
 
 const enUS = {

@@ -13,7 +13,7 @@ class OPOrderMessageView extends StatelessWidget {
     String? message = floor["message"];
     String? messageTime = floor["messageTime"];
 
-    if (HyzyTextTools.isEmpty(message)) {
+    if (OceanTextTools.isEmpty(message)) {
       return Container();
     }
     return ClipRRect(
@@ -29,11 +29,11 @@ class OPOrderMessageView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              HyzyTextTools.mpsfStr("$message"),
+              OceanTextTools.safeStr("$message"),
               style: const TextStyle(color: Colors.grey, fontSize: 12),
             ),
             Text(
-              HyzyTextTools.mpsfStr("$messageTime"),
+              OceanTextTools.safeStr("$messageTime"),
               style: const TextStyle(color: Colors.grey, fontSize: 12),
             )
           ],

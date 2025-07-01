@@ -1,19 +1,10 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: TT
- * @Date: 2023-03-20 10:16:37
- * @LastEditors: TT
- * @LastEditTime: 2023-09-07 17:38:25
- */
-
 import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/material.dart';
-import 'package:hzy_normal_tool/hzy_normal_tool.dart';
+import 'package:ocean_utils/ocean_utils.dart';
 import '../utils/utils.dart';
+import './abstract/common_state.dart';
 import 'common_place_holder_widget.dart';
 import 'common_refresh_widgets.dart';
-import 'common_state.dart';
 
 class CommonListState<T extends StatefulWidget> extends CommonState<T>
     with HzyAbstracRefreshWidget, HzyAbstracRefreshMehod {
@@ -33,15 +24,11 @@ class CommonListState<T extends StatefulWidget> extends CommonState<T>
     required BuildContext context,
     BoxConstraints? constraints,
   }) {
-    return createRefreshWidget(
-      context,
-    );
+    return createRefreshWidget(context);
   }
 
   @override
-  Widget createRefreshWidget(
-    BuildContext context,
-  ) {
+  Widget createRefreshWidget(BuildContext context) {
     Widget body = EasyRefresh(
       controller: refreshController,
       onRefresh: () async {
@@ -58,19 +45,19 @@ class CommonListState<T extends StatefulWidget> extends CommonState<T>
   }
 
   /// 配置刷新header
+  @override
   Header? createHeader() {
     return CommonRefreshWidget.configHeader();
   }
 
   /// 配置刷新footer
+  @override
   Footer? createFooter() {
     return CommonRefreshWidget.configFooter();
   }
 
   @override
-  Widget createListView(
-    BuildContext context,
-  ) {
+  Widget createListView(BuildContext context) {
     throw UnimplementedError();
   }
 
@@ -85,28 +72,20 @@ class CommonListState<T extends StatefulWidget> extends CommonState<T>
 
   // 点击缺省页触发事件
   @override
-  tapPlaceHoldWidgetMethod({
-    required CommonPlaceHoldType placeHoldType,
-  }) {}
+  tapPlaceHoldWidgetMethod({required CommonPlaceHoldType placeHoldType}) {}
 
   // 上啦加载触发事件
   @override
   void configLoading() {
     page++;
-    getNetWorkData(
-      type: 2,
-      info: configNetWorkParmas(),
-    );
+    getNetWorkData(type: 2, info: configNetWorkParmas());
   }
 
   // 下啦刷新触发事件
   @override
   void configRefresh() {
     page = 1;
-    getNetWorkData(
-      type: 1,
-      info: configNetWorkParmas(),
-    );
+    getNetWorkData(type: 1, info: configNetWorkParmas());
   }
 
   // 创建刷新控制器
@@ -126,16 +105,16 @@ class CommonListState<T extends StatefulWidget> extends CommonState<T>
   }) {
     return endRefresh(
       type: type,
-      pageState: HzyNormalTools.configPageState(
-        allNum: allNum ?? 0,
-        networkNum: netWorkNum ?? 0,
+      state: determinePageState(
+        totalCount: allNum ?? 0,
+        currentPageCount: netWorkNum ?? 0,
       ),
     );
   }
 
   // 执行结束刷新
   @override
-  PageState endRefresh({required int type, required PageState pageState}) {
+  PageState endRefresh({required int type, required PageState state}) {
     return configEndRefresh(
       type: type,
       state: pageState,

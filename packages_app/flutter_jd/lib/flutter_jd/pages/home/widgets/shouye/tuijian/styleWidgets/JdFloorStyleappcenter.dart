@@ -5,7 +5,7 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 class JdFloorStyleappcenter extends StatefulWidget {
   final Map? floor;
 
-  const JdFloorStyleappcenter({Key? key, this.floor}) : super(key: key);
+  const JdFloorStyleappcenter({super.key, this.floor});
 
   @override
   State createState() => _JdFloorStyleappcenterState();
@@ -41,9 +41,9 @@ class _JdFloorStyleappcenterState extends State<JdFloorStyleappcenter> {
     List data = widget.floor?["content"]?["data"] ?? [];
 
     ///计算
-    _totalPages = HzyNormalTools.getPageCount(data.length, _itemsOnPage);
+    _totalPages = OceanNormalTools.getPageCount(data.length, _itemsOnPage);
     //分割数组
-    _totalPagesData = HzyNormalTools.splitList(data, _itemsOnPage);
+    _totalPagesData = OceanNormalTools.splitList(data, _itemsOnPage);
   }
 
   @override
