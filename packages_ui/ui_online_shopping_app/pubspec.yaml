@@ -8,8 +8,8 @@ environment:
   sdk: ^3.8.1
 dependencies:
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
 
   expandable_text: ^2.3.0
 

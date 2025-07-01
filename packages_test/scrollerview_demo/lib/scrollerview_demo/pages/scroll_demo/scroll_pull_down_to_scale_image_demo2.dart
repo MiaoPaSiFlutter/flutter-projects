@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 class ScrollPullDownToScaleImageDemo2 extends StatefulWidget {
   ScrollPullDownToScaleImageDemo2({Key? key}) : super(key: key);

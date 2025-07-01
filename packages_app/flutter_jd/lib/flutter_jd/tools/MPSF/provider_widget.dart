@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, must_be_immutable
 
 import 'package:flutter/cupertino.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 class ProviderWidget<T extends ChangeNotifier> extends StatefulWidget {
   final Widget Function(BuildContext context, T value, Widget? child) builder;

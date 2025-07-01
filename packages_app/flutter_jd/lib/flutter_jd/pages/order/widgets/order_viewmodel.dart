@@ -1,5 +1,5 @@
 import 'package:flutter_jd/flutter_jd.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 class OrderViewModel extends ScreenViewModel {
   String? _functionId;

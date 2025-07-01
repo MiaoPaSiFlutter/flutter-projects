@@ -4,7 +4,7 @@ import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Player/audio
 import 'package:flutter_black_hole/flutter_black_hole/pages/Services/youtube_services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:logging/logging.dart';
 
 SendPort? isolateSendPort;

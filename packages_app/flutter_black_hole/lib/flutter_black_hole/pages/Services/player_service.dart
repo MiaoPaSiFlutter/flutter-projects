@@ -27,11 +27,10 @@ import 'package:flutter_black_hole/flutter_black_hole/pages/Screens/Player/audio
 import 'package:flutter_black_hole/flutter_black_hole/pages/Services/youtube_services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:hzy_common_module/hzy_common_module.dart' hide File;
 import 'package:logging/logging.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
-// ignore: avoid_classes_with_only_static_members
 class PlayerInvoke {
   static final AudioPlayerHandler audioHandler = GetIt.I<AudioPlayerHandler>();
 

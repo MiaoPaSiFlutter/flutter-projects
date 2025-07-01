@@ -7,7 +7,7 @@
  * @LastEditTime: 2023-04-24 11:26:52
  */
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 import '../../modules/my_module/module_index.dart';
 import 'root_tab_v.dart';

@@ -1,6 +1,6 @@
 // ignore_for_file: unused_import
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'loading_utils.dart';
 import 'pretty_dio_logger.dart';
 import 'response_interceptor.dart';

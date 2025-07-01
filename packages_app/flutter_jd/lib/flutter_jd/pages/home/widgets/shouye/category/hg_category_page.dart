@@ -1,6 +1,6 @@
 import 'package:flutter_jd/flutter_jd.dart';
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import 'styleWidgets/JdFloorStyle0901.dart';
 import 'styleWidgets/JdFloorStyle0902.dart';

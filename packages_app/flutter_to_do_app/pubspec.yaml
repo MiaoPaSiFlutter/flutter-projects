@@ -8,8 +8,8 @@ environment:
   sdk: ^3.8.0
 dependencies:
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
   # 完全用 Dart 编写的快速、超轻量级同步键值存储
   get_storage: ^2.1.1
   # 由一系列选定和未选定步骤组成的条形指示器

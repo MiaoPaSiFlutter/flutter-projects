@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 //因为使用Getx进行状态管理，使用dio进行HTTP请求，它们都有response类，所以会造成冲突，
 //解决方法：即修改get的引入方式：
 import 'package:get/get.dart' hide Response;
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../JMGL/JMGLManager.dart';
 import '../Network/http_utils.dart';

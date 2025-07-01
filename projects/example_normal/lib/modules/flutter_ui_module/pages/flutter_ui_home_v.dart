@@ -1,4 +1,4 @@
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_blogclub_app/ui_blogclub_app/pages/UIBlogClubApp.dart';
 import 'package:ui_chat_message_app/ui_chat_message_app/pages/ChatMessageAppUI.dart';

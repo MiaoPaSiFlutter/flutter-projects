@@ -9,8 +9,8 @@ environment:
 
 dependencies:
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
   # 通过“json_serialized”包支持 JSON 代码生成的类和辅助函数。
   json_annotation: ^4.9.0
   # 通过注释 Dart 类，自动生成用于与 JSON 相互转换的代码。

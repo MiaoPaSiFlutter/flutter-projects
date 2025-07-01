@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../entity/update_entity.dart';
 

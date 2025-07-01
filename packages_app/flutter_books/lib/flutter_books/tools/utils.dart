@@ -1,4 +1,4 @@
-import 'package:hzy_common_module/utils/utils.dart';
+import 'package:ocean_common_module/utils/utils.dart';
 
 class Utils {
   /// "/agent/http%3A%2F%2Fimg.1391.com%2Fapi%2Fv1%2Fbookcenter%2Fcover%2F1%2F1505654%2F1505654_7a52c23c70c44e3ebaf027f09588d641.jpg%2F"

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
 
 import 'package:share_plus/share_plus.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/CustomWidgets/custom_widgets_index.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Helpers/helpers_index.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/Services/services_index.dart';

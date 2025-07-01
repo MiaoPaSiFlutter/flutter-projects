@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:example_normal/modules/example_module/module_index.dart';
 import 'package:example_normal/modules/my_module/config/my_en_us_config.dart';
 import 'package:example_normal/modules/my_module/config/my_zh_cn_config.dart';

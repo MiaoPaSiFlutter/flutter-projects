@@ -7,7 +7,7 @@ import 'package:another_xlider/models/slider_step.dart';
 import 'package:another_xlider/models/tooltip/tooltip.dart';
 import 'package:another_xlider/widgets/sized_box.dart';
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../../../widgets/Ktext.dart';
 import '../../../widgets/hex_color.dart';

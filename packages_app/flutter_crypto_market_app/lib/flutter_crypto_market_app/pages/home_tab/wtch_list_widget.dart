@@ -1,7 +1,7 @@
 import 'package:chart_sparkline/chart_sparkline.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import '../../constants/constants_index.dart';
 import '../../provider/provider_index.dart';
 import '../market_tab/coin_details.dart';

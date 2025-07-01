@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 import 'app/config/themes/app_theme.dart';
 import 'app/features/dashboard/views/screens/dashboard_screen.dart';

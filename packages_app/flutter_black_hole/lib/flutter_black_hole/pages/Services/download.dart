@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:http/http.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:logging/logging.dart';
 // import 'package:metadata_god/metadata_god.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';

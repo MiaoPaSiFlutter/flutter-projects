@@ -10,7 +10,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import '../config/my_launch_id_config.dart';
 import '../config/my_normal_config.dart';
 import '../pages/pages_index.dart';

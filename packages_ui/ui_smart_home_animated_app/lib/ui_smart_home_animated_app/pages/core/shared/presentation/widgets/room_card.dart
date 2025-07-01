@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import '../../../../../pages/ui_common/ui_common.dart';
 import '../../../../features/home/presentation/widgets/background_room_lights.dart';
 import '../../../../features/smart_room/screens/room_details_screen.dart';

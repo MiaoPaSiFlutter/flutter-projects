@@ -8,7 +8,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../config/my_module_image_id_config.dart';
 import '../tools/my_module_image_path_config.dart';

@@ -8,8 +8,8 @@ environment:
   sdk: ^3.8.1
 dependencies:
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
   fluentui_icons: ^1.0.0
   gap: ^3.0.1
   barcode_widget: ^2.0.4

@@ -8,8 +8,8 @@ environment:
   sdk: ^3.8.0
 dependencies:
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
   # 一个高度可定制、功能强大且易于使用的 Flutter 警报库。
   flash: ^3.0.5+1
   # Flutter plugin for SQLite, a self-contained, high-reliability, embedded, SQL database engine.

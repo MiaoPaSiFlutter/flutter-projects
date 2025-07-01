@@ -9,7 +9,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:example_normal/modules/example_module/compontents/compontents.dart';
 import 'package:example_normal/modules/example_module/models/image_model.dart';
 import 'package:example_normal/modules/example_module/models/tu_chong_model.dart';

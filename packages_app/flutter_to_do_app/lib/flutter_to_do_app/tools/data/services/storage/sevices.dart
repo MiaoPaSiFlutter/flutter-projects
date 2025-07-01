@@ -1,4 +1,4 @@
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:get_storage/get_storage.dart';
 import '../../../keys.dart';
 

@@ -13,8 +13,8 @@ dependencies:
   # webview
   webview_flutter: ^4.2.3
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
   # Flutter 的 dynamic_fonts 包允许您（相对）轻松地将动态加载的 Web 托管字体添加到您的应用程序中，就像 google_fonts 包一样，但适用于在任何地方托管的任意字体。
   dynamic_fonts: ^2.2.0
   # 在 Flutter 上原生渲染 After Effects 动画.

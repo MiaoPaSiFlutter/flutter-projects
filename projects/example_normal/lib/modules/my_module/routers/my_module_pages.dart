@@ -7,7 +7,7 @@
  * @LastEditTime: 2023-05-03 20:42:39
  */
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import '../pages/pages_index.dart';
 import '/modules/my_module/routers/routers_index.dart';
 

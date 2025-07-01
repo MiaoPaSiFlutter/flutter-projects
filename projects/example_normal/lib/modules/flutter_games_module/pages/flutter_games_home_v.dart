@@ -1,5 +1,5 @@
 import 'package:game_math_app/game_math_app/pages/GameMathApp.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 
 import '../../../compontents/interesting_ui_widget.dart';

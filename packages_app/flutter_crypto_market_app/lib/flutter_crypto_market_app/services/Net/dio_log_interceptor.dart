@@ -1,4 +1,4 @@
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 ///日志拦截器
 class DioLogInterceptor extends Interceptor {

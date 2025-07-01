@@ -12,7 +12,7 @@ import 'package:example_normal/modules/flutter_games_module/pages/flutter_games_
 import 'package:example_normal/modules/flutter_test_module/pages/flutter_test_home_v.dart';
 import 'package:example_normal/modules/flutter_ui_module/pages/flutter_ui_home_v.dart';
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:example_normal/modules/example_module/module_index.dart';
 import 'package:example_normal/modules/my_module/pages/pages_index.dart';
 import 'package:example_normal/pages/root_pages/root_tab_v.dart';

@@ -21,8 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_black_hole/flutter_black_hole.dart';
 import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizations.dart';
 import 'package:flutter_black_hole/flutter_black_hole/pages/CustomWidgets/custom_widgets_index.dart';
-
-import 'package:hzy_common_module/hzy_common_module.dart' hide copyToClipboard;
+import 'package:ocean_common_module/ocean_common_module.dart' hide copyToClipboard;
 
 class AboutScreen extends StatefulWidget {
   @override

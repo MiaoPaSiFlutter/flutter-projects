@@ -7,7 +7,7 @@
  * @LastEditTime: 2023-05-04 17:49:04
  */
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 import '../compontents/my_banner_widget.dart';
 import '../compontents/compontents_index.dart';

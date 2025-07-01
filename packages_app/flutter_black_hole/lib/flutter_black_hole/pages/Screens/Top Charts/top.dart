@@ -28,7 +28,7 @@ import 'package:flutter_black_hole/flutter_black_hole/l10n-output/app_localizati
 
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 List localSongs = [];
 List globalSongs = [];

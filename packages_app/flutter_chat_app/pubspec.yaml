@@ -10,8 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
   chat:
     path: ./chat
   # 一个可预测的状态管理库，有助于实现 BLoC（业务逻辑组件）设计模式。

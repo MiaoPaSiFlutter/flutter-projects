@@ -2,7 +2,7 @@ import 'package:animation_demo/animation_demo/pages/TestAnimationApp.dart';
 import 'package:canvas_demo/canvas_demo/pages/TestCanvasApp.dart';
 import 'package:common_demo/common_demo/pages/TestCommonApp.dart';
 import 'package:extended_sliver_demo/extended_sliver_demo/pages/TestExtendedSliverApp.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 import 'package:scrollerview_demo/scrollerview_demo/pages/TestScrollerViewApp.dart';
 

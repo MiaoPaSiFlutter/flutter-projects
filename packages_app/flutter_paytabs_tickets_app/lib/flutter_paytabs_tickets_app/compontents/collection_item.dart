@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_paytabs_tickets_app/flutter_paytabs_tickets_app.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 class CollectionItem extends StatelessWidget {
   final Event collection;

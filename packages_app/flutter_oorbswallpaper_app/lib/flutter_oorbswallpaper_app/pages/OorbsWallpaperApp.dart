@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_oorbswallpaper_app/flutter_oorbswallpaper_app.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'index.dart';
 
 class OorbsWallpaperApp extends GetView<OorbsWallpaperAppController> {

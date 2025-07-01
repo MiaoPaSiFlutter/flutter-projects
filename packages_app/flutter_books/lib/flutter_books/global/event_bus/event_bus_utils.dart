@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 typedef EventCallback<T> = void Function(T event);
 

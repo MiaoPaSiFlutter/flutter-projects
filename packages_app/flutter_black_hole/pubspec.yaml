@@ -9,8 +9,8 @@ environment:
 
 dependencies:
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
     # 用于读取 ID3 标签并将其写入 MP3 文件的库。  您可以获取 Map 对象或 Tag 对象的数据。
   audiotagger:
     path: ../../packages/audiotagger

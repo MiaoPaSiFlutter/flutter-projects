@@ -16,7 +16,7 @@
  */
 
 import 'package:example_normal/pages/root_pages/root_v.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import '../dataconfig/page_id_config.dart';
 
 class ProjectPageS {

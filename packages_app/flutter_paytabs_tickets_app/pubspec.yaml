@@ -8,8 +8,8 @@ environment:
   sdk: ^3.8.0
 dependencies:
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
   # 一种从应用程序中的任何位置访问状态的简单方法，同时健壮且可测试。
   flutter_riverpod: ^2.4.5
   # Flutter 的 SVG 渲染和小部件库，允许绘制和显示可扩展矢量图形 1.1 文件。

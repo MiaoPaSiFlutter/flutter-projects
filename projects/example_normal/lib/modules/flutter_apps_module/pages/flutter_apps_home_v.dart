@@ -16,7 +16,7 @@ import 'package:flutter_chatgpt_app/flutter_chatgpt_app/pages/ChatGptApp.dart';
 import 'package:flutter_weather/flutter_weather/pages/FlutterWeatherApp.dart';
 import 'package:flutter_compass_app/flutter_compass_app/pages/CompassApp.dart';
 import 'package:flutter_quiz_app/flutter_quiz_app/pages/FlutterQuizApp.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 
 import '../../../compontents/interesting_ui_widget.dart';

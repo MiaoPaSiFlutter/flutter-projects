@@ -177,7 +177,7 @@ cr_init_plus="
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../config/routers/routers.dart';
 
@@ -263,7 +263,7 @@ import 'package:flutter/foundation.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../config/routers/routers.dart';
 
@@ -438,7 +438,7 @@ class GlobalConfig {
 "
 cr_glob_config_pro="
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'http_normal_config.dart';
 
 class GlobalConfig {
@@ -648,7 +648,7 @@ class RouterS {
 }
 "
 cr_routers_plus="
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import '../../init/init_index.dart';
 import '../dataconfig/page_id_config.dart';
 

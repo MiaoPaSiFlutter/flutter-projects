@@ -7,7 +7,7 @@
  * @LastEditTime: 2023-05-16 12:58:52
  */
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import 'example_http_config.dart';
 import 'tuchong_http_transformer.dart';

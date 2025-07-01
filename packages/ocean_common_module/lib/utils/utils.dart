@@ -35,7 +35,7 @@ class NormalModuleUtils {
     }
   }
 
-  static const package = "hzy_common_module";
+  static const package = "ocean_common_module";
 }
 
 /// 通过图片信息

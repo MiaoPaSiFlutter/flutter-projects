@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/components/common_extendeed_image_widget.dart';
+import 'package:ocean_common_module/components/common_extendeed_image_widget.dart';
 
 class SmallCollectionItem extends StatelessWidget {
   final String? imageUrl;

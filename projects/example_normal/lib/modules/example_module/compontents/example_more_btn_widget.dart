@@ -7,7 +7,7 @@
  * @LastEditTime: 2023-05-15 22:09:48
  */
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 
 class ExampleMoreBtnWidget extends CommonLessV {

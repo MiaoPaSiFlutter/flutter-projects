@@ -1,6 +1,6 @@
 // ignore_for_file:public_member_api_docs
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 const height4 = RSizedBox(height: 4);
 

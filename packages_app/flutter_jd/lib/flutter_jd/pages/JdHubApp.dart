@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 // 京东demo
 import 'account/views/login_view.dart';
 import 'account_set/account_set_view.dart';

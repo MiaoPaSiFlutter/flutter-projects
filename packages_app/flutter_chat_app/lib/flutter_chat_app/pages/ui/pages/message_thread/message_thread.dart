@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:chat/chat.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:intl/intl.dart';
 import '../../../colors.dart';
 import '../../../models/chat.dart';

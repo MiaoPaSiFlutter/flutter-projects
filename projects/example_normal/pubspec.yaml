@@ -29,8 +29,8 @@ dependencies:
   json_path: ^0.7.6
 
   ####### packages
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
   audiotagger:
     path: ../../packages/audiotagger
   persistent_bottom_nav_bar:

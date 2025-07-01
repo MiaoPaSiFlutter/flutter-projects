@@ -10,7 +10,7 @@
 import 'dart:math';
 
 import 'package:flutter/foundation.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 
 import '../compontents/example_list_widget.dart';

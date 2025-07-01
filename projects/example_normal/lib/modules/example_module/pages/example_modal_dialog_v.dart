@@ -7,7 +7,7 @@
  * @LastEditTime: 2023-05-16 17:19:33
  */
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../compontents/compontents.dart';
 import '../models/normal_models.dart';

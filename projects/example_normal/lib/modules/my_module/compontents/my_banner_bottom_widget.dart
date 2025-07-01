@@ -7,7 +7,7 @@
  * @LastEditTime: 2023-04-30 21:31:16
  */
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 
 class MyBannerBottomWidget extends StatefulWidget {

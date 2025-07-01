@@ -8,8 +8,8 @@ environment:
   sdk: ^3.8.0
 dependencies:
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
   # 一个 Flutter 插件，用于为提供的小部件实现液体滑动效果。
   liquid_swipe: ^3.1.0
   # 抖动动画、向上弹出动画、抖动文本、垂直圆形菜单、底部圆形菜单、动画进度按钮

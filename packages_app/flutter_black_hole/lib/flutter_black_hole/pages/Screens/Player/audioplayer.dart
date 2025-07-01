@@ -42,10 +42,10 @@ import 'package:get_it/get_it.dart';
 import 'package:hive/hive.dart';
 import 'package:logging/logging.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:ocean_common_module/ocean_common_module.dart' hide copyToClipboard;
 import 'package:rxdart/rxdart.dart' as rxdart;
 import 'package:share_plus/share_plus.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
-import 'package:hzy_common_module/hzy_common_module.dart' hide File, FileImage, copyToClipboard;
 
 class PlayScreen extends StatefulWidget {
   const PlayScreen({super.key});

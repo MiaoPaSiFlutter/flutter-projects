@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'dart:async';
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 ///通过流 Stream 实现的倒计时功能
 ///倒计时

@@ -1,7 +1,7 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/components/common_extendeed_image_widget.dart';
+import 'package:ocean_common_module/components/common_extendeed_image_widget.dart';
 
 /// 内容视图
 class HGCatgFloorContent_TMP extends StatelessWidget {

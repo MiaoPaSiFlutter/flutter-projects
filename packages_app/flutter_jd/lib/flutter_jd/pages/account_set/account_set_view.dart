@@ -2,7 +2,7 @@ import 'dart:math';
 import 'dart:ui';
 import 'package:flutter_jd/flutter_jd.dart';
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 class AccountSetView extends CommonGetXlistWidget<AccountSetController> {
   AccountSetView({Key? key}) : super(key: key);

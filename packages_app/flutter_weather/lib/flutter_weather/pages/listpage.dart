@@ -2,16 +2,15 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:ui';
 import 'dart:math' show asin, cos, pi, sqrt;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_weather/flutter_weather.dart';
-import 'package:http/http.dart' as http;
 import 'package:location/location.dart';
 import 'package:intl/intl.dart';
-import 'package:hzy_common_module/hzy_common_module.dart' hide PermissionStatus;
+import 'package:ocean_common_module/ocean_common_module.dart' as http show get;
+import 'package:ocean_common_module/ocean_common_module.dart' hide PermissionStatus;
 
 class CityList extends StatefulWidget {
   const CityList({super.key});
@@ -24,7 +23,7 @@ class _CityListState extends State<CityList> {
   List<Map<String, dynamic>> cities = [];
   List<Map<String, dynamic>> filteredCities = [];
   Map<String, List<Map<String, dynamic>>> _searchIndex = {};
-  TextEditingController _searchController = TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
   bool searching = false;
   List<Weather> cityWeather = [];
   bool isLoading = true;

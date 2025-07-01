@@ -9,7 +9,7 @@
 
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import 'example_more_btn_widget.dart';
 

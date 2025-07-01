@@ -8,8 +8,8 @@ environment:
   sdk: ^3.8.0
 dependencies:
   # 通用
-  hzy_common_module:
-    path: ../../packages/hzy_common_module
+  ocean_common_module:
+    path: ../../packages/ocean_common_module
   # 强大的Sliver扩展库, 包括 SliverToNestedScrollBoxAdapter, SliverPinnedPersistentHeader,
   # SliverPinnedToBoxAdapter 和 ExtendedSliverAppbar.
   extended_sliver: ^2.1.3

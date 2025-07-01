@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 class CacheManager {
   /// 递归计算文件、文件夹的大小

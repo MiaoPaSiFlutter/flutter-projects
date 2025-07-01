@@ -8,7 +8,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 
 import '../compontents/example_tu_item_widget.dart';
 import '../models/tu_chong_model.dart';

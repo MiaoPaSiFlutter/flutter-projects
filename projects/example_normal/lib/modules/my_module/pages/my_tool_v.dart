@@ -6,7 +6,7 @@
  * @LastEditors: TT
  * @LastEditTime: 2023-05-03 15:54:47
  */
-import 'package:hzy_common_module/hzy_common_module.dart';
+import 'package:ocean_common_module/ocean_common_module.dart';
 import 'package:flutter/material.dart';
 import '../../../pages/root_pages/root_v.dart';
 import '../config/my_normal_config.dart';
