@@ -8,7 +8,7 @@ import '../../config/normal_configs.dart';
 import '/components/common_place_holder_widget.dart';
 import 'ocean_abs_common_getx_controller.dart';
 
-abstract class OceanAbsCommonGetXWidget<T extends CommonGetXController>
+abstract class OceanAbsCommonGetXWidget<T extends OceanAbsCommonGetXController>
     extends GetView<T>
     with OceanAbsWidget {
   OceanAbsCommonGetXWidget({super.key});
