@@ -335,12 +335,8 @@ class _MyAppState extends State<MyApp> {
                 restorationScopeId: 'blackhole',
                 debugShowCheckedModeBanner: false,
                 themeMode: AppTheme.themeMode,
-                theme: AppTheme.lightTheme(
-                  context: context,
-                ),
-                darkTheme: AppTheme.darkTheme(
-                  context: context,
-                ),
+                theme: AppTheme.lightTheme(context: context),
+                darkTheme: AppTheme.darkTheme(context: context),
                 locale: _locale,
                 localizationsDelegates: const [
                   AppLocalizations.delegate,
