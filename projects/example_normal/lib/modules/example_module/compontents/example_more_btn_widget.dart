@@ -11,28 +11,24 @@ import 'package:hzy_common_module/hzy_common_module.dart';
 import 'package:flutter/material.dart';
 
 class ExampleMoreBtnWidget extends CommonLessV {
-  ExampleMoreBtnWidget({
-    super.key,
-    required this.onTap,
-    this.isRefresh = true,
-  });
+  ExampleMoreBtnWidget({super.key, required this.onTap, this.isRefresh = true});
   final bool? isRefresh;
   final Function(int) onTap;
   @override
   bool get isNeedScaffol => false;
 
   @override
-  Widget createScallBody(
-      {required BuildContext context, BoxConstraints? constraints}) {
+  Widget createScallBody({
+    required BuildContext context,
+    BoxConstraints? constraints,
+  }) {
     Widget body = configMoreBtnWidget();
     return body;
   }
 
   @override
   configBoxDecoreation() {
-    return BoxDecoration(
-      color: HzyCommonColor().backgroudgrey.withOpacity(0),
-    );
+    return BoxDecoration(color: HzyCommonColor().backgroudgrey.withOpacity(0));
   }
 
   configMoreBtnWidget() {
@@ -61,11 +57,7 @@ class ExampleMoreBtnWidget extends CommonLessV {
     return body;
   }
 
-  configBtn({
-    required String text,
-    Function()? tapCall,
-    int index = 0,
-  }) {
+  configBtn({required String text, Function()? tapCall, int index = 0}) {
     Widget body = HzyBtnWidget(
       text: text,
       width: 50.w,
@@ -73,32 +65,15 @@ class ExampleMoreBtnWidget extends CommonLessV {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: index == 0
-              ? [
-                  Colors.orange,
-                  Colors.white,
-                  Colors.greenAccent,
-                ]
-              : [
-                  Colors.greenAccent,
-                  Colors.white,
-                  Colors.orange,
-                ],
+              ? [Colors.orange, Colors.white, Colors.greenAccent]
+              : [Colors.greenAccent, Colors.white, Colors.orange],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),
-        boxShadow: [
-          configThemeShadow(
-            opacity: 0.5,
-          ),
-        ],
-        borderRadius: BorderRadius.circular(
-          50.r,
-        ),
+        boxShadow: [configThemeShadow(opacity: 120)],
+        borderRadius: BorderRadius.circular(50.r),
       ),
-      textStyle: HzyTextStyle.fontBold(
-        size: 14,
-        color: Colors.black87,
-      ),
+      textStyle: HzyTextStyle.fontBold(size: 14, color: Colors.black87),
       tapCall: () {
         if (tapCall != null) {
           tapCall();

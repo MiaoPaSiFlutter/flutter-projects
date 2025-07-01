@@ -14,6 +14,7 @@ workspace:
   - packages/athena_utils
   - packages/athena_network
   - packages/ocean_utils
+  - packages/ocean_common_module
   - packages/hzy_normal_network
   - packages/hzy_common_module
   - packages/audiotagger
